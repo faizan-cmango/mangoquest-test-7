@@ -1,0 +1,40 @@
+{
+  "kind": "lint",
+  "schema_version": 2,
+  "tool": "tb_lint",
+  "block": "counter4d",
+  "inputs": [
+    {
+      "path": "verif/counter4d/testplan.yaml",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "verif/test_counter4d.py",
+      "version": 2,
+      "sha256": ""
+    },
+    {
+      "path": "rtl/counter4d.sv",
+      "version": 4,
+      "sha256": ""
+    }
+  ],
+  "timed_out": false,
+  "stopped": "",
+  "image": "quest-eda-tools:2026.11.1",
+  "tool_version": "",
+  "top": "",
+  "clean": true,
+  "errors": [],
+  "warnings": [],
+  "error_count": 0,
+  "warning_count": 0,
+  "failure": "",
+  "pack": "",
+  "pack_clean": null,
+  "pack_error_count": 0,
+  "pack_findings": [],
+  "pack_not_evaluated": {},
+  "self_check_clean": null
+}
