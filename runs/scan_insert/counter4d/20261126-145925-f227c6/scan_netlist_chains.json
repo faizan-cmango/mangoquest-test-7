@@ -1,0 +1,30 @@
+[
+ {
+  "chain": 0,
+  "pos": 0,
+  "cell": "$auto$ff.cc:266:slice$138",
+  "q": "cnt_value_ff[0]",
+  "region": "cnt_value"
+ },
+ {
+  "chain": 0,
+  "pos": 1,
+  "cell": "$auto$ff.cc:266:slice$137",
+  "q": "cnt_value_ff[1]",
+  "region": "cnt_value"
+ },
+ {
+  "chain": 0,
+  "pos": 2,
+  "cell": "$auto$ff.cc:266:slice$136",
+  "q": "cnt_value_ff[2]",
+  "region": "cnt_value"
+ },
+ {
+  "chain": 0,
+  "pos": 3,
+  "cell": "$auto$ff.cc:266:slice$135",
+  "q": "cnt_value_ff[3]",
+  "region": "cnt_value"
+ }
+]

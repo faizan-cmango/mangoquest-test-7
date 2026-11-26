@@ -1,0 +1,6 @@
+block: counter4d
+findings:
+  - {rule: TOLA-DFT-010, status: pass, finding: "one clock domain, one chain of 4 flops; no clock gating or bypass, no lockup needed", location: runs/scan_insert/counter4d/20261126-145925-f227c6/scan_netlist_chains.json}
+  - {rule: TOLA-DFT-027, status: pass, finding: "chains intact after insertion; lec_post_scan proved 24 of 24 points, 4 of 4 flops matched", location: runs/lec_post_scan/counter4d/20261126-145932-af5080/equiv_status.txt}
+  - {rule: TOLA-DFT-040, status: pass, finding: "no density hotspot (cnt_value density 0.2 against 0.30); no flags", location: dft/counter4d/tola_seun_flags.json}
+  - {rule: TOLA-DFT-030, status: pass, finding: "block rated LOW; transition faults were run anyway as the brief asks (test coverage 80.31 %, constrained 100 %, no target applied)", location: runs/atpg/counter4d/20261126-145933-100652/report.json}

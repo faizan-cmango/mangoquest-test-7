@@ -1,0 +1,10 @@
+{
+ "block": "counter4d",
+ "version": "dsr/counter4d@v1",
+ "signoff_level": "checks_run",
+ "files": [
+  {"path": "runs/scan_insert/counter4d/20261126-145925-f227c6/scan_netlist.v", "sha256": "a53979b192383ad616be6ff150de64124247eedf270b82280d8774730157d971"},
+  {"path": "runs/atpg/counter4d/20261126-145933-100652/atpg_patterns.json", "sha256": "337d10adf0350096faab3b4af767b5d4f7883e6ce04f13751ae6d7801f46adcc"},
+  {"path": "runs/scan_insert/counter4d/20261126-145925-f227c6/scan_netlist_chains.json", "sha256": "fbf831878ee73b6fe218f31416343b7585a25dcbeedf8a1cf2bd78b3748795b5"}
+ ]
+}

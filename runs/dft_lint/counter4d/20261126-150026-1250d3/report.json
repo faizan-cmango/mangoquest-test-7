@@ -1,0 +1,206 @@
+{
+  "kind": "dft",
+  "schema_version": 1,
+  "tool": "dft_lint",
+  "block": "counter4d",
+  "inputs": [
+    {
+      "path": "runs/atpg/counter4d/20261126-145933-100652/report.json",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "spec/counter4d/clocks.yaml",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "runs/scan_insert/counter4d/20261126-145925-f227c6/report.json",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "dft/counter4d/dsr.yaml",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "runs/lec_post_scan/counter4d/20261126-145932-af5080/equiv.json",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "runs/lec_post_scan/counter4d/20261126-145932-af5080/equiv_status.txt",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "dft/counter4d/tola_seun_flags.json",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "runs/lec_post_scan/counter4d/20261126-145932-af5080/scan_netlist_func.json",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "dft/counter4d/atpg_handoff.json",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "runs/scan_insert/counter4d/20261126-145925-f227c6/scan_netlist_chains.json",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "runs/scan_insert/counter4d/20261126-145925-f227c6/scan_netlist.json",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "runs/pattern_sim/counter4d/20261126-145951-818b88/patsim.log",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "runs/atpg/counter4d/20261126-145933-100652/atpg_patterns.json",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "dft/counter4d/counter4d_capture.sdc",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "rtl/counter4d.sdc",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "dft/counter4d/counter4d_shift.sdc",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "runs/scan_insert/counter4d/20261126-145925-f227c6/source_netlist.json",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "runs/atpg/counter4d/20261126-145933-100652/atpg_waivers.json",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "runs/scan_insert/counter4d/20261126-145925-f227c6/scan_netlist.v",
+      "version": 1,
+      "sha256": ""
+    }
+  ],
+  "timed_out": false,
+  "stopped": "",
+  "image": "quest-eda-tools:2026.11.1",
+  "tool_version": "1.0.0 (pack 1.0.0)",
+  "top": "counter4d",
+  "signoff_level": "oss",
+  "ok": true,
+  "errors": [],
+  "scan": null,
+  "atpg": null,
+  "patsim": null,
+  "equivalence": null,
+  "lint": {
+    "pack": "dft_lint",
+    "pack_version": "1.0.0",
+    "standard": "MQ-ARC-CDA-04 §16 @1.0 (v1.0.1 of the document)",
+    "scope": "deliverable",
+    "roles": {
+      "atpg_report": "runs/atpg/counter4d/20261126-145933-100652/report.json",
+      "clocks": "spec/counter4d/clocks.yaml",
+      "dft_report": "runs/scan_insert/counter4d/20261126-145925-f227c6/report.json",
+      "dsr": "dft/counter4d/dsr.yaml",
+      "equiv_json": "runs/lec_post_scan/counter4d/20261126-145932-af5080/equiv.json",
+      "equiv_log": "runs/lec_post_scan/counter4d/20261126-145932-af5080/equiv_status.txt",
+      "flags": "dft/counter4d/tola_seun_flags.json",
+      "func_netlist": "runs/lec_post_scan/counter4d/20261126-145932-af5080/scan_netlist_func.json",
+      "handoff": "dft/counter4d/atpg_handoff.json",
+      "manifest": "runs/scan_insert/counter4d/20261126-145925-f227c6/scan_netlist_chains.json",
+      "netlist": "runs/scan_insert/counter4d/20261126-145925-f227c6/scan_netlist.json",
+      "patsim_log": "runs/pattern_sim/counter4d/20261126-145951-818b88/patsim.log",
+      "patterns": "runs/atpg/counter4d/20261126-145933-100652/atpg_patterns.json",
+      "sdc_capture": "dft/counter4d/counter4d_capture.sdc",
+      "sdc_functional": "rtl/counter4d.sdc",
+      "sdc_shift": "dft/counter4d/counter4d_shift.sdc",
+      "source_netlist": "runs/scan_insert/counter4d/20261126-145925-f227c6/source_netlist.json",
+      "waivers": "runs/atpg/counter4d/20261126-145933-100652/atpg_waivers.json"
+    },
+    "risk": "LOW",
+    "signoff_status": "pending",
+    "approver_named": false,
+    "open_p1_flags": [],
+    "open_p2_flags": [],
+    "clean": false,
+    "gate_clean": false,
+    "error_count": 1,
+    "warning_count": 0,
+    "info_count": 3,
+    "proposed_warning_count": 1,
+    "failed_rules": [
+      "TOLA-DFT-005"
+    ],
+    "skipped_rules": [
+      "TOLA-DFT-023"
+    ],
+    "gate_steps": {
+      "step1_dftlint": false,
+      "step2_equivalence": true,
+      "step3_chains": true,
+      "step4_atpg": true,
+      "step5_gatesim": false,
+      "step6_flags": true
+    },
+    "findings": [
+      {
+        "rule": "TOLA-DFT-005",
+        "severity": "error",
+        "location": "ports",
+        "message": "no test_mode port and the DSR does not say scan_en doubles as test_mode",
+        "status": "active"
+      },
+      {
+        "rule": "TOLA-DFT-010",
+        "severity": "info",
+        "location": "dsr.scan.at_speed_validation",
+        "message": "not stated",
+        "status": "active"
+      },
+      {
+        "rule": "TOLA-DFT-019",
+        "severity": "warning",
+        "location": "dsr.scan.scan_en_fanout",
+        "message": "None, the netlist's fan-out is 4",
+        "status": "proposed"
+      },
+      {
+        "rule": "TOLA-DFT-023",
+        "severity": "info",
+        "location": "gatesim_results",
+        "message": "skipped: missing_input (gatesim_results)",
+        "status": "active"
+      },
+      {
+        "rule": "TOLA-DFT-030",
+        "severity": "info",
+        "location": "atpg_report.atpg.fault_models",
+        "message": "LOW block tested with ['stuck_at', 'transition_loc']: the review pass judges the choice",
+        "status": "active"
+      }
+    ],
+    "findings_count": 5,
+    "waivers": []
+  },
+  "outputs_sha256": {}
+}

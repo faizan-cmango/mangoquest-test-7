@@ -1,0 +1,146 @@
+{
+  "kind": "sta",
+  "schema_version": 1,
+  "tool": "sta",
+  "block": "counter4d",
+  "inputs": [
+    {
+      "path": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v",
+      "version": 1,
+      "sha256": "sha256:c9905581f81a0652a1f92b2f40fc91d0d01a64e838bd8e3f3a5a45a3411370ea"
+    },
+    {
+      "path": "rtl/counter4d.sdc",
+      "version": 1,
+      "sha256": "sha256:6473595727faa3cf8a743cb5a6d4683d1852d1400575ffccf863124fe1d434e9"
+    }
+  ],
+  "timed_out": false,
+  "stopped": "",
+  "image": "quest-eda-tools:2026.11.1",
+  "tool_version": "",
+  "top": "counter4d",
+  "sdc": "rtl/counter4d.sdc",
+  "held": {},
+  "ok": true,
+  "met": true,
+  "clocks": [
+    {
+      "name": "clk",
+      "period": 10.0
+    }
+  ],
+  "corners": [
+    {
+      "corner": "tt",
+      "liberty": "sky130_fd_sc_hd__tt_025C_1v80",
+      "ran": true,
+      "setup": {
+        "wns": 7.5843,
+        "tns": 0.0,
+        "groups": [
+          {
+            "name": "clk",
+            "wns": 7.5843,
+            "tns": 0.0,
+            "endpoints": 8,
+            "violations": 0,
+            "complete": true,
+            "worst_paths": [
+              {
+                "startpoint": "en",
+                "endpoint": "_26_",
+                "slack": 7.5843,
+                "arrival": 2.2963,
+                "required": 9.8806
+              },
+              {
+                "startpoint": "_29_",
+                "endpoint": "count[0]",
+                "slack": 7.6604,
+                "arrival": 0.3396,
+                "required": 8.0
+              },
+              {
+                "startpoint": "en",
+                "endpoint": "_27_",
+                "slack": 7.6703,
+                "arrival": 2.2127,
+                "required": 9.883
+              },
+              {
+                "startpoint": "_28_",
+                "endpoint": "count[1]",
+                "slack": 7.6863,
+                "arrival": 0.3137,
+                "required": 8.0
+              },
+              {
+                "startpoint": "_27_",
+                "endpoint": "count[2]",
+                "slack": 7.7033,
+                "arrival": 0.2967,
+                "required": 8.0
+              }
+            ]
+          }
+        ]
+      },
+      "hold": {
+        "wns": 0.4205,
+        "tns": 0.0,
+        "groups": [
+          {
+            "name": "clk",
+            "wns": 0.4205,
+            "tns": 0.0,
+            "endpoints": 8,
+            "violations": 0,
+            "complete": true,
+            "worst_paths": [
+              {
+                "startpoint": "_27_",
+                "endpoint": "_27_",
+                "slack": 0.4205,
+                "arrival": 0.3668,
+                "required": -0.0537
+              },
+              {
+                "startpoint": "_26_",
+                "endpoint": "_26_",
+                "slack": 0.4239,
+                "arrival": 0.3678,
+                "required": -0.0561
+              },
+              {
+                "startpoint": "_29_",
+                "endpoint": "_29_",
+                "slack": 0.4559,
+                "arrival": 0.4137,
+                "required": -0.0422
+              },
+              {
+                "startpoint": "_28_",
+                "endpoint": "_28_",
+                "slack": 0.4745,
+                "arrival": 0.4343,
+                "required": -0.0402
+              },
+              {
+                "startpoint": "_26_",
+                "endpoint": "count[3]",
+                "slack": 2.2716,
+                "arrival": 0.2716,
+                "required": -2.0
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "cell_count": 17,
+  "area": 140.1344,
+  "errors": [],
+  "warning_count": 0
+}

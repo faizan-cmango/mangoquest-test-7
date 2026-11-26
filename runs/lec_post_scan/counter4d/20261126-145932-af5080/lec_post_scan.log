@@ -1,0 +1,253 @@
+== equiv (exit 0)
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2025  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.52 (git sha1 fee39a3284c90249e1d9684cf6944ffbbcbb8f90)
+
+-- Executing script file `.quest/dft/equiv.ys' --
+
+1. Executing JSON frontend.
+Importing module counter4d from JSON tree.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \counter4d
+
+2.2. Analyzing design hierarchy..
+Top module:  \counter4d
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4d.
+
+4. Executing FLATTEN pass (flatten design).
+
+5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4d..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+Renaming module \counter4d to \gold.
+
+6. Executing JSON frontend.
+Importing module counter4d from JSON tree.
+Renaming module \counter4d to \gate.
+
+7. Executing PROC pass (convert processes to netlists).
+
+7.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+7.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+7.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+7.4. Executing PROC_INIT pass (extract init attributes).
+
+7.5. Executing PROC_ARST pass (detect async resets in processes).
+
+7.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+7.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+7.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+7.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+7.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+7.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+7.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module gate.
+<suppressed ~4 debug messages>
+Optimizing module gold.
+
+8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \gate..
+Finding unused cells or wires in module \gold..
+Removed 0 unused cells and 5 unused wires.
+<suppressed ~1 debug messages>
+
+9. Executing ASYNC2SYNC pass.
+
+10. Executing EQUIV_MAKE pass (creating equiv checking module).
+Presumably equivalent wires: $and$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:19$3_Y_gold ($and$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:19$3_Y_gold), $and$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:19$3_Y_gate ($and$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:19$3_Y_gate) -> $and$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:19$3_Y
+Presumably equivalent wires: $procmux$18_Y_gold ($procmux$18_Y_gold), $procmux$18_Y_gate ($procmux$18_Y_gate) -> $procmux$18_Y
+Presumably equivalent wires: $procmux$23_Y_gold ($procmux$23_Y_gold), $procmux$23_Y_gate ($procmux$23_Y_gate) -> $procmux$23_Y
+Presumably equivalent wires: $procmux$28_Y_gold ($procmux$28_Y_gold), $procmux$28_Y_gate ($procmux$28_Y_gate) -> $procmux$28_Y
+Presumably equivalent wires: $procmux$33_Y_gold ($procmux$33_Y_gold), $procmux$33_Y_gate ($procmux$33_Y_gate) -> $procmux$33_Y
+Presumably equivalent wires: $xor$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:20$5_Y_gold ($xor$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:20$5_Y_gold), $xor$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:20$5_Y_gate ($xor$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:20$5_Y_gate) -> $xor$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:20$5_Y
+Presumably equivalent wires: _00__gold (\_00__gold), _00__gate (\_00__gate) -> _00_
+Presumably equivalent wires: _01__gold (\_01__gold), _01__gate (\_01__gate) -> _01_
+Presumably equivalent wires: _03__gold (\_03__gold), _03__gate (\_03__gate) -> _03_
+Presumably equivalent wires: clk_gold (\clk_gold), clk_gate (\clk_gate) -> clk
+Presumably equivalent wires: cnt_value_ff_gold (\count_gold), cnt_value_ff_gate (\count_gate) -> cnt_value_ff
+Presumably equivalent wires: count_gold (\count_gold), count_gate (\count_gate) -> count
+Presumably equivalent wires: en_gold (\en_gold), en_gate (\en_gate) -> en
+Presumably equivalent wires: rst_n_gold (\rst_n_gold), rst_n_gate (\rst_n_gate) -> rst_n
+Changing input A of cell $auto$simplemap.cc:275:simplemap_mux$127_gate ($_MUX_): \count_gate [3] -> \count [3]
+Changing input B of cell $auto$simplemap.cc:275:simplemap_mux$127_gate ($_MUX_): \_03__gate [3] -> \_03_ [3]
+Changing input B of cell $auto$simplemap.cc:275:simplemap_mux$128_gate ($_MUX_): $procmux$18_Y_gate -> $procmux$18_Y
+Changing input A of cell $auto$simplemap.cc:275:simplemap_mux$129_gate ($_MUX_): \count_gate [2] -> \count [2]
+Changing input B of cell $auto$simplemap.cc:275:simplemap_mux$129_gate ($_MUX_): \_03__gate [2] -> \_03_ [2]
+Changing input B of cell $auto$simplemap.cc:275:simplemap_mux$130_gate ($_MUX_): $procmux$23_Y_gate -> $procmux$23_Y
+Changing input A of cell $auto$simplemap.cc:275:simplemap_mux$131_gate ($_MUX_): \count_gate [1] -> \count [1]
+Changing input B of cell $auto$simplemap.cc:275:simplemap_mux$131_gate ($_MUX_): \_03__gate [1] -> \_03_ [1]
+Changing input B of cell $auto$simplemap.cc:275:simplemap_mux$132_gate ($_MUX_): $procmux$28_Y_gate -> $procmux$28_Y
+Changing input A of cell $auto$simplemap.cc:275:simplemap_mux$133_gate ($_MUX_): \count_gate [0] -> \count [0]
+Changing input B of cell $auto$simplemap.cc:275:simplemap_mux$133_gate ($_MUX_): \_03__gate [0] -> \_03_ [0]
+Changing input B of cell $auto$simplemap.cc:275:simplemap_mux$134_gate ($_MUX_): $procmux$33_Y_gate -> $procmux$33_Y
+Changing input A of cell $auto$simplemap.cc:38:simplemap_not$119_gate ($_NOT_): \count_gate [0] -> \count [0]
+Changing input A of cell $auto$simplemap.cc:38:simplemap_not$122_gate ($_NOT_): $and$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:19$3_Y_gate -> $and$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:19$3_Y
+Changing input A of cell $auto$simplemap.cc:38:simplemap_not$124_gate ($_NOT_): $xor$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:20$5_Y_gate -> $xor$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:20$5_Y
+Changing input A of cell $auto$simplemap.cc:83:simplemap_bitop$120_gate ($_XOR_): \count_gate [1] -> \count [1]
+Changing input B of cell $auto$simplemap.cc:83:simplemap_bitop$120_gate ($_XOR_): \count_gate [0] -> \count [0]
+Changing input A of cell $auto$simplemap.cc:83:simplemap_bitop$121_gate ($_AND_): \count_gate [1] -> \count [1]
+Changing input B of cell $auto$simplemap.cc:83:simplemap_bitop$121_gate ($_AND_): \count_gate [0] -> \count [0]
+Changing input A of cell $auto$simplemap.cc:83:simplemap_bitop$123_gate ($_XOR_): \_00__gate -> \_00_
+Changing input B of cell $auto$simplemap.cc:83:simplemap_bitop$123_gate ($_XOR_): \count_gate [2] -> \count [2]
+Changing input A of cell $auto$simplemap.cc:83:simplemap_bitop$125_gate ($_AND_): \count_gate [2] -> \count [2]
+Changing input B of cell $auto$simplemap.cc:83:simplemap_bitop$125_gate ($_AND_): $and$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:19$3_Y_gate -> $and$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:19$3_Y
+Changing input A of cell $auto$simplemap.cc:83:simplemap_bitop$126_gate ($_XOR_): \_01__gate -> \_01_
+Changing input B of cell $auto$simplemap.cc:83:simplemap_bitop$126_gate ($_XOR_): \count_gate [3] -> \count [3]
+Changing input A of cell $auto$simplemap.cc:275:simplemap_mux$127_gold ($_MUX_): \count_gold [3] -> \count [3]
+Changing input B of cell $auto$simplemap.cc:275:simplemap_mux$127_gold ($_MUX_): \_03__gold [3] -> \_03_ [3]
+Changing input B of cell $auto$simplemap.cc:275:simplemap_mux$128_gold ($_MUX_): $procmux$18_Y_gold -> $procmux$18_Y
+Changing input A of cell $auto$simplemap.cc:275:simplemap_mux$129_gold ($_MUX_): \count_gold [2] -> \count [2]
+Changing input B of cell $auto$simplemap.cc:275:simplemap_mux$129_gold ($_MUX_): \_03__gold [2] -> \_03_ [2]
+Changing input B of cell $auto$simplemap.cc:275:simplemap_mux$130_gold ($_MUX_): $procmux$23_Y_gold -> $procmux$23_Y
+Changing input A of cell $auto$simplemap.cc:275:simplemap_mux$131_gold ($_MUX_): \count_gold [1] -> \count [1]
+Changing input B of cell $auto$simplemap.cc:275:simplemap_mux$131_gold ($_MUX_): \_03__gold [1] -> \_03_ [1]
+Changing input B of cell $auto$simplemap.cc:275:simplemap_mux$132_gold ($_MUX_): $procmux$28_Y_gold -> $procmux$28_Y
+Changing input A of cell $auto$simplemap.cc:275:simplemap_mux$133_gold ($_MUX_): \count_gold [0] -> \count [0]
+Changing input B of cell $auto$simplemap.cc:275:simplemap_mux$133_gold ($_MUX_): \_03__gold [0] -> \_03_ [0]
+Changing input B of cell $auto$simplemap.cc:275:simplemap_mux$134_gold ($_MUX_): $procmux$33_Y_gold -> $procmux$33_Y
+Changing input A of cell $auto$simplemap.cc:38:simplemap_not$119_gold ($_NOT_): \count_gold [0] -> \count [0]
+Changing input A of cell $auto$simplemap.cc:38:simplemap_not$122_gold ($_NOT_): $and$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:19$3_Y_gold -> $and$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:19$3_Y
+Changing input A of cell $auto$simplemap.cc:38:simplemap_not$124_gold ($_NOT_): $xor$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:20$5_Y_gold -> $xor$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:20$5_Y
+Changing input A of cell $auto$simplemap.cc:83:simplemap_bitop$120_gold ($_XOR_): \count_gold [1] -> \count [1]
+Changing input B of cell $auto$simplemap.cc:83:simplemap_bitop$120_gold ($_XOR_): \count_gold [0] -> \count [0]
+Changing input A of cell $auto$simplemap.cc:83:simplemap_bitop$121_gold ($_AND_): \count_gold [1] -> \count [1]
+Changing input B of cell $auto$simplemap.cc:83:simplemap_bitop$121_gold ($_AND_): \count_gold [0] -> \count [0]
+Changing input A of cell $auto$simplemap.cc:83:simplemap_bitop$123_gold ($_XOR_): \_00__gold -> \_00_
+Changing input B of cell $auto$simplemap.cc:83:simplemap_bitop$123_gold ($_XOR_): \count_gold [2] -> \count [2]
+Changing input A of cell $auto$simplemap.cc:83:simplemap_bitop$125_gold ($_AND_): \count_gold [2] -> \count [2]
+Changing input B of cell $auto$simplemap.cc:83:simplemap_bitop$125_gold ($_AND_): $and$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:19$3_Y_gold -> $and$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:19$3_Y
+Changing input A of cell $auto$simplemap.cc:83:simplemap_bitop$126_gold ($_XOR_): \_01__gold -> \_01_
+Changing input B of cell $auto$simplemap.cc:83:simplemap_bitop$126_gold ($_XOR_): \count_gold [3] -> \count [3]
+Presumably equivalent cells: $auto$ff.cc:266:slice$135_gold $auto$ff.cc:266:slice$135_gate ($_DFF_P_) -> $auto$ff.cc:266:slice$135
+Presumably equivalent cells: $auto$ff.cc:266:slice$136_gold $auto$ff.cc:266:slice$136_gate ($_DFF_P_) -> $auto$ff.cc:266:slice$136
+Presumably equivalent cells: $auto$ff.cc:266:slice$137_gold $auto$ff.cc:266:slice$137_gate ($_DFF_P_) -> $auto$ff.cc:266:slice$137
+Presumably equivalent cells: $auto$ff.cc:266:slice$138_gold $auto$ff.cc:266:slice$138_gate ($_DFF_P_) -> $auto$ff.cc:266:slice$138
+Presumably equivalent cells: $auto$simplemap.cc:275:simplemap_mux$127_gold $auto$simplemap.cc:275:simplemap_mux$127_gate ($_MUX_) -> $auto$simplemap.cc:275:simplemap_mux$127
+Presumably equivalent cells: $auto$simplemap.cc:275:simplemap_mux$128_gold $auto$simplemap.cc:275:simplemap_mux$128_gate ($_MUX_) -> $auto$simplemap.cc:275:simplemap_mux$128
+Presumably equivalent cells: $auto$simplemap.cc:275:simplemap_mux$129_gold $auto$simplemap.cc:275:simplemap_mux$129_gate ($_MUX_) -> $auto$simplemap.cc:275:simplemap_mux$129
+Presumably equivalent cells: $auto$simplemap.cc:275:simplemap_mux$130_gold $auto$simplemap.cc:275:simplemap_mux$130_gate ($_MUX_) -> $auto$simplemap.cc:275:simplemap_mux$130
+Presumably equivalent cells: $auto$simplemap.cc:275:simplemap_mux$131_gold $auto$simplemap.cc:275:simplemap_mux$131_gate ($_MUX_) -> $auto$simplemap.cc:275:simplemap_mux$131
+Presumably equivalent cells: $auto$simplemap.cc:275:simplemap_mux$132_gold $auto$simplemap.cc:275:simplemap_mux$132_gate ($_MUX_) -> $auto$simplemap.cc:275:simplemap_mux$132
+Presumably equivalent cells: $auto$simplemap.cc:275:simplemap_mux$133_gold $auto$simplemap.cc:275:simplemap_mux$133_gate ($_MUX_) -> $auto$simplemap.cc:275:simplemap_mux$133
+Presumably equivalent cells: $auto$simplemap.cc:275:simplemap_mux$134_gold $auto$simplemap.cc:275:simplemap_mux$134_gate ($_MUX_) -> $auto$simplemap.cc:275:simplemap_mux$134
+Presumably equivalent cells: $auto$simplemap.cc:38:simplemap_not$119_gold $auto$simplemap.cc:38:simplemap_not$119_gate ($_NOT_) -> $auto$simplemap.cc:38:simplemap_not$119
+Presumably equivalent cells: $auto$simplemap.cc:38:simplemap_not$122_gold $auto$simplemap.cc:38:simplemap_not$122_gate ($_NOT_) -> $auto$simplemap.cc:38:simplemap_not$122
+Presumably equivalent cells: $auto$simplemap.cc:38:simplemap_not$124_gold $auto$simplemap.cc:38:simplemap_not$124_gate ($_NOT_) -> $auto$simplemap.cc:38:simplemap_not$124
+Presumably equivalent cells: $auto$simplemap.cc:83:simplemap_bitop$120_gold $auto$simplemap.cc:83:simplemap_bitop$120_gate ($_XOR_) -> $auto$simplemap.cc:83:simplemap_bitop$120
+Presumably equivalent cells: $auto$simplemap.cc:83:simplemap_bitop$121_gold $auto$simplemap.cc:83:simplemap_bitop$121_gate ($_AND_) -> $auto$simplemap.cc:83:simplemap_bitop$121
+Presumably equivalent cells: $auto$simplemap.cc:83:simplemap_bitop$123_gold $auto$simplemap.cc:83:simplemap_bitop$123_gate ($_XOR_) -> $auto$simplemap.cc:83:simplemap_bitop$123
+Presumably equivalent cells: $auto$simplemap.cc:83:simplemap_bitop$125_gold $auto$simplemap.cc:83:simplemap_bitop$125_gate ($_AND_) -> $auto$simplemap.cc:83:simplemap_bitop$125
+Presumably equivalent cells: $auto$simplemap.cc:83:simplemap_bitop$126_gold $auto$simplemap.cc:83:simplemap_bitop$126_gate ($_XOR_) -> $auto$simplemap.cc:83:simplemap_bitop$126
+
+11. Executing HIERARCHY pass (managing design hierarchy).
+
+11.1. Analyzing design hierarchy..
+Top module:  \equiv
+
+11.2. Analyzing design hierarchy..
+Top module:  \equiv
+Removing unused module `\gate'.
+Removing unused module `\gold'.
+Removed 2 unused modules.
+
+12. Executing EQUIV_SIMPLE pass.
+Found 24 unproven $equiv cells (15 groups) in equiv:
+ Grouping SAT models for \count:
+  Trying to prove $equiv for \count [0]: success!
+  Trying to prove $equiv for \count [1]: success!
+  Trying to prove $equiv for \count [2]: success!
+  Trying to prove $equiv for \count [3]: success!
+ Grouping SAT models for \cnt_value_ff:
+  Trying to prove $equiv for \cnt_value_ff [0]: success!
+  Trying to prove $equiv for \cnt_value_ff [1]: success!
+  Trying to prove $equiv for \cnt_value_ff [2]: success!
+  Trying to prove $equiv for \cnt_value_ff [3]: success!
+ Grouping SAT models for \_03_:
+  Trying to prove $equiv for \_03_ [0]: success!
+  Trying to prove $equiv for \_03_ [1]: success!
+  Trying to prove $equiv for \_03_ [2]: success!
+  Trying to prove $equiv for \_03_ [3]: success!
+  Trying to prove $equiv for \_01_: success!
+  Trying to prove $equiv for \_00_: success!
+  Trying to prove $equiv for $xor$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:20$5_Y: success!
+  Trying to prove $equiv for $procmux$33_Y: success!
+  Trying to prove $equiv for $procmux$28_Y: success!
+  Trying to prove $equiv for $procmux$23_Y: success!
+  Trying to prove $equiv for $procmux$18_Y: success!
+  Trying to prove $equiv for $and$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:19$3_Y: success!
+  Trying to prove $equiv for $auto$equiv_make.cc:368:find_same_cells$27: success!
+  Trying to prove $equiv for $auto$equiv_make.cc:368:find_same_cells$25: success!
+  Trying to prove $equiv for $auto$equiv_make.cc:368:find_same_cells$23: success!
+  Trying to prove $equiv for $auto$equiv_make.cc:368:find_same_cells$21: success!
+Proved 24 previously unproven $equiv cells.
+
+13. Executing EQUIV_INDUCT pass.
+No selected unproven $equiv cells found in equiv.
+Proved 0 previously unproven $equiv cells.
+
+14. Executing EQUIV_STATUS pass.
+Found 24 $equiv cells in equiv:
+  Of those cells 24 are proven and 0 are unproven.
+  Equivalence successfully proven!
+
+15. Executing JSON backend.
+
+End of script. Logfile hash: a546a28582, CPU: user 0.05s system 0.04s, MEM: 13.00 MB peak
+Yosys 0.52 (git sha1 fee39a3284c90249e1d9684cf6944ffbbcbb8f90)
+Time spent: 31% 2x hierarchy (0 sec), 16% 1x equiv_simple (0 sec), ...

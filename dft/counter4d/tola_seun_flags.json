@@ -1,0 +1,14 @@
+{
+ "block": "counter4d",
+ "dsr": "dsr/counter4d@v1",
+ "flags": [],
+ "timing_proxy": {
+  "method": "opensta",
+  "corner": "tt_025C_1v80",
+  "delay_before_ps": 2441.9,
+  "delay_after_ps": 2639.3,
+  "delta_ps": 197.4,
+  "slack_after_ps": 7360.7,
+  "slack_budget_ps": 300.0
+ }
+}

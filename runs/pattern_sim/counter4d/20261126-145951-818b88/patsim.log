@@ -1,0 +1,11 @@
+pattern_sim 1.0.0: counter4d on runs/scan_insert/counter4d/20261126-145925-f227c6/scan_netlist.json (iverilog with Yosys simcells.v)
+patterns: runs/atpg/counter4d/20261126-145933-100652/atpg_patterns.json (tola-patterns 1.0), 1 chains
+== verilog (exit 0)
+
+== compile (exit 0)
+
+== simulate (exit 0)
+CHAIN TEST chain 0 length 4: sequence 0011 PASS
+PATSIM: 10 stuck-at + 8 transition patterns, 18 patterns, 144 checks, 0 errors
+PATSIM PASS
+.quest/dft/patsim_tb.v:162: $finish called at 7280000 (1ps)

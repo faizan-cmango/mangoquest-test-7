@@ -1,0 +1,3 @@
+TOLA-DFT-010 info dsr.scan.at_speed_validation: not stated
+TOLA-DFT-023 info gatesim_results: skipped: missing_input (gatesim_results)
+TOLA-DFT-030 info atpg_report.atpg.fault_models: LOW block tested with ['stuck_at', 'transition_loc']: the review pass judges the choice

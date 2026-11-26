@@ -1,0 +1,90 @@
+{
+  "kind": "dft",
+  "schema_version": 1,
+  "tool": "scan_insert",
+  "block": "counter4d",
+  "inputs": [
+    {
+      "path": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "spec/counter4d/clocks.yaml",
+      "version": 1,
+      "sha256": ""
+    }
+  ],
+  "timed_out": false,
+  "stopped": "",
+  "image": "quest-eda-tools:2026.11.1",
+  "tool_version": "1.0.0",
+  "top": "counter4d",
+  "signoff_level": "oss",
+  "ok": true,
+  "errors": [],
+  "scan": {
+    "scan_style": "mux_d_full_scan",
+    "scan_chains": 1,
+    "chain_lengths": [
+      4
+    ],
+    "max_chain_length": 4,
+    "flops_total": 4,
+    "flops_scanned": 4,
+    "exceptions": [],
+    "domains": [
+      {
+        "domain": "core",
+        "clock": "clk",
+        "chains": [
+          0
+        ]
+      }
+    ],
+    "test_mode_port": "",
+    "test_mode_inserted": false,
+    "test_mode_gates": [],
+    "cells_added": {
+      "scan_mux": 4,
+      "chain_buffer": 1
+    },
+    "is_pre_pnr": true,
+    "chains_reordered": false,
+    "chains_intact": true,
+    "density_threshold": 0.3,
+    "density_calibration": "dkb.tola.density-calibration@1.0 (the v1.0 default, T-2)",
+    "regions": [
+      {
+        "region": "cnt_value",
+        "scan_ffs": 4,
+        "cone_cells": 16,
+        "density": 0.2
+      }
+    ],
+    "density_hotspots": [],
+    "findings": [],
+    "notes": "density = scan flops / (scan flops + cells in their D cones), per feature-prefix region: a pre-placement proxy until the floorplan exists",
+    "source_files": [
+      "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v"
+    ],
+    "region_map": "",
+    "region_source": "inferred",
+    "requested": {
+      "chains": 0,
+      "chain_length_max": 0,
+      "scan_pins_max": 0
+    }
+  },
+  "atpg": null,
+  "patsim": null,
+  "equivalence": null,
+  "lint": null,
+  "outputs_sha256": {
+    "scan_netlist.v": "a53979b192383ad616be6ff150de64124247eedf270b82280d8774730157d971",
+    "scan_netlist.json": "e3cce1a75059fd42cbf617ed9abfb6ad0d1bfcafc1b508fb92681b68e7bcc338",
+    "scan_netlist_func.json": "1b2d6d69dfbfdf77fd715fa1a8e028554a991c4b1c5adc1428dcd70325e7f67c",
+    "scan_netlist_chains.json": "fbf831878ee73b6fe218f31416343b7585a25dcbeedf8a1cf2bd78b3748795b5",
+    "source_netlist.json": "113ab3a4990c545605c8a1bcfd525b909ae90e26d404d9c2305ecb444ef44eed"
+  }
+}

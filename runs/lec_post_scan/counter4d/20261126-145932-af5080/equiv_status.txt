@@ -1,0 +1,5 @@
+
+14. Executing EQUIV_STATUS pass.
+Found 24 $equiv cells in equiv:
+  Of those cells 24 are proven and 0 are unproven.
+  Equivalence successfully proven!
