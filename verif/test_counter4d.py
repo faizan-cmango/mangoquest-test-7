@@ -27,8 +27,15 @@ from cocotb_coverage.coverage import CoverPoint, coverage_db
 # ==== B. Interface layer ==========================================================
 CLK_PERIOD_NS = 10  # clocks.yaml: clk at 100 MHz
 RESET_EDGES = 2  # REQ-3.1.1: rst_n held for two rising edges so every flop is reset
+COUNT_BITS = 4  # REQ-3.1.6: count is 4 bits wide
 COUNT_MAX = 15  # REQ-3.1.3: the value at which count wraps
 WAIT_CYCLES = 4  # REQ-3.1.5: an edge is sampled every cycle; 4 without one is a hang
+HOLD_EDGES = 4  # VPS-03: edges held per count value, my choice
+MID_STEPS = 7  # VPS-03: steps from 0 to a mid value (7), inside 1..14
+MAX_STEPS = 8  # VPS-03: steps from 7 to 15 (REQ-3.1.3's value)
+RAND_EDGES = 400  # testplan constraint_model: edges of the random test
+RAND_RST_P = 0.05  # testplan constraint_model: rst_n 0 about 1 edge in 20
+RAND_EN_P = 0.75  # testplan constraint_model: en 1 on 3 edges in 4
 LOG = logging.getLogger("tb_counter4d")
 
 
@@ -156,8 +163,16 @@ async def test_vps_01_reset(dut) -> None:
     """VPS-01: count to a non-zero value, reset with en 0, hold, release."""
     env = CntEnv(dut, "test_vps_01_reset")
     await env.start()
-    # waits for the RTL: body is filled in at verification
-    env.finish("VPS-01", 0)
+    for _ in range(9):  # count 1..9 (mid)
+        await env.step("VPS-01", 1)
+    await env.step("VPS-01", 0, 0)  # reset at mid, en 0
+    await env.step("VPS-01", 0, 0)  # held
+    await env.step("VPS-01", 0, 1)  # release
+    for _ in range(15):
+        await env.step("VPS-01", 1)
+    await env.step("VPS-01", 0, 0)  # reset at max
+    await env.step("VPS-01", 0, 1)
+    env.finish("VPS-01", 2)
 
 
 @cocotb.test(timeout_time=20, timeout_unit="us")
@@ -165,8 +180,9 @@ async def test_vps_02_increment(dut) -> None:
     """VPS-02: en 1 for several edges."""
     env = CntEnv(dut, "test_vps_02_increment")
     await env.start()
-    # waits for the RTL: body is filled in at verification
-    env.finish("VPS-02", 0)
+    for _ in range(10):
+        await env.step("VPS-02", 1)
+    env.finish("VPS-02", 5)
 
 
 @cocotb.test(timeout_time=20, timeout_unit="us")
@@ -174,8 +190,21 @@ async def test_vps_03_hold(dut) -> None:
     """VPS-03: en 0 at count 0, mid and 15, with en toggled between edges."""
     env = CntEnv(dut, "test_vps_03_hold")
     await env.start()
-    # waits for the RTL: body is filled in at verification
-    env.finish("VPS-03", 0)
+    async def hold(n: int) -> None:
+        for _ in range(n):
+            target = env.scoreboard.edges + 1
+            await FallingEdge(env.dut.clk)
+            env.dut.en.value = 0  # en moves only at falling edges (R1)
+            await env.watchdog.wait_edges(target, "VPS-03")
+
+    await hold(HOLD_EDGES)  # at zero
+    for _ in range(MID_STEPS):
+        await env.step("VPS-03", 1)
+    await hold(HOLD_EDGES)  # mid
+    for _ in range(MAX_STEPS):
+        await env.step("VPS-03", 1)
+    await hold(HOLD_EDGES)  # max
+    env.finish("VPS-03", 12)
 
 
 @cocotb.test(timeout_time=20, timeout_unit="us")
@@ -183,8 +212,9 @@ async def test_vps_04_wrap(dut) -> None:
     """VPS-04: count up to 15 and one more enabled edge."""
     env = CntEnv(dut, "test_vps_04_wrap")
     await env.start()
-    # waits for the RTL: body is filled in at verification
-    env.finish("VPS-04", 0)
+    for _ in range(17):  # 0 -> 15 -> wrap -> 1
+        await env.step("VPS-04", 1)
+    env.finish("VPS-04", 1)
 
 
 @cocotb.test(timeout_time=20, timeout_unit="us")
@@ -192,8 +222,12 @@ async def test_vps_05_reset_priority(dut) -> None:
     """VPS-05: rst_n 0 and en 1 together at a non-zero count."""
     env = CntEnv(dut, "test_vps_05_reset_priority")
     await env.start()
-    # waits for the RTL: body is filled in at verification
-    env.finish("VPS-05", 0)
+    for _ in range(5):
+        await env.step("VPS-05", 1)
+    await env.step("VPS-05", 1, 0)  # reset and en together
+    await env.step("VPS-05", 1, 0)
+    await env.step("VPS-05", 1, 1)
+    env.finish("VPS-05", 2)
 
 
 @cocotb.test(timeout_time=20, timeout_unit="us")
@@ -201,8 +235,20 @@ async def test_vps_06_port_list(dut) -> None:
     """VPS-06: ports are clk, rst_n, en, count[3:0]; count is 4 bits wide."""
     env = CntEnv(dut, "test_vps_06_port_list")
     await env.start()
-    # waits for the RTL: body is filled in at verification (width of count is 4)
-    env.finish("VPS-06", 0)
+    for name in ("clk", "rst_n", "en", "count"):
+        if not hasattr(dut, name):
+            raise AssertionError(f"MISMATCH VPS-06 REQ-3.1.6 signal={name} expected=port observed=absent")
+    if len(dut.count) != COUNT_BITS:
+        raise AssertionError(
+            f"MISMATCH VPS-06 REQ-3.1.6 signal=count expected={COUNT_BITS} observed={len(dut.count)}"
+        )
+    await env.step("VPS-06", 0)
+    got = cnt_read(dut.count, "count")
+    if got != 0:
+        raise AssertionError(f"MISMATCH VPS-06 REQ-3.1.6 signal=count expected=0 observed={got}")
+    cg_vps_06(CntMatch("VPS-06", 0, CntSample(1, 0, 0)))
+    env.scoreboard.checked["VPS-06"] += 1
+    env.finish("VPS-06", 1)
 
 
 @cocotb.test(timeout_time=100, timeout_unit="us")
@@ -210,7 +256,10 @@ async def test_random_seeded(dut) -> None:
     """Constrained-random en and rst_n from the testplan's constraint model, one seed."""
     env = CntEnv(dut, "test_random_seeded")
     await env.start()
-    # waits for the RTL: body is filled in at verification
+    for _ in range(RAND_EDGES):
+        rst_n = 0 if env.rng.random() < RAND_RST_P else 1
+        en = 1 if env.rng.random() < RAND_EN_P else 0
+        await env.step("VPS-02", en, rst_n)
     env.finish("VPS-02", 0)
 
 

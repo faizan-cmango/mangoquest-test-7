@@ -1,0 +1,83 @@
+{
+  "kind": "lint",
+  "schema_version": 2,
+  "tool": "tb_lint",
+  "block": "counter4d",
+  "inputs": [
+    {
+      "path": "verif/counter4d/testplan.yaml",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "verif/test_counter4d.py",
+      "version": 3,
+      "sha256": ""
+    },
+    {
+      "path": "rtl/counter4d.sv",
+      "version": 4,
+      "sha256": ""
+    }
+  ],
+  "timed_out": false,
+  "stopped": "",
+  "image": "quest-eda-tools:2026.11.1",
+  "tool_version": "",
+  "top": "",
+  "clean": false,
+  "errors": [
+    {
+      "file": "verif/test_counter4d.py",
+      "line": 197,
+      "column": null,
+      "code": "DAYO-TBS-015",
+      "message": "test_vps_03_hold: uncited values: 7, 8, 4, 4, 4"
+    },
+    {
+      "file": "verif/test_counter4d.py",
+      "line": 249,
+      "column": null,
+      "code": "DAYO-TBS-015",
+      "message": "test_random_seeded: uncited values: 400, 0.05, 0.75"
+    },
+    {
+      "file": "verif/test_counter4d.py",
+      "line": 236,
+      "column": null,
+      "code": "DAYO-TBS-032",
+      "message": "test_vps_06_port_list: the failure is not a MISMATCH line with signal, expected and observed"
+    },
+    {
+      "file": "verif/test_counter4d.py",
+      "line": 238,
+      "column": null,
+      "code": "DAYO-TBS-032",
+      "message": "test_vps_06_port_list: the failure is not a MISMATCH line with signal, expected and observed"
+    },
+    {
+      "file": "verif/test_counter4d.py",
+      "line": 190,
+      "column": null,
+      "code": "MQ-TBS-001",
+      "message": "test_vps_03_hold: rst_n is held for too few edges (0 rising edges, 1 needed)"
+    },
+    {
+      "file": "verif/test_counter4d.py",
+      "line": 190,
+      "column": null,
+      "code": "MQ-TBS-001",
+      "message": "hold: rst_n is held for too few edges (0 rising edges, 1 needed)"
+    }
+  ],
+  "warnings": [],
+  "error_count": 6,
+  "warning_count": 0,
+  "failure": "",
+  "pack": "",
+  "pack_clean": null,
+  "pack_error_count": 0,
+  "pack_findings": [],
+  "pack_not_evaluated": {},
+  "self_check_clean": null
+}
