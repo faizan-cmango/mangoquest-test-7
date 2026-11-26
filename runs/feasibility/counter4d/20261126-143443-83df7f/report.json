@@ -1,0 +1,39 @@
+{
+  "kind": "feasibility",
+  "schema_version": 1,
+  "tool": "feasibility",
+  "block": "counter4d",
+  "inputs": [
+    {
+      "path": "docs/feasibility/counter4d/counter4d.sv",
+      "version": 1,
+      "sha256": ""
+    }
+  ],
+  "package": "spec/counter4d",
+  "design": "proxy",
+  "top": "counter4d",
+  "clock": "clk",
+  "target_mhz": 100.0,
+  "area_um2_max": null,
+  "method": "opensta_liberty",
+  "liberty_kind": "pdk",
+  "liberty": "sky130_fd_sc_hd__tt_025C_1v80",
+  "confidence": 0.5,
+  "corners": [
+    "tt"
+  ],
+  "skipped": null,
+  "fmax_mhz_estimate": 1257.9,
+  "worst_slack_ns": 6.5852,
+  "worst_path": "en -> _26_",
+  "area_um2_estimate": 140.1344,
+  "cell_count": 17,
+  "meets_target": true,
+  "challenge": "",
+  "notes": [
+    "worst setup slack at tt",
+    "an input or output path is the worst (6.585 ns at the recipe's I/O delays); the fmax estimate is of the register-to-register paths (9.205 ns)",
+    "a proxy of the architecture, not RTL"
+  ]
+}

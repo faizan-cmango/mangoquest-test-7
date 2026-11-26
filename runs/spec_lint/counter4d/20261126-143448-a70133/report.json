@@ -1,0 +1,78 @@
+{
+  "kind": "spec_lint",
+  "schema_version": 1,
+  "tool": "spec_lint",
+  "block": "counter4d",
+  "inputs": [
+    {
+      "path": "spec/counter4d/rtm.yaml",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "spec/counter4d/idd/counter_io.yaml",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "spec/counter4d/clocks.yaml",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "spec/counter4d/riskmap.yaml",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "spec/counter4d/errata.yaml",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "spec/counter4d/brs.yaml",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "spec/counter4d/vps.yaml",
+      "version": 2,
+      "sha256": ""
+    },
+    {
+      "path": "spec/counter4d/decisions.yaml",
+      "version": 2,
+      "sha256": ""
+    },
+    {
+      "path": "spec/counter4d/sad.yaml",
+      "version": 2,
+      "sha256": ""
+    },
+    {
+      "path": "spec/counter4d/sad.md",
+      "version": 2,
+      "sha256": ""
+    }
+  ],
+  "package": "spec/counter4d",
+  "lint": "chidi-speclint 1.1.0 (MQ-ARC-CDA-01 A.7) + MQ checks 1.0 + MQ house rules 1.1.0",
+  "revising": false,
+  "compared": false,
+  "errors": 0,
+  "warnings": 0,
+  "to_explain": 0,
+  "advisory": 0,
+  "info": 6,
+  "findings": [],
+  "findings_not_kept": 0,
+  "not_compared": {},
+  "reset_only": [
+    "VPS-01",
+    "VPS-05",
+    "VPS-06"
+  ],
+  "revises": {},
+  "review": [],
+  "stale_downstream": []
+}
