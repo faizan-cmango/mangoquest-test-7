@@ -1,0 +1,11 @@
+block: counter4d
+findings:
+  - {rule: DAYO-TBS-003, status: pass, finding: "expected fields name count at the port", location: verif/counter4d/testplan.yaml:1}
+  - {rule: DAYO-TBS-006, status: pass, finding: "constraint_model for IDD-COUNTER_IO lists en, rst_n and the illegal inputs", location: verif/counter4d/testplan.yaml:78}
+  - {rule: DAYO-TBS-016, status: pass, finding: "DEBUG NOTES and KNOWN GOTCHAS name the MISMATCH line, waveform order and drive/sample phase", location: verif/test_counter4d.py:9}
+  - {rule: DAYO-TBS-020, status: finding, finding: "hold() in test_vps_03_hold writes en directly instead of through CntDriver", location: verif/test_counter4d.py:195}
+  - {rule: DAYO-TBS-021, status: pass, finding: "reset, watchdog, monitor and scoreboard are own classes", location: verif/test_counter4d.py:60}
+  - {rule: DAYO-TBS-024, status: pass, finding: "inputs driven after FallingEdge, count read after ReadOnly, recorded in KNOWN GOTCHAS", location: verif/test_counter4d.py:12}
+  - {rule: DAYO-TBS-035, status: pass, finding: "no coverage hole was left open", location: verif/test_counter4d.py:1}
+  - {rule: DAYO-TBS-042, status: finding, finding: "VPS-06 zero bin is sampled from a CntMatch the test builds, not from an observed edge", location: verif/test_counter4d.py:243}
+  - {rule: DAYO-TBS-051, status: pass, finding: "random test draws en and rst_n incl. reset mid-count; no cdc signal; illegal same-edge changes excluded by R1", location: verif/test_counter4d.py:253}

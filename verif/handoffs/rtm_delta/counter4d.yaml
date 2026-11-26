@@ -1,0 +1,52 @@
+agent: dayo
+block: counter4d
+entries:
+- req_id: REQ-3.1.1
+  artefacts:
+  - verif/counter4d/testplan.yaml
+  - verif/test_counter4d.py
+  verified_status: true
+  test_ids:
+  - test_vps_01_reset
+  - test_vps_05_reset_priority
+  properties: []
+- req_id: REQ-3.1.2
+  artefacts:
+  - verif/counter4d/testplan.yaml
+  - verif/test_counter4d.py
+  verified_status: true
+  test_ids:
+  - test_vps_02_increment
+  properties: []
+- req_id: REQ-3.1.3
+  artefacts:
+  - verif/counter4d/testplan.yaml
+  - verif/test_counter4d.py
+  verified_status: true
+  test_ids:
+  - test_vps_04_wrap
+  properties: []
+- req_id: REQ-3.1.4
+  artefacts:
+  - verif/counter4d/testplan.yaml
+  - verif/test_counter4d.py
+  verified_status: true
+  test_ids:
+  - test_vps_03_hold
+  properties: []
+- req_id: REQ-3.1.5
+  artefacts:
+  - verif/counter4d/testplan.yaml
+  - verif/test_counter4d.py
+  verified_status: true
+  test_ids:
+  - test_vps_03_hold
+  properties: []
+- req_id: REQ-3.1.6
+  artefacts:
+  - verif/counter4d/testplan.yaml
+  - verif/test_counter4d.py
+  verified_status: true
+  test_ids:
+  - test_vps_06_port_list
+  properties: []

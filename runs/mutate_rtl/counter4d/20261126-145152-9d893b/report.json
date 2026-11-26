@@ -1,0 +1,142 @@
+{
+  "kind": "mutation",
+  "schema_version": 1,
+  "tool": "mutate_rtl",
+  "block": "counter4d",
+  "inputs": [
+    {
+      "path": "rtl/counter4d.sv",
+      "version": 4,
+      "sha256": "sha256:2465adb6f64fb52bce9659b3ae11bd9233d1636ce47e61d028a72ae9655d3ffe"
+    },
+    {
+      "path": "verif/test_counter4d.py",
+      "version": 5,
+      "sha256": "sha256:78d9d2721f60f763c76264ddd8b8bfef8233488e733b08580e9dc8d68d4e90a1"
+    }
+  ],
+  "timed_out": false,
+  "stopped": "",
+  "image": "quest-eda-tools:2026.11.1",
+  "tool_version": "",
+  "simulator": "icarus",
+  "test_module": "verif/test_counter4d.py",
+  "toplevel": "counter4d",
+  "seed": 870935265,
+  "ok": true,
+  "baseline_passed": true,
+  "mutants": [
+    {
+      "id": "M01",
+      "operator": "operator_swap",
+      "file": "rtl/counter4d.sv",
+      "line": 29,
+      "original": "assign cnt_value_next = en ? (cnt_value_ff + 4'd1) : cnt_value_ff;",
+      "mutated": "assign cnt_value_next = en ? (cnt_value_ff - 4'd1) : cnt_value_ff;",
+      "status": "killed",
+      "killed_by": [
+        "test_vps_01_reset",
+        "test_vps_02_increment",
+        "test_vps_03_hold",
+        "test_vps_04_wrap",
+        "test_vps_05_reset_priority",
+        "test_random_seeded"
+      ]
+    },
+    {
+      "id": "M02",
+      "operator": "stuck_bit",
+      "file": "rtl/counter4d.sv",
+      "line": 46,
+      "original": "assign count = cnt_value_ff;  // REQ-3.1.6",
+      "mutated": "assign count = '1;",
+      "status": "killed",
+      "killed_by": [
+        "test_vps_01_reset",
+        "test_vps_02_increment",
+        "test_vps_03_hold",
+        "test_vps_04_wrap",
+        "test_vps_05_reset_priority",
+        "test_vps_06_port_list",
+        "test_random_seeded"
+      ]
+    },
+    {
+      "id": "M03",
+      "operator": "dropped_reset",
+      "file": "rtl/counter4d.sv",
+      "line": 35,
+      "original": "cnt_value_ff <= '0;",
+      "mutated": "",
+      "status": "killed",
+      "killed_by": [
+        "test_vps_01_reset",
+        "test_vps_02_increment",
+        "test_vps_03_hold",
+        "test_vps_04_wrap",
+        "test_vps_05_reset_priority",
+        "test_vps_06_port_list",
+        "test_random_seeded"
+      ]
+    },
+    {
+      "id": "M04",
+      "operator": "stuck_bit",
+      "file": "rtl/counter4d.sv",
+      "line": 46,
+      "original": "assign count = cnt_value_ff;  // REQ-3.1.6",
+      "mutated": "assign count = '0;",
+      "status": "killed",
+      "killed_by": [
+        "test_vps_01_reset",
+        "test_vps_02_increment",
+        "test_vps_03_hold",
+        "test_vps_04_wrap",
+        "test_vps_05_reset_priority",
+        "test_random_seeded"
+      ]
+    },
+    {
+      "id": "M05",
+      "operator": "stuck_bit",
+      "file": "rtl/counter4d.sv",
+      "line": 29,
+      "original": "assign cnt_value_next = en ? (cnt_value_ff + 4'd1) : cnt_value_ff;",
+      "mutated": "assign cnt_value_next = '0;",
+      "status": "killed",
+      "killed_by": [
+        "test_vps_01_reset",
+        "test_vps_02_increment",
+        "test_vps_03_hold",
+        "test_vps_04_wrap",
+        "test_vps_05_reset_priority",
+        "test_random_seeded"
+      ]
+    },
+    {
+      "id": "M06",
+      "operator": "stuck_bit",
+      "file": "rtl/counter4d.sv",
+      "line": 29,
+      "original": "assign cnt_value_next = en ? (cnt_value_ff + 4'd1) : cnt_value_ff;",
+      "mutated": "assign cnt_value_next = '1;",
+      "status": "killed",
+      "killed_by": [
+        "test_vps_01_reset",
+        "test_vps_02_increment",
+        "test_vps_03_hold",
+        "test_vps_04_wrap",
+        "test_vps_05_reset_priority",
+        "test_vps_06_port_list",
+        "test_random_seeded"
+      ]
+    }
+  ],
+  "candidates": 6,
+  "killed": 6,
+  "survived": 0,
+  "kill_rate": 1.0,
+  "threshold": 0.8,
+  "qualified": true,
+  "errors": []
+}

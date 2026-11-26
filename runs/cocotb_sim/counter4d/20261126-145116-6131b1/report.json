@@ -1,0 +1,3289 @@
+{
+  "kind": "sim",
+  "schema_version": 2,
+  "tool": "cocotb_sim",
+  "block": "counter4d",
+  "inputs": [
+    {
+      "path": "rtl/counter4d.sv",
+      "version": 4,
+      "sha256": "sha256:2465adb6f64fb52bce9659b3ae11bd9233d1636ce47e61d028a72ae9655d3ffe"
+    },
+    {
+      "path": "verif/test_counter4d.py",
+      "version": 3,
+      "sha256": "sha256:98220618e0ca4a92d67abbadc4ac497ddd030081615e49fcc3aa3edd10474cd9"
+    }
+  ],
+  "timed_out": false,
+  "stopped": "",
+  "image": "quest-eda-tools:2026.11.1",
+  "tool_version": "2.1.0",
+  "simulator": "verilator",
+  "testbench": "test_counter4d",
+  "compiled": true,
+  "compile_errors": [],
+  "compile_warning_count": 0,
+  "compile_failure": "",
+  "finished": true,
+  "end_time": null,
+  "passed": true,
+  "first_failure": null,
+  "mismatches": 0,
+  "assertion_errors": 0,
+  "errors": [],
+  "assertion_failures": null,
+  "coverage": {
+    "line": {
+      "hit": 1,
+      "total": 1,
+      "percent": 100.0
+    },
+    "branch": {
+      "hit": 2,
+      "total": 2,
+      "percent": 100.0
+    },
+    "toggle": {
+      "hit": 15,
+      "total": 15,
+      "percent": 100.0
+    },
+    "user": null,
+    "functional": {
+      "hit": 10,
+      "total": 10,
+      "percent": 100.0
+    },
+    "fsm": null,
+    "other": {},
+    "uncovered": [],
+    "uncovered_count": 0
+  },
+  "seed": 724061427,
+  "framework": "cocotb",
+  "test_module": "verif/test_counter4d.py",
+  "toplevel": "counter4d",
+  "seeds": [
+    {
+      "seed": 1675700277,
+      "locked": true,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 2074770130,
+      "locked": true,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1588912939,
+      "locked": true,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 585870581,
+      "locked": true,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1656643245,
+      "locked": true,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 724061427,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 116110799,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1982536020,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 421947054,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 774217859,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1970557683,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1444235098,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 20254696,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1542044335,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1998455395,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 215516030,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1633637588,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1935786419,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1414453527,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 158058281,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1865828,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 769616462,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1466952897,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 762284818,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 808652365,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 861551516,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 983472582,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 991688004,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 166660960,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 953684041,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 457851975,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 283335989,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1296638150,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1554322214,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1412851395,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1696433522,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 440574013,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 500964821,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 939396675,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1806975207,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 2105216276,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1511912776,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1215117539,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 32136270,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1506645941,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 94065065,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 289980585,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 624530437,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1692462179,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 193047620,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1277262060,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1748530186,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1313004229,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1939192400,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 199495668,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 320026949,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1571268294,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1564998896,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 2091501711,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    },
+    {
+      "seed": 1704222495,
+      "locked": false,
+      "finished": true,
+      "passed": true,
+      "tests": [
+        {
+          "name": "test_vps_01_reset",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_02_increment",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_03_hold",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_04_wrap",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_05_reset_priority",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_vps_06_port_list",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        },
+        {
+          "name": "test_random_seeded",
+          "passed": true,
+          "message": "",
+          "sim_time_ns": null
+        }
+      ]
+    }
+  ],
+  "functional_groups": [
+    {
+      "name": "cg_vps_01.count_at",
+      "covergroup": "cg_vps_01",
+      "hit": 2,
+      "total": 2,
+      "percent": 100.0,
+      "holes": []
+    },
+    {
+      "name": "cg_vps_02.count_at",
+      "covergroup": "cg_vps_02",
+      "hit": 2,
+      "total": 2,
+      "percent": 100.0,
+      "holes": []
+    },
+    {
+      "name": "cg_vps_03.count_at",
+      "covergroup": "cg_vps_03",
+      "hit": 3,
+      "total": 3,
+      "percent": 100.0,
+      "holes": []
+    },
+    {
+      "name": "cg_vps_04.count_at",
+      "covergroup": "cg_vps_04",
+      "hit": 1,
+      "total": 1,
+      "percent": 100.0,
+      "holes": []
+    },
+    {
+      "name": "cg_vps_05.count_at",
+      "covergroup": "cg_vps_05",
+      "hit": 1,
+      "total": 1,
+      "percent": 100.0,
+      "holes": []
+    },
+    {
+      "name": "cg_vps_06.count_at",
+      "covergroup": "cg_vps_06",
+      "hit": 1,
+      "total": 1,
+      "percent": 100.0,
+      "holes": []
+    }
+  ],
+  "fsms": [],
+  "fsm_source": "",
+  "fsm_note": "Yosys found no state machine in the design (fsm_detect).",
+  "simulator_version": "5.032",
+  "reproduction": false,
+  "closure": {
+    "test_module": "verif/test_counter4d.py",
+    "toplevel": "counter4d",
+    "tool_version": "2.1.0",
+    "inputs": [
+      {
+        "path": "rtl/counter4d.sv",
+        "version": 4,
+        "sha256": ""
+      },
+      {
+        "path": "verif/test_counter4d.py",
+        "version": 3,
+        "sha256": ""
+      }
+    ],
+    "batches": 1,
+    "seeds": [
+      1675700277,
+      2074770130,
+      1588912939,
+      585870581,
+      1656643245,
+      724061427,
+      116110799,
+      1982536020,
+      421947054,
+      774217859,
+      1970557683,
+      1444235098,
+      20254696,
+      1542044335,
+      1998455395,
+      215516030,
+      1633637588,
+      1935786419,
+      1414453527,
+      158058281,
+      1865828,
+      769616462,
+      1466952897,
+      762284818,
+      808652365,
+      861551516,
+      983472582,
+      991688004,
+      166660960,
+      953684041,
+      457851975,
+      283335989,
+      1296638150,
+      1554322214,
+      1412851395,
+      1696433522,
+      440574013,
+      500964821,
+      939396675,
+      1806975207,
+      2105216276,
+      1511912776,
+      1215117539,
+      32136270,
+      1506645941,
+      94065065,
+      289980585,
+      624530437,
+      1692462179,
+      193047620,
+      1277262060,
+      1748530186,
+      1313004229,
+      1939192400,
+      199495668,
+      320026949,
+      1571268294,
+      1564998896,
+      2091501711,
+      1704222495
+    ],
+    "curve": [
+      {
+        "seeds": 60,
+        "bins_hit": 10,
+        "bins_total": 10
+      }
+    ],
+    "coverage": {
+      "line": {
+        "hit": 1,
+        "total": 1,
+        "percent": 100.0
+      },
+      "branch": {
+        "hit": 2,
+        "total": 2,
+        "percent": 100.0
+      },
+      "toggle": {
+        "hit": 15,
+        "total": 15,
+        "percent": 100.0
+      },
+      "user": null,
+      "functional": {
+        "hit": 10,
+        "total": 10,
+        "percent": 100.0
+      },
+      "fsm": null,
+      "other": {},
+      "uncovered": [],
+      "uncovered_count": 0
+    },
+    "functional_groups": [
+      {
+        "name": "cg_vps_01.count_at",
+        "covergroup": "cg_vps_01",
+        "hit": 2,
+        "total": 2,
+        "percent": 100.0,
+        "holes": []
+      },
+      {
+        "name": "cg_vps_02.count_at",
+        "covergroup": "cg_vps_02",
+        "hit": 2,
+        "total": 2,
+        "percent": 100.0,
+        "holes": []
+      },
+      {
+        "name": "cg_vps_03.count_at",
+        "covergroup": "cg_vps_03",
+        "hit": 3,
+        "total": 3,
+        "percent": 100.0,
+        "holes": []
+      },
+      {
+        "name": "cg_vps_04.count_at",
+        "covergroup": "cg_vps_04",
+        "hit": 1,
+        "total": 1,
+        "percent": 100.0,
+        "holes": []
+      },
+      {
+        "name": "cg_vps_05.count_at",
+        "covergroup": "cg_vps_05",
+        "hit": 1,
+        "total": 1,
+        "percent": 100.0,
+        "holes": []
+      },
+      {
+        "name": "cg_vps_06.count_at",
+        "covergroup": "cg_vps_06",
+        "hit": 1,
+        "total": 1,
+        "percent": 100.0,
+        "holes": []
+      }
+    ],
+    "fsms": []
+  }
+}
