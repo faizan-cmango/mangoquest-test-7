@@ -1,0 +1,3 @@
+== atpg (exit 0)
+ATPG stuck_at: 10 patterns, 162 of 166 detected, test coverage 100.0, constrained coverage 100.0
+ATPG transition: 8 patterns, 102 of 142 detected, test coverage 80.31, constrained coverage 100.0

@@ -1,0 +1,175 @@
+{
+  "kind": "dft",
+  "schema_version": 1,
+  "tool": "atpg",
+  "block": "counter4d",
+  "inputs": [
+    {
+      "path": "runs/scan_insert/counter4d/20261126-145836-e2513b/scan_netlist.json",
+      "version": 1,
+      "sha256": ""
+    }
+  ],
+  "timed_out": false,
+  "stopped": "",
+  "image": "quest-eda-tools:2026.11.1",
+  "tool_version": "1.0.0",
+  "top": "counter4d",
+  "signoff_level": "oss",
+  "ok": true,
+  "errors": [],
+  "scan": null,
+  "atpg": {
+    "method": "oss",
+    "seed": 7,
+    "random_patterns": 64,
+    "fault_models": [
+      "stuck_at",
+      "transition_loc"
+    ],
+    "fault_model_detail": {
+      "stuck_at": "pin-level, uncollapsed, clock pins excluded",
+      "transition_loc": "launch-on-capture, primary inputs held between launch and capture"
+    },
+    "constraints": {
+      "capture_holds": {},
+      "pi_held_between_launch_and_capture": true,
+      "scan_en_in_capture": 0,
+      "x_sources": "none",
+      "sdc_exceptions_in_capture": "none",
+      "undeclared_holds": []
+    },
+    "chains_reordered": false,
+    "stuck_at": {
+      "patterns": 10,
+      "faults": {
+        "total": 166,
+        "detected": 162,
+        "detected_capture": 143,
+        "detected_chain_test": 19,
+        "untestable_proven": 4,
+        "au_constrained": 0,
+        "au_classes": {},
+        "uncovered": 0,
+        "aborted": 0,
+        "aborted_timeout": 0,
+        "aborted_rlimit": 0,
+        "not_run": 0
+      },
+      "functional": {
+        "total": 142,
+        "detected": 138,
+        "detected_capture": 138,
+        "detected_chain_test": 0,
+        "untestable_proven": 4,
+        "au_constrained": 0,
+        "au_classes": {},
+        "uncovered": 0,
+        "aborted": 0,
+        "aborted_timeout": 0,
+        "aborted_rlimit": 0,
+        "not_run": 0
+      },
+      "scan_structure": {
+        "total": 24,
+        "detected": 24,
+        "detected_capture": 5,
+        "detected_chain_test": 19,
+        "untestable_proven": 0,
+        "au_constrained": 0,
+        "au_classes": {},
+        "uncovered": 0,
+        "aborted": 0,
+        "aborted_timeout": 0,
+        "aborted_rlimit": 0,
+        "not_run": 0
+      },
+      "compacted": true
+    },
+    "stuck_at_fault_coverage_pct": 97.59,
+    "stuck_at_coverage_pct": 100.0,
+    "stuck_at_constrained_coverage_pct": 100.0,
+    "transition": {
+      "patterns": 8,
+      "faults": {
+        "total": 142,
+        "detected": 102,
+        "detected_capture": 102,
+        "detected_chain_test": 0,
+        "untestable_proven": 15,
+        "au_constrained": 25,
+        "au_classes": {
+          "au_pi_held": 25
+        },
+        "uncovered": 0,
+        "aborted": 0,
+        "aborted_timeout": 0,
+        "aborted_rlimit": 0,
+        "not_run": 0
+      },
+      "functional": {
+        "total": 142,
+        "detected": 102,
+        "detected_capture": 102,
+        "detected_chain_test": 0,
+        "untestable_proven": 15,
+        "au_constrained": 25,
+        "au_classes": {
+          "au_pi_held": 25
+        },
+        "uncovered": 0,
+        "aborted": 0,
+        "aborted_timeout": 0,
+        "aborted_rlimit": 0,
+        "not_run": 0
+      },
+      "scan_structure": {
+        "total": 0,
+        "detected": 0,
+        "detected_capture": 0,
+        "detected_chain_test": 0,
+        "untestable_proven": 0,
+        "au_constrained": 0,
+        "au_classes": {},
+        "uncovered": 0,
+        "aborted": 0,
+        "aborted_timeout": 0,
+        "aborted_rlimit": 0,
+        "not_run": 0
+      },
+      "compacted": true
+    },
+    "transition_fault_coverage_pct": 71.83,
+    "transition_coverage_pct": 80.31,
+    "transition_constrained_coverage_pct": 100.0,
+    "patterns_total": 18,
+    "accounting_complete": true,
+    "proofs": {
+      "exhaustive": 111,
+      "z3": 0
+    },
+    "z3": true,
+    "ate": {
+      "shift_clock_mhz": 25.0,
+      "longest_chain": 4,
+      "cycles": 114,
+      "time_s": 4.56e-6
+    },
+    "note": "",
+    "scan_chains": 1,
+    "chain_lengths": [
+      4
+    ],
+    "time_budget_s": 96.0,
+    "z3_timeout_ms": 60000,
+    "out_of_time": false,
+    "z3_rlimit": 10000000
+  },
+  "patsim": null,
+  "equivalence": null,
+  "lint": null,
+  "outputs_sha256": {
+    "atpg_patterns.json": "337d10adf0350096faab3b4af767b5d4f7883e6ce04f13751ae6d7801f46adcc",
+    "atpg_waivers.json": "4a7ae17693496207e9575563296c956bb9227275fcb9ea66412f018aee3c94e1"
+  }
+}

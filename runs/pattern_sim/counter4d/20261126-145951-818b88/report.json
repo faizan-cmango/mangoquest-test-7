@@ -1,0 +1,50 @@
+{
+  "kind": "dft",
+  "schema_version": 1,
+  "tool": "pattern_sim",
+  "block": "counter4d",
+  "inputs": [
+    {
+      "path": "runs/scan_insert/counter4d/20261126-145925-f227c6/scan_netlist.json",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "runs/atpg/counter4d/20261126-145933-100652/atpg_patterns.json",
+      "version": 1,
+      "sha256": ""
+    }
+  ],
+  "timed_out": false,
+  "stopped": "",
+  "image": "quest-eda-tools:2026.11.1",
+  "tool_version": "1.0.0",
+  "top": "counter4d",
+  "signoff_level": "oss",
+  "ok": true,
+  "errors": [],
+  "scan": null,
+  "atpg": null,
+  "patsim": {
+    "simulator": "icarus",
+    "chain_test": [
+      {
+        "chain": 0,
+        "length": 4,
+        "passed": true,
+        "detail": "sequence 0011 PASS"
+      }
+    ],
+    "chains_pass": true,
+    "stuck_at_patterns": 10,
+    "transition_patterns": 8,
+    "patterns": 18,
+    "checks": 144,
+    "errors": 0,
+    "passed": true,
+    "mismatches": []
+  },
+  "equivalence": null,
+  "lint": null,
+  "outputs_sha256": {}
+}

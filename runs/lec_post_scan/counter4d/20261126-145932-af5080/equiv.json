@@ -1,0 +1,1203 @@
+{
+  "creator": "Yosys 0.52 (git sha1 fee39a3284c90249e1d9684cf6944ffbbcbb8f90)",
+  "modules": {
+    "equiv": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:3.1-38.10"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "rst_n": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "en": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "count": {
+          "direction": "output",
+          "bits": [ 5, 6, 7, 8 ]
+        }
+      },
+      "cells": {
+        "$auto$equiv_make.cc:257:find_same_wires$17": {
+          "hide_name": 1,
+          "type": "$equiv",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 9 ],
+            "Y": [ 5 ]
+          }
+        },
+        "$auto$equiv_make.cc:257:find_same_wires$18": {
+          "hide_name": 1,
+          "type": "$equiv",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 10 ],
+            "B": [ 10 ],
+            "Y": [ 6 ]
+          }
+        },
+        "$auto$equiv_make.cc:257:find_same_wires$19": {
+          "hide_name": 1,
+          "type": "$equiv",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 11 ],
+            "Y": [ 7 ]
+          }
+        },
+        "$auto$equiv_make.cc:257:find_same_wires$20": {
+          "hide_name": 1,
+          "type": "$equiv",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 12 ],
+            "B": [ 12 ],
+            "Y": [ 8 ]
+          }
+        },
+        "$auto$equiv_make.cc:294:find_same_wires$1": {
+          "hide_name": 1,
+          "type": "$equiv",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 13 ],
+            "B": [ 13 ],
+            "Y": [ 14 ]
+          }
+        },
+        "$auto$equiv_make.cc:294:find_same_wires$10": {
+          "hide_name": 1,
+          "type": "$equiv",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 15 ],
+            "B": [ 15 ],
+            "Y": [ 16 ]
+          }
+        },
+        "$auto$equiv_make.cc:294:find_same_wires$11": {
+          "hide_name": 1,
+          "type": "$equiv",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17 ],
+            "B": [ 17 ],
+            "Y": [ 18 ]
+          }
+        },
+        "$auto$equiv_make.cc:294:find_same_wires$12": {
+          "hide_name": 1,
+          "type": "$equiv",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 19 ],
+            "B": [ 19 ],
+            "Y": [ 20 ]
+          }
+        },
+        "$auto$equiv_make.cc:294:find_same_wires$13": {
+          "hide_name": 1,
+          "type": "$equiv",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 9 ],
+            "Y": [ 21 ]
+          }
+        },
+        "$auto$equiv_make.cc:294:find_same_wires$14": {
+          "hide_name": 1,
+          "type": "$equiv",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 10 ],
+            "B": [ 10 ],
+            "Y": [ 22 ]
+          }
+        },
+        "$auto$equiv_make.cc:294:find_same_wires$15": {
+          "hide_name": 1,
+          "type": "$equiv",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 11 ],
+            "Y": [ 23 ]
+          }
+        },
+        "$auto$equiv_make.cc:294:find_same_wires$16": {
+          "hide_name": 1,
+          "type": "$equiv",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 12 ],
+            "B": [ 12 ],
+            "Y": [ 24 ]
+          }
+        },
+        "$auto$equiv_make.cc:294:find_same_wires$2": {
+          "hide_name": 1,
+          "type": "$equiv",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 25 ],
+            "B": [ 25 ],
+            "Y": [ 26 ]
+          }
+        },
+        "$auto$equiv_make.cc:294:find_same_wires$3": {
+          "hide_name": 1,
+          "type": "$equiv",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 27 ],
+            "B": [ 27 ],
+            "Y": [ 28 ]
+          }
+        },
+        "$auto$equiv_make.cc:294:find_same_wires$4": {
+          "hide_name": 1,
+          "type": "$equiv",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 29 ],
+            "B": [ 29 ],
+            "Y": [ 30 ]
+          }
+        },
+        "$auto$equiv_make.cc:294:find_same_wires$5": {
+          "hide_name": 1,
+          "type": "$equiv",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 31 ],
+            "B": [ 31 ],
+            "Y": [ 32 ]
+          }
+        },
+        "$auto$equiv_make.cc:294:find_same_wires$6": {
+          "hide_name": 1,
+          "type": "$equiv",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 33 ],
+            "B": [ 33 ],
+            "Y": [ 34 ]
+          }
+        },
+        "$auto$equiv_make.cc:294:find_same_wires$7": {
+          "hide_name": 1,
+          "type": "$equiv",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 35 ],
+            "B": [ 35 ],
+            "Y": [ 36 ]
+          }
+        },
+        "$auto$equiv_make.cc:294:find_same_wires$8": {
+          "hide_name": 1,
+          "type": "$equiv",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 37 ],
+            "B": [ 37 ],
+            "Y": [ 38 ]
+          }
+        },
+        "$auto$equiv_make.cc:294:find_same_wires$9": {
+          "hide_name": 1,
+          "type": "$equiv",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 39 ],
+            "B": [ 39 ],
+            "Y": [ 40 ]
+          }
+        },
+        "$auto$equiv_make.cc:369:find_same_cells$22": {
+          "hide_name": 1,
+          "type": "$equiv",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 41 ],
+            "B": [ 41 ],
+            "Y": [ 42 ]
+          }
+        },
+        "$auto$equiv_make.cc:369:find_same_cells$24": {
+          "hide_name": 1,
+          "type": "$equiv",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 43 ],
+            "B": [ 43 ],
+            "Y": [ 44 ]
+          }
+        },
+        "$auto$equiv_make.cc:369:find_same_cells$26": {
+          "hide_name": 1,
+          "type": "$equiv",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 45 ],
+            "B": [ 45 ],
+            "Y": [ 46 ]
+          }
+        },
+        "$auto$equiv_make.cc:369:find_same_cells$28": {
+          "hide_name": 1,
+          "type": "$equiv",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 47 ],
+            "B": [ 47 ],
+            "Y": [ 48 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$135": {
+          "hide_name": 1,
+          "type": "$_DFF_P_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:32.3-34.45"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 42 ],
+            "Q": [ 12 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$136": {
+          "hide_name": 1,
+          "type": "$_DFF_P_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:29.3-31.45"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 44 ],
+            "Q": [ 11 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$137": {
+          "hide_name": 1,
+          "type": "$_DFF_P_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:26.3-28.45"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 46 ],
+            "Q": [ 10 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$138": {
+          "hide_name": 1,
+          "type": "$_DFF_P_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:23.3-25.45"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 48 ],
+            "Q": [ 9 ]
+          }
+        },
+        "$auto$simplemap.cc:275:simplemap_mux$127": {
+          "hide_name": 1,
+          "type": "$_MUX_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:34.14-34.16|runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:34.10-34.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8 ],
+            "B": [ 20 ],
+            "S": [ 4 ],
+            "Y": [ 25 ]
+          }
+        },
+        "$auto$simplemap.cc:275:simplemap_mux$128": {
+          "hide_name": 1,
+          "type": "$_MUX_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:33.9-33.15|runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:33.5-34.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ 26 ],
+            "S": [ 3 ],
+            "Y": [ 41 ]
+          }
+        },
+        "$auto$simplemap.cc:275:simplemap_mux$129": {
+          "hide_name": 1,
+          "type": "$_MUX_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:31.14-31.16|runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:31.10-31.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 18 ],
+            "S": [ 4 ],
+            "Y": [ 27 ]
+          }
+        },
+        "$auto$simplemap.cc:275:simplemap_mux$130": {
+          "hide_name": 1,
+          "type": "$_MUX_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:30.9-30.15|runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:30.5-31.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ 28 ],
+            "S": [ 3 ],
+            "Y": [ 43 ]
+          }
+        },
+        "$auto$simplemap.cc:275:simplemap_mux$131": {
+          "hide_name": 1,
+          "type": "$_MUX_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:28.14-28.16|runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:28.10-28.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 16 ],
+            "S": [ 4 ],
+            "Y": [ 29 ]
+          }
+        },
+        "$auto$simplemap.cc:275:simplemap_mux$132": {
+          "hide_name": 1,
+          "type": "$_MUX_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:27.9-27.15|runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:27.5-28.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ 30 ],
+            "S": [ 3 ],
+            "Y": [ 45 ]
+          }
+        },
+        "$auto$simplemap.cc:275:simplemap_mux$133": {
+          "hide_name": 1,
+          "type": "$_MUX_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:25.14-25.16|runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:25.10-25.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5 ],
+            "B": [ 40 ],
+            "S": [ 4 ],
+            "Y": [ 31 ]
+          }
+        },
+        "$auto$simplemap.cc:275:simplemap_mux$134": {
+          "hide_name": 1,
+          "type": "$_MUX_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:24.9-24.15|runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:24.5-25.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ 32 ],
+            "S": [ 3 ],
+            "Y": [ 47 ]
+          }
+        },
+        "$auto$simplemap.cc:38:simplemap_not$119": {
+          "hide_name": 1,
+          "type": "$_NOT_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:17.20-17.36"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5 ],
+            "Y": [ 39 ]
+          }
+        },
+        "$auto$simplemap.cc:38:simplemap_not$122": {
+          "hide_name": 1,
+          "type": "$_NOT_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:19.17-19.53"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 14 ],
+            "Y": [ 35 ]
+          }
+        },
+        "$auto$simplemap.cc:38:simplemap_not$124": {
+          "hide_name": 1,
+          "type": "$_NOT_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:20.20-20.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 34 ],
+            "Y": [ 17 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$120": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:18.20-18.53"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 5 ],
+            "Y": [ 15 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$121": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:19.19-19.52"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 5 ],
+            "Y": [ 13 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$123": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:20.22-20.44"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 36 ],
+            "B": [ 7 ],
+            "Y": [ 33 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$125": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:21.17-21.42"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 14 ],
+            "Y": [ 37 ]
+          }
+        },
+        "$auto$simplemap.cc:83:simplemap_bitop$126": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:22.20-22.42"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 38 ],
+            "B": [ 8 ],
+            "Y": [ 19 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\cnt_value_ff[0:0]_gold": {
+          "hide_name": 1,
+          "bits": [ 47 ],
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:23.3-25.45"
+          }
+        },
+        "$0\\cnt_value_ff[1:1]_gold": {
+          "hide_name": 1,
+          "bits": [ 45 ],
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:26.3-28.45"
+          }
+        },
+        "$0\\cnt_value_ff[2:2]_gold": {
+          "hide_name": 1,
+          "bits": [ 43 ],
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:29.3-31.45"
+          }
+        },
+        "$0\\cnt_value_ff[3:3]_gold": {
+          "hide_name": 1,
+          "bits": [ 41 ],
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:32.3-34.45"
+          }
+        },
+        "$and$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:19$3_Y": {
+          "hide_name": 1,
+          "bits": [ 14 ],
+          "attributes": {
+          }
+        },
+        "$and$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:19$3_Y_gate": {
+          "hide_name": 1,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:19.19-19.52"
+          }
+        },
+        "$and$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:19$3_Y_gold": {
+          "hide_name": 1,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:19.19-19.52"
+          }
+        },
+        "$auto$equiv_make.cc:368:find_same_cells$21": {
+          "hide_name": 1,
+          "bits": [ 42 ],
+          "attributes": {
+          }
+        },
+        "$auto$equiv_make.cc:368:find_same_cells$23": {
+          "hide_name": 1,
+          "bits": [ 44 ],
+          "attributes": {
+          }
+        },
+        "$auto$equiv_make.cc:368:find_same_cells$25": {
+          "hide_name": 1,
+          "bits": [ 46 ],
+          "attributes": {
+          }
+        },
+        "$auto$equiv_make.cc:368:find_same_cells$27": {
+          "hide_name": 1,
+          "bits": [ 48 ],
+          "attributes": {
+          }
+        },
+        "$procmux$18_Y": {
+          "hide_name": 1,
+          "bits": [ 26 ],
+          "attributes": {
+          }
+        },
+        "$procmux$18_Y_gate": {
+          "hide_name": 1,
+          "bits": [ 25 ],
+          "attributes": {
+          }
+        },
+        "$procmux$18_Y_gold": {
+          "hide_name": 1,
+          "bits": [ 25 ],
+          "attributes": {
+          }
+        },
+        "$procmux$23_Y": {
+          "hide_name": 1,
+          "bits": [ 28 ],
+          "attributes": {
+          }
+        },
+        "$procmux$23_Y_gate": {
+          "hide_name": 1,
+          "bits": [ 27 ],
+          "attributes": {
+          }
+        },
+        "$procmux$23_Y_gold": {
+          "hide_name": 1,
+          "bits": [ 27 ],
+          "attributes": {
+          }
+        },
+        "$procmux$28_Y": {
+          "hide_name": 1,
+          "bits": [ 30 ],
+          "attributes": {
+          }
+        },
+        "$procmux$28_Y_gate": {
+          "hide_name": 1,
+          "bits": [ 29 ],
+          "attributes": {
+          }
+        },
+        "$procmux$28_Y_gold": {
+          "hide_name": 1,
+          "bits": [ 29 ],
+          "attributes": {
+          }
+        },
+        "$procmux$33_Y": {
+          "hide_name": 1,
+          "bits": [ 32 ],
+          "attributes": {
+          }
+        },
+        "$procmux$33_Y_gate": {
+          "hide_name": 1,
+          "bits": [ 31 ],
+          "attributes": {
+          }
+        },
+        "$procmux$33_Y_gold": {
+          "hide_name": 1,
+          "bits": [ 31 ],
+          "attributes": {
+          }
+        },
+        "$xor$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:20$5_Y": {
+          "hide_name": 1,
+          "bits": [ 34 ],
+          "attributes": {
+          }
+        },
+        "$xor$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:20$5_Y_gate": {
+          "hide_name": 1,
+          "bits": [ 33 ],
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:20.22-20.44"
+          }
+        },
+        "$xor$runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:20$5_Y_gold": {
+          "hide_name": 1,
+          "bits": [ 33 ],
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:20.22-20.44"
+          }
+        },
+        "_00_": {
+          "hide_name": 0,
+          "bits": [ 36 ],
+          "attributes": {
+          }
+        },
+        "_00__gate": {
+          "hide_name": 0,
+          "bits": [ 35 ],
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:4.8-4.12"
+          }
+        },
+        "_00__gold": {
+          "hide_name": 0,
+          "bits": [ 35 ],
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:4.8-4.12"
+          }
+        },
+        "_01_": {
+          "hide_name": 0,
+          "bits": [ 38 ],
+          "attributes": {
+          }
+        },
+        "_01__gate": {
+          "hide_name": 0,
+          "bits": [ 37 ],
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:5.8-5.12"
+          }
+        },
+        "_01__gold": {
+          "hide_name": 0,
+          "bits": [ 37 ],
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:5.8-5.12"
+          }
+        },
+        "_03_": {
+          "hide_name": 0,
+          "bits": [ 40, 16, 18, 20 ],
+          "attributes": {
+          }
+        },
+        "_03__gate": {
+          "hide_name": 0,
+          "bits": [ 39, 15, 17, 19 ],
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:7.14-7.18"
+          }
+        },
+        "_03__gold": {
+          "hide_name": 0,
+          "bits": [ 39, 15, 17, 19 ],
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:7.14-7.18"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+          }
+        },
+        "clk_gate": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:8.9-8.12"
+          }
+        },
+        "clk_gold": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:8.9-8.12"
+          }
+        },
+        "cnt_value_ff": {
+          "hide_name": 0,
+          "bits": [ 21, 22, 23, 24 ],
+          "attributes": {
+          }
+        },
+        "cnt_value_ff_gate": {
+          "hide_name": 0,
+          "bits": [ 9, 10, 11, 12 ],
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:10.13-10.25"
+          }
+        },
+        "cnt_value_ff_gold": {
+          "hide_name": 0,
+          "bits": [ 9, 10, 11, 12 ],
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:10.13-10.25"
+          }
+        },
+        "count": {
+          "hide_name": 0,
+          "bits": [ 5, 6, 7, 8 ],
+          "attributes": {
+          }
+        },
+        "count_gate": {
+          "hide_name": 0,
+          "bits": [ 9, 10, 11, 12 ],
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:11.16-11.21"
+          }
+        },
+        "count_gold": {
+          "hide_name": 0,
+          "bits": [ 9, 10, 11, 12 ],
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:11.16-11.21"
+          }
+        },
+        "en": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+          }
+        },
+        "en_gate": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:13.9-13.11"
+          }
+        },
+        "en_gold": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:13.9-13.11"
+          }
+        },
+        "rst_n": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+          }
+        },
+        "rst_n_gate": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:15.9-15.14"
+          }
+        },
+        "rst_n_gold": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v:15.9-15.14"
+          }
+        },
+        "scan_d_0_0_gate": {
+          "hide_name": 0,
+          "bits": [ 47 ],
+          "attributes": {
+          }
+        },
+        "scan_d_0_1_gate": {
+          "hide_name": 0,
+          "bits": [ 45 ],
+          "attributes": {
+          }
+        },
+        "scan_d_0_2_gate": {
+          "hide_name": 0,
+          "bits": [ 43 ],
+          "attributes": {
+          }
+        },
+        "scan_d_0_3_gate": {
+          "hide_name": 0,
+          "bits": [ 41 ],
+          "attributes": {
+          }
+        }
+      }
+    }
+  }
+}

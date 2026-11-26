@@ -1,0 +1,46 @@
+{
+  "kind": "dft",
+  "schema_version": 1,
+  "tool": "lec_post_scan",
+  "block": "counter4d",
+  "inputs": [
+    {
+      "path": "runs/scan_insert/counter4d/20261126-145925-f227c6/source_netlist.json",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "runs/scan_insert/counter4d/20261126-145925-f227c6/scan_netlist.json",
+      "version": 1,
+      "sha256": ""
+    }
+  ],
+  "timed_out": false,
+  "stopped": "",
+  "image": "quest-eda-tools:2026.11.1",
+  "tool_version": "1.0.0",
+  "top": "counter4d",
+  "signoff_level": "oss",
+  "ok": true,
+  "errors": [],
+  "scan": null,
+  "atpg": null,
+  "patsim": null,
+  "equivalence": {
+    "method": "yosys read_json of scan_insert's source_netlist.json / equiv_make -inames / equiv_simple -seq 4 / equiv_induct -seq 4; the functional-mode view re-derived from the delivered netlist",
+    "equivalent": true,
+    "points": 24,
+    "proven": 24,
+    "unproven": 0,
+    "unproven_points": [],
+    "flops_matched": 4,
+    "flops_total": 4,
+    "unmatched_flops": [],
+    "view_derived": true,
+    "depth": 4,
+    "seconds": 1.8,
+    "timeout_s": 240.0
+  },
+  "lint": null,
+  "outputs_sha256": {}
+}

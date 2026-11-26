@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites name="gate_sim">
+  <testsuite name="test_counter4d seed 1675700277" tests="7" failures="0">
+    <property name="random_seed" value="1675700277" />
+    <testcase name="test_vps_01_reset" classname="test_counter4d" />
+    <testcase name="test_vps_02_increment" classname="test_counter4d" />
+    <testcase name="test_vps_03_hold" classname="test_counter4d" />
+    <testcase name="test_vps_04_wrap" classname="test_counter4d" />
+    <testcase name="test_vps_05_reset_priority" classname="test_counter4d" />
+    <testcase name="test_vps_06_port_list" classname="test_counter4d" />
+    <testcase name="test_random_seeded" classname="test_counter4d" />
+  </testsuite>
+  <testsuite name="test_counter4d seed 2074770130" tests="7" failures="0">
+    <property name="random_seed" value="2074770130" />
+    <testcase name="test_vps_01_reset" classname="test_counter4d" />
+    <testcase name="test_vps_02_increment" classname="test_counter4d" />
+    <testcase name="test_vps_03_hold" classname="test_counter4d" />
+    <testcase name="test_vps_04_wrap" classname="test_counter4d" />
+    <testcase name="test_vps_05_reset_priority" classname="test_counter4d" />
+    <testcase name="test_vps_06_port_list" classname="test_counter4d" />
+    <testcase name="test_random_seeded" classname="test_counter4d" />
+  </testsuite>
+  <testsuite name="test_counter4d seed 1588912939" tests="7" failures="0">
+    <property name="random_seed" value="1588912939" />
+    <testcase name="test_vps_01_reset" classname="test_counter4d" />
+    <testcase name="test_vps_02_increment" classname="test_counter4d" />
+    <testcase name="test_vps_03_hold" classname="test_counter4d" />
+    <testcase name="test_vps_04_wrap" classname="test_counter4d" />
+    <testcase name="test_vps_05_reset_priority" classname="test_counter4d" />
+    <testcase name="test_vps_06_port_list" classname="test_counter4d" />
+    <testcase name="test_random_seeded" classname="test_counter4d" />
+  </testsuite>
+  <testsuite name="test_counter4d seed 585870581" tests="7" failures="0">
+    <property name="random_seed" value="585870581" />
+    <testcase name="test_vps_01_reset" classname="test_counter4d" />
+    <testcase name="test_vps_02_increment" classname="test_counter4d" />
+    <testcase name="test_vps_03_hold" classname="test_counter4d" />
+    <testcase name="test_vps_04_wrap" classname="test_counter4d" />
+    <testcase name="test_vps_05_reset_priority" classname="test_counter4d" />
+    <testcase name="test_vps_06_port_list" classname="test_counter4d" />
+    <testcase name="test_random_seeded" classname="test_counter4d" />
+  </testsuite>
+  <testsuite name="test_counter4d seed 1656643245" tests="7" failures="0">
+    <property name="random_seed" value="1656643245" />
+    <testcase name="test_vps_01_reset" classname="test_counter4d" />
+    <testcase name="test_vps_02_increment" classname="test_counter4d" />
+    <testcase name="test_vps_03_hold" classname="test_counter4d" />
+    <testcase name="test_vps_04_wrap" classname="test_counter4d" />
+    <testcase name="test_vps_05_reset_priority" classname="test_counter4d" />
+    <testcase name="test_vps_06_port_list" classname="test_counter4d" />
+    <testcase name="test_random_seeded" classname="test_counter4d" />
+  </testsuite>
+</testsuites>

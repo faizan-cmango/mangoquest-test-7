@@ -1,0 +1,84 @@
+# dsr.yaml -- DFT Sign-off Report, block counter4d, Tola. Pending: a person signs.
+dsr: dsr/counter4d@v1
+block: counter4d
+risk: LOW                       # from riskmap.yaml
+signoff_level: oss
+source_netlist:
+  artefact: runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v
+  version: 1
+  tool: "yosys_synth of rtl/counter4d.sv v4 (accepted RTL)"
+  is_pre_pnr: true
+scan:
+  style: mux_d_full_scan
+  flops_total: 4
+  flops_scanned: 4
+  exceptions: []
+  chains: 1
+  chain_lengths: [4]
+  domains: {core: {clock: clk, chains: [0]}}
+  ports: {scan_en: scan_en, scan_in: scan_in, scan_out: scan_out}
+  test_mode: {port: none, doubles_as_scan_en: true, gates: []}   # no asynchronous set or reset: no test_mode inserted, scan_en doubles as test mode
+  clock_bypass: []
+  lockups: []
+  scan_en_fanout: 4
+  bus_contention: none
+  test_clock: {core: clk}
+  shift_clock: {core: "ATE-sourced on clk, 25 MHz (default, to confirm)"}
+  capture_clock: {core: "functional clk at 100 MHz"}
+  reset_in_test: "synchronous reset rst_n is logic in the D cone; no asynchronous reset"
+  clock_gating: none
+  manifest: runs/scan_insert/counter4d/20261126-145925-f227c6/scan_netlist_chains.json
+  region_map: "none given; regions inferred from flop prefix (cnt_value), default to confirm"
+integrity:
+  equivalence:
+    status: proven
+    points: 24
+    flops_matched: "4 / 4 by name"
+    view_derived: pass
+    depth: 4
+    report: runs/lec_post_scan/counter4d/20261126-145932-af5080/equiv_status.txt
+  chain_test: {status: pass, sequence: "0011", chains: 1, report: runs/pattern_sim/counter4d/20261126-145951-818b88/patsim.log}
+  pattern_validation: {status: pass, patterns: 18, checks: 144, errors: 0, report: runs/pattern_sim/counter4d/20261126-145951-818b88/patsim.log}
+  gate_level_sim: {status: pass, tests: 35, passed: 35, x_after_reset: false, seeds: [1675700277, 2074770130, 1588912939, 585870581, 1656643245], harness: "verif/test_counter4d.py", report: runs/gate_sim/counter4d/20261126-145942-eef8cd/results.xml}
+atpg:
+  tool: "atpg 1.0.0"
+  fault_models: [stuck_at, transition_loc]
+  gate_metric: constrained
+  constraints: {capture_holds: {}, pi_held_between_launch_and_capture: true, scan_en_in_capture: 0, undeclared_holds: [], sdc_exceptions_in_capture: none}
+  stuck_at: {total: 166, detected: 162, untestable_proven: 4, au_constrained: 0, uncovered: 0, aborted: 0, fault_coverage_pct: 97.59, test_coverage_pct: 100.0, constrained_coverage_pct: 100.0, patterns: 10, target_pct: 99}
+  transition: {total: 142, detected: 102, untestable_proven: 15, au_constrained: 25, uncovered: 0, aborted: 0, fault_coverage_pct: 71.83, test_coverage_pct: 80.31, constrained_coverage_pct: 100.0, patterns: 8, target_pct: 95}
+  patterns: {artefact: runs/atpg/counter4d/20261126-145933-100652/atpg_patterns.json, format: tola-patterns 1.0, chains: 1, shift_length: 4, shift_clock_mhz: 25, ate_cycles: 114, ate_time_estimate_s: 4.56e-06}
+  open_faults_owner: tola
+waivers:
+  file: runs/atpg/counter4d/20261126-145933-100652/atpg_waivers.json
+  count: 44
+  classes:
+    untestable_proven:
+      count: 19
+      reason: "UNSAT with every capture constraint released (4 stuck-at and 15 transition faults, on constant-0 mux inputs and redundant increment logic)"
+      recovery_owner: "none needed: structurally untestable (Kemi informed through this record)"
+    au_pi_held:
+      count: 25
+      reason: "transition faults on en, rst_n and the count feedback that no launch-on-capture pattern launches while the primary inputs are held, and that a pattern launches once en or rst_n toggles"
+      recovery_owner: "chip-level test specification: upstream flops or wrapper cells drive en and rst_n (T-6), Tola lead"
+flags:
+  file: dft/counter4d/tola_seun_flags.json
+  open_p1: 0
+  p1: []
+  p2: []
+timing_delta: {method: opensta, corner: tt_025C_1v80, delay_before_ps: 2441.9, delay_after_ps: 2639.3, delta_ps: 197.4, slack_after_ps: 7360.7, slack_budget_ps: 300}
+hand_offs:
+  seun:
+    dft_netlist: {artefact: runs/scan_insert/counter4d/20261126-145925-f227c6/scan_netlist.v, role: dft_netlist}
+    flags: dft/counter4d/tola_seun_flags.json
+    test_sdc: {artefacts: [dft/counter4d/counter4d_shift.sdc, dft/counter4d/counter4d_capture.sdc], role: test_sdc, rendered_by: "tola_sdc 1.0.0"}
+  emeka: {patterns: runs/atpg/counter4d/20261126-145933-100652/atpg_patterns.json, format: tola-patterns 1.0, chip_test_spec: pending_chip_level}
+  atpg_handoff: dft/counter4d/atpg_handoff.json
+tools: {yosys: "0.52", iverilog: "12.0", z3: "4.13.3", scan_insert: "1.0.0", atpg: "1.0.0", pattern_sim: "1.0.0", gate_sim: "1.0.0 (cocotb 2.1.0)", dft_lint: "1.0.0"}
+signoff:
+  status: pending
+  level: oss
+  open_items: [T-6]
+open_items:
+  - {id: T-6, owner: tola, what: "25 au_pi_held transition faults (en, rst_n and feedback) leave the block-level gate with a chip-level recovery owner; transition test coverage is 80.31 % against 95 %, the constrained figure is 100 %", gate: chip_level_dsr}
+  - {id: defaults, owner: person, what: "confirm defaults: 25 MHz shift clock, regions inferred from flop prefix, one chain as the brief asks, no targets.json"}

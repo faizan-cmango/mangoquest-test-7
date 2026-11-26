@@ -1,0 +1,272 @@
+{
+ "format": "tola-patterns 1.0",
+ "block": "counter4d",
+ "note": "values in scan order (position 0 first); pi in pi_order; po in po_order, strobed before the first capture pulse; unload = the flops after the last capture",
+ "chains": [
+  {
+   "chain": 0,
+   "length": 4,
+   "scan_in": "scan_in[0]",
+   "scan_out": "scan_out[0]",
+   "cells": [
+    "$auto$ff.cc:266:slice$138",
+    "$auto$ff.cc:266:slice$137",
+    "$auto$ff.cc:266:slice$136",
+    "$auto$ff.cc:266:slice$135"
+   ]
+  }
+ ],
+ "pi_order": [
+  "rst_n",
+  "en"
+ ],
+ "po_order": [
+  "count[0]",
+  "count[1]",
+  "count[2]",
+  "count[3]"
+ ],
+ "held_in_capture": {
+  "scan_en": 0
+ },
+ "chain_test": {
+  "sequence": "0011",
+  "cycles": 12
+ },
+ "patterns": [
+  {
+   "id": 0,
+   "model": "stuck_at",
+   "load": [
+    "0100"
+   ],
+   "pi": "10",
+   "po_before_capture": "0100",
+   "captures": 1,
+   "unload": [
+    "0100"
+   ]
+  },
+  {
+   "id": 1,
+   "model": "stuck_at",
+   "load": [
+    "0011"
+   ],
+   "pi": "00",
+   "po_before_capture": "0011",
+   "captures": 1,
+   "unload": [
+    "0000"
+   ]
+  },
+  {
+   "id": 2,
+   "model": "stuck_at",
+   "load": [
+    "1110"
+   ],
+   "pi": "00",
+   "po_before_capture": "1110",
+   "captures": 1,
+   "unload": [
+    "0000"
+   ]
+  },
+  {
+   "id": 3,
+   "model": "stuck_at",
+   "load": [
+    "0011"
+   ],
+   "pi": "11",
+   "po_before_capture": "0011",
+   "captures": 1,
+   "unload": [
+    "1011"
+   ]
+  },
+  {
+   "id": 4,
+   "model": "stuck_at",
+   "load": [
+    "1010"
+   ],
+   "pi": "10",
+   "po_before_capture": "1010",
+   "captures": 1,
+   "unload": [
+    "1010"
+   ]
+  },
+  {
+   "id": 5,
+   "model": "stuck_at",
+   "load": [
+    "1100"
+   ],
+   "pi": "11",
+   "po_before_capture": "1100",
+   "captures": 1,
+   "unload": [
+    "0010"
+   ]
+  },
+  {
+   "id": 6,
+   "model": "stuck_at",
+   "load": [
+    "1001"
+   ],
+   "pi": "11",
+   "po_before_capture": "1001",
+   "captures": 1,
+   "unload": [
+    "0101"
+   ]
+  },
+  {
+   "id": 7,
+   "model": "stuck_at",
+   "load": [
+    "1111"
+   ],
+   "pi": "10",
+   "po_before_capture": "1111",
+   "captures": 1,
+   "unload": [
+    "1111"
+   ]
+  },
+  {
+   "id": 8,
+   "model": "stuck_at",
+   "load": [
+    "0100"
+   ],
+   "pi": "11",
+   "po_before_capture": "0100",
+   "captures": 1,
+   "unload": [
+    "1100"
+   ]
+  },
+  {
+   "id": 9,
+   "model": "stuck_at",
+   "load": [
+    "1110"
+   ],
+   "pi": "11",
+   "po_before_capture": "1110",
+   "captures": 1,
+   "unload": [
+    "0001"
+   ]
+  },
+  {
+   "id": 10,
+   "model": "transition_loc",
+   "load": [
+    "1110"
+   ],
+   "pi": "11",
+   "po_before_capture": "1110",
+   "captures": 2,
+   "unload": [
+    "1001"
+   ]
+  },
+  {
+   "id": 11,
+   "model": "transition_loc",
+   "load": [
+    "1000"
+   ],
+   "pi": "11",
+   "po_before_capture": "1000",
+   "captures": 2,
+   "unload": [
+    "1100"
+   ]
+  },
+  {
+   "id": 12,
+   "model": "transition_loc",
+   "load": [
+    "0010"
+   ],
+   "pi": "11",
+   "po_before_capture": "0010",
+   "captures": 2,
+   "unload": [
+    "0110"
+   ]
+  },
+  {
+   "id": 13,
+   "model": "transition_loc",
+   "load": [
+    "0110"
+   ],
+   "pi": "11",
+   "po_before_capture": "0110",
+   "captures": 2,
+   "unload": [
+    "0001"
+   ]
+  },
+  {
+   "id": 14,
+   "model": "transition_loc",
+   "load": [
+    "0100"
+   ],
+   "pi": "11",
+   "po_before_capture": "0100",
+   "captures": 2,
+   "unload": [
+    "0010"
+   ]
+  },
+  {
+   "id": 15,
+   "model": "transition_loc",
+   "load": [
+    "1101"
+   ],
+   "pi": "11",
+   "po_before_capture": "1101",
+   "captures": 2,
+   "unload": [
+    "1011"
+   ]
+  },
+  {
+   "id": 16,
+   "model": "transition_loc",
+   "load": [
+    "0111"
+   ],
+   "pi": "11",
+   "po_before_capture": "0111",
+   "captures": 2,
+   "unload": [
+    "0000"
+   ]
+  },
+  {
+   "id": 17,
+   "model": "transition_loc",
+   "load": [
+    "1111"
+   ],
+   "pi": "11",
+   "po_before_capture": "1111",
+   "captures": 2,
+   "unload": [
+    "1000"
+   ]
+  }
+ ]
+}

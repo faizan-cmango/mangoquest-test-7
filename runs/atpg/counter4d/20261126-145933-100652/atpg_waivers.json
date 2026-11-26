@@ -1,0 +1,752 @@
+{
+ "block": "counter4d",
+ "waivers": [
+  {
+   "id": "W-01",
+   "model": "stuck_at",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$128.A sa0",
+   "class": "untestable_proven",
+   "site": {
+    "net": "0",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$128",
+    "pin": "A"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$135"
+   ],
+   "reason": "no pattern detects it, with every capture constraint released",
+   "proof": "UNSAT with every capture constraint released (exhaustive over 6 inputs)"
+  },
+  {
+   "id": "W-02",
+   "model": "stuck_at",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$130.A sa0",
+   "class": "untestable_proven",
+   "site": {
+    "net": "0",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$130",
+    "pin": "A"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$136"
+   ],
+   "reason": "no pattern detects it, with every capture constraint released",
+   "proof": "UNSAT with every capture constraint released (exhaustive over 5 inputs)"
+  },
+  {
+   "id": "W-03",
+   "model": "stuck_at",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$132.A sa0",
+   "class": "untestable_proven",
+   "site": {
+    "net": "0",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$132",
+    "pin": "A"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$137"
+   ],
+   "reason": "no pattern detects it, with every capture constraint released",
+   "proof": "UNSAT with every capture constraint released (exhaustive over 4 inputs)"
+  },
+  {
+   "id": "W-04",
+   "model": "stuck_at",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$134.A sa0",
+   "class": "untestable_proven",
+   "site": {
+    "net": "0",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$134",
+    "pin": "A"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$138"
+   ],
+   "reason": "no pattern detects it, with every capture constraint released",
+   "proof": "UNSAT with every capture constraint released (exhaustive over 3 inputs)"
+  },
+  {
+   "id": "W-05",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$127.A stf",
+   "class": "au_pi_held",
+   "site": {
+    "net": "cnt_value_ff[3]",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$127",
+    "pin": "A"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$135"
+   ],
+   "reason": "the launch needs a primary input to change between launch and capture, and primary inputs are held",
+   "proof": "UNSAT with the primary inputs held (exhaustive over 6 inputs); SAT with them free between launch and capture (exhaustive over 8 inputs)"
+  },
+  {
+   "id": "W-06",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$127.A str",
+   "class": "au_pi_held",
+   "site": {
+    "net": "cnt_value_ff[3]",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$127",
+    "pin": "A"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$135"
+   ],
+   "reason": "the launch needs a primary input to change between launch and capture, and primary inputs are held",
+   "proof": "UNSAT with the primary inputs held (exhaustive over 6 inputs); SAT with them free between launch and capture (exhaustive over 8 inputs)"
+  },
+  {
+   "id": "W-07",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$127.S stf",
+   "class": "au_pi_held",
+   "site": {
+    "net": "en",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$127",
+    "pin": "S"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$135"
+   ],
+   "reason": "the launch needs a primary input to change between launch and capture, and primary inputs are held",
+   "proof": "UNSAT with the primary inputs held (exhaustive over 6 inputs); SAT with them free between launch and capture (exhaustive over 8 inputs)"
+  },
+  {
+   "id": "W-08",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$127.S str",
+   "class": "au_pi_held",
+   "site": {
+    "net": "en",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$127",
+    "pin": "S"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$135"
+   ],
+   "reason": "the launch needs a primary input to change between launch and capture, and primary inputs are held",
+   "proof": "UNSAT with the primary inputs held (exhaustive over 6 inputs); SAT with them free between launch and capture (exhaustive over 8 inputs)"
+  },
+  {
+   "id": "W-09",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$128.A stf",
+   "class": "untestable_proven",
+   "site": {
+    "net": "0",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$128",
+    "pin": "A"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$135"
+   ],
+   "reason": "no pattern detects it, with every capture constraint released",
+   "proof": "UNSAT with every capture constraint released (exhaustive over 8 inputs)"
+  },
+  {
+   "id": "W-10",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$128.A str",
+   "class": "untestable_proven",
+   "site": {
+    "net": "0",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$128",
+    "pin": "A"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$135"
+   ],
+   "reason": "no pattern detects it, with every capture constraint released",
+   "proof": "UNSAT with every capture constraint released (exhaustive over 8 inputs)"
+  },
+  {
+   "id": "W-11",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$128.S stf",
+   "class": "au_pi_held",
+   "site": {
+    "net": "rst_n",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$128",
+    "pin": "S"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$135"
+   ],
+   "reason": "the launch needs a primary input to change between launch and capture, and primary inputs are held",
+   "proof": "UNSAT with the primary inputs held (exhaustive over 6 inputs); SAT with them free between launch and capture (exhaustive over 8 inputs)"
+  },
+  {
+   "id": "W-12",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$128.S str",
+   "class": "untestable_proven",
+   "site": {
+    "net": "rst_n",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$128",
+    "pin": "S"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$135"
+   ],
+   "reason": "no pattern detects it, with every capture constraint released",
+   "proof": "UNSAT with every capture constraint released (exhaustive over 8 inputs)"
+  },
+  {
+   "id": "W-13",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$129.A stf",
+   "class": "au_pi_held",
+   "site": {
+    "net": "cnt_value_ff[2]",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$129",
+    "pin": "A"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$136"
+   ],
+   "reason": "the launch needs a primary input to change between launch and capture, and primary inputs are held",
+   "proof": "UNSAT with the primary inputs held (exhaustive over 5 inputs); SAT with them free between launch and capture (exhaustive over 7 inputs)"
+  },
+  {
+   "id": "W-14",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$129.A str",
+   "class": "au_pi_held",
+   "site": {
+    "net": "cnt_value_ff[2]",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$129",
+    "pin": "A"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$136"
+   ],
+   "reason": "the launch needs a primary input to change between launch and capture, and primary inputs are held",
+   "proof": "UNSAT with the primary inputs held (exhaustive over 5 inputs); SAT with them free between launch and capture (exhaustive over 7 inputs)"
+  },
+  {
+   "id": "W-15",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$129.S stf",
+   "class": "au_pi_held",
+   "site": {
+    "net": "en",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$129",
+    "pin": "S"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$136"
+   ],
+   "reason": "the launch needs a primary input to change between launch and capture, and primary inputs are held",
+   "proof": "UNSAT with the primary inputs held (exhaustive over 5 inputs); SAT with them free between launch and capture (exhaustive over 7 inputs)"
+  },
+  {
+   "id": "W-16",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$129.S str",
+   "class": "au_pi_held",
+   "site": {
+    "net": "en",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$129",
+    "pin": "S"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$136"
+   ],
+   "reason": "the launch needs a primary input to change between launch and capture, and primary inputs are held",
+   "proof": "UNSAT with the primary inputs held (exhaustive over 5 inputs); SAT with them free between launch and capture (exhaustive over 7 inputs)"
+  },
+  {
+   "id": "W-17",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$130.A stf",
+   "class": "untestable_proven",
+   "site": {
+    "net": "0",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$130",
+    "pin": "A"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$136"
+   ],
+   "reason": "no pattern detects it, with every capture constraint released",
+   "proof": "UNSAT with every capture constraint released (exhaustive over 7 inputs)"
+  },
+  {
+   "id": "W-18",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$130.A str",
+   "class": "untestable_proven",
+   "site": {
+    "net": "0",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$130",
+    "pin": "A"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$136"
+   ],
+   "reason": "no pattern detects it, with every capture constraint released",
+   "proof": "UNSAT with every capture constraint released (exhaustive over 7 inputs)"
+  },
+  {
+   "id": "W-19",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$130.S stf",
+   "class": "au_pi_held",
+   "site": {
+    "net": "rst_n",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$130",
+    "pin": "S"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$136"
+   ],
+   "reason": "the launch needs a primary input to change between launch and capture, and primary inputs are held",
+   "proof": "UNSAT with the primary inputs held (exhaustive over 5 inputs); SAT with them free between launch and capture (exhaustive over 7 inputs)"
+  },
+  {
+   "id": "W-20",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$130.S str",
+   "class": "untestable_proven",
+   "site": {
+    "net": "rst_n",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$130",
+    "pin": "S"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$136"
+   ],
+   "reason": "no pattern detects it, with every capture constraint released",
+   "proof": "UNSAT with every capture constraint released (exhaustive over 7 inputs)"
+  },
+  {
+   "id": "W-21",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$131.A stf",
+   "class": "au_pi_held",
+   "site": {
+    "net": "cnt_value_ff[1]",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$131",
+    "pin": "A"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$137"
+   ],
+   "reason": "the launch needs a primary input to change between launch and capture, and primary inputs are held",
+   "proof": "UNSAT with the primary inputs held (exhaustive over 4 inputs); SAT with them free between launch and capture (exhaustive over 6 inputs)"
+  },
+  {
+   "id": "W-22",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$131.A str",
+   "class": "au_pi_held",
+   "site": {
+    "net": "cnt_value_ff[1]",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$131",
+    "pin": "A"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$137"
+   ],
+   "reason": "the launch needs a primary input to change between launch and capture, and primary inputs are held",
+   "proof": "UNSAT with the primary inputs held (exhaustive over 4 inputs); SAT with them free between launch and capture (exhaustive over 6 inputs)"
+  },
+  {
+   "id": "W-23",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$131.S stf",
+   "class": "au_pi_held",
+   "site": {
+    "net": "en",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$131",
+    "pin": "S"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$137"
+   ],
+   "reason": "the launch needs a primary input to change between launch and capture, and primary inputs are held",
+   "proof": "UNSAT with the primary inputs held (exhaustive over 4 inputs); SAT with them free between launch and capture (exhaustive over 6 inputs)"
+  },
+  {
+   "id": "W-24",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$131.S str",
+   "class": "au_pi_held",
+   "site": {
+    "net": "en",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$131",
+    "pin": "S"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$137"
+   ],
+   "reason": "the launch needs a primary input to change between launch and capture, and primary inputs are held",
+   "proof": "UNSAT with the primary inputs held (exhaustive over 4 inputs); SAT with them free between launch and capture (exhaustive over 6 inputs)"
+  },
+  {
+   "id": "W-25",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$132.A stf",
+   "class": "untestable_proven",
+   "site": {
+    "net": "0",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$132",
+    "pin": "A"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$137"
+   ],
+   "reason": "no pattern detects it, with every capture constraint released",
+   "proof": "UNSAT with every capture constraint released (exhaustive over 6 inputs)"
+  },
+  {
+   "id": "W-26",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$132.A str",
+   "class": "untestable_proven",
+   "site": {
+    "net": "0",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$132",
+    "pin": "A"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$137"
+   ],
+   "reason": "no pattern detects it, with every capture constraint released",
+   "proof": "UNSAT with every capture constraint released (exhaustive over 6 inputs)"
+  },
+  {
+   "id": "W-27",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$132.S stf",
+   "class": "au_pi_held",
+   "site": {
+    "net": "rst_n",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$132",
+    "pin": "S"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$137"
+   ],
+   "reason": "the launch needs a primary input to change between launch and capture, and primary inputs are held",
+   "proof": "UNSAT with the primary inputs held (exhaustive over 4 inputs); SAT with them free between launch and capture (exhaustive over 6 inputs)"
+  },
+  {
+   "id": "W-28",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$132.S str",
+   "class": "untestable_proven",
+   "site": {
+    "net": "rst_n",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$132",
+    "pin": "S"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$137"
+   ],
+   "reason": "no pattern detects it, with every capture constraint released",
+   "proof": "UNSAT with every capture constraint released (exhaustive over 6 inputs)"
+  },
+  {
+   "id": "W-29",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$133.A stf",
+   "class": "au_pi_held",
+   "site": {
+    "net": "cnt_value_ff[0]",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$133",
+    "pin": "A"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$138"
+   ],
+   "reason": "the launch needs a primary input to change between launch and capture, and primary inputs are held",
+   "proof": "UNSAT with the primary inputs held (exhaustive over 3 inputs); SAT with them free between launch and capture (exhaustive over 5 inputs)"
+  },
+  {
+   "id": "W-30",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$133.A str",
+   "class": "au_pi_held",
+   "site": {
+    "net": "cnt_value_ff[0]",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$133",
+    "pin": "A"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$138"
+   ],
+   "reason": "the launch needs a primary input to change between launch and capture, and primary inputs are held",
+   "proof": "UNSAT with the primary inputs held (exhaustive over 3 inputs); SAT with them free between launch and capture (exhaustive over 5 inputs)"
+  },
+  {
+   "id": "W-31",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$133.S stf",
+   "class": "au_pi_held",
+   "site": {
+    "net": "en",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$133",
+    "pin": "S"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$138"
+   ],
+   "reason": "the launch needs a primary input to change between launch and capture, and primary inputs are held",
+   "proof": "UNSAT with the primary inputs held (exhaustive over 3 inputs); SAT with them free between launch and capture (exhaustive over 5 inputs)"
+  },
+  {
+   "id": "W-32",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$133.S str",
+   "class": "au_pi_held",
+   "site": {
+    "net": "en",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$133",
+    "pin": "S"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$138"
+   ],
+   "reason": "the launch needs a primary input to change between launch and capture, and primary inputs are held",
+   "proof": "UNSAT with the primary inputs held (exhaustive over 3 inputs); SAT with them free between launch and capture (exhaustive over 5 inputs)"
+  },
+  {
+   "id": "W-33",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$134.A stf",
+   "class": "untestable_proven",
+   "site": {
+    "net": "0",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$134",
+    "pin": "A"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$138"
+   ],
+   "reason": "no pattern detects it, with every capture constraint released",
+   "proof": "UNSAT with every capture constraint released (exhaustive over 5 inputs)"
+  },
+  {
+   "id": "W-34",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$134.A str",
+   "class": "untestable_proven",
+   "site": {
+    "net": "0",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$134",
+    "pin": "A"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$138"
+   ],
+   "reason": "no pattern detects it, with every capture constraint released",
+   "proof": "UNSAT with every capture constraint released (exhaustive over 5 inputs)"
+  },
+  {
+   "id": "W-35",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$134.S stf",
+   "class": "au_pi_held",
+   "site": {
+    "net": "rst_n",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$134",
+    "pin": "S"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$138"
+   ],
+   "reason": "the launch needs a primary input to change between launch and capture, and primary inputs are held",
+   "proof": "UNSAT with the primary inputs held (exhaustive over 3 inputs); SAT with them free between launch and capture (exhaustive over 5 inputs)"
+  },
+  {
+   "id": "W-36",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:275:simplemap_mux$134.S str",
+   "class": "au_pi_held",
+   "site": {
+    "net": "rst_n",
+    "cell": "$auto$simplemap.cc:275:simplemap_mux$134",
+    "pin": "S"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$138"
+   ],
+   "reason": "the launch needs a primary input to change between launch and capture, and primary inputs are held",
+   "proof": "UNSAT with the primary inputs held (exhaustive over 3 inputs); SAT with them free between launch and capture (exhaustive over 5 inputs)"
+  },
+  {
+   "id": "W-37",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:83:simplemap_bitop$121.A stf",
+   "class": "untestable_proven",
+   "site": {
+    "net": "cnt_value_ff[1]",
+    "cell": "$auto$simplemap.cc:83:simplemap_bitop$121",
+    "pin": "A"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$135",
+    "$auto$ff.cc:266:slice$136"
+   ],
+   "reason": "no pattern detects it, with every capture constraint released",
+   "proof": "UNSAT with every capture constraint released (exhaustive over 8 inputs)"
+  },
+  {
+   "id": "W-38",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:83:simplemap_bitop$121.A str",
+   "class": "untestable_proven",
+   "site": {
+    "net": "cnt_value_ff[1]",
+    "cell": "$auto$simplemap.cc:83:simplemap_bitop$121",
+    "pin": "A"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$135",
+    "$auto$ff.cc:266:slice$136"
+   ],
+   "reason": "no pattern detects it, with every capture constraint released",
+   "proof": "UNSAT with every capture constraint released (exhaustive over 8 inputs)"
+  },
+  {
+   "id": "W-39",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:83:simplemap_bitop$125.A stf",
+   "class": "untestable_proven",
+   "site": {
+    "net": "cnt_value_ff[2]",
+    "cell": "$auto$simplemap.cc:83:simplemap_bitop$125",
+    "pin": "A"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$135"
+   ],
+   "reason": "no pattern detects it, with every capture constraint released",
+   "proof": "UNSAT with every capture constraint released (exhaustive over 8 inputs)"
+  },
+  {
+   "id": "W-40",
+   "model": "transition",
+   "fault": "$auto$simplemap.cc:83:simplemap_bitop$125.A str",
+   "class": "untestable_proven",
+   "site": {
+    "net": "cnt_value_ff[2]",
+    "cell": "$auto$simplemap.cc:83:simplemap_bitop$125",
+    "pin": "A"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$135"
+   ],
+   "reason": "no pattern detects it, with every capture constraint released",
+   "proof": "UNSAT with every capture constraint released (exhaustive over 8 inputs)"
+  },
+  {
+   "id": "W-41",
+   "model": "transition",
+   "fault": "en stf",
+   "class": "au_pi_held",
+   "site": {
+    "net": "en",
+    "cell": "en",
+    "pin": "en"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$138"
+   ],
+   "reason": "the launch needs a primary input to change between launch and capture, and primary inputs are held",
+   "proof": "UNSAT with the primary inputs held (exhaustive over 6 inputs); SAT with them free between launch and capture (exhaustive over 8 inputs)"
+  },
+  {
+   "id": "W-42",
+   "model": "transition",
+   "fault": "en str",
+   "class": "au_pi_held",
+   "site": {
+    "net": "en",
+    "cell": "en",
+    "pin": "en"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$138"
+   ],
+   "reason": "the launch needs a primary input to change between launch and capture, and primary inputs are held",
+   "proof": "UNSAT with the primary inputs held (exhaustive over 6 inputs); SAT with them free between launch and capture (exhaustive over 8 inputs)"
+  },
+  {
+   "id": "W-43",
+   "model": "transition",
+   "fault": "rst_n stf",
+   "class": "au_pi_held",
+   "site": {
+    "net": "rst_n",
+    "cell": "rst_n",
+    "pin": "rst_n"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$138"
+   ],
+   "reason": "the launch needs a primary input to change between launch and capture, and primary inputs are held",
+   "proof": "UNSAT with the primary inputs held (exhaustive over 6 inputs); SAT with them free between launch and capture (exhaustive over 8 inputs)"
+  },
+  {
+   "id": "W-44",
+   "model": "transition",
+   "fault": "rst_n str",
+   "class": "au_pi_held",
+   "site": {
+    "net": "rst_n",
+    "cell": "rst_n",
+    "pin": "rst_n"
+   },
+   "observed_by": [
+    "$auto$ff.cc:266:slice$138"
+   ],
+   "reason": "the launch needs a primary input to change between launch and capture, and primary inputs are held",
+   "proof": "UNSAT with the primary inputs held (exhaustive over 6 inputs); SAT with them free between launch and capture (exhaustive over 8 inputs)"
+  }
+ ],
+ "uncovered": [],
+ "by_net": [
+  {
+   "net": "0",
+   "total": 12,
+   "untestable_proven": 12
+  },
+  {
+   "net": "cnt_value_ff[3]",
+   "total": 2,
+   "au_pi_held": 2
+  },
+  {
+   "net": "en",
+   "total": 10,
+   "au_pi_held": 10
+  },
+  {
+   "net": "rst_n",
+   "total": 10,
+   "au_pi_held": 7,
+   "untestable_proven": 3
+  },
+  {
+   "net": "cnt_value_ff[2]",
+   "total": 4,
+   "au_pi_held": 2,
+   "untestable_proven": 2
+  },
+  {
+   "net": "cnt_value_ff[1]",
+   "total": 4,
+   "au_pi_held": 2,
+   "untestable_proven": 2
+  },
+  {
+   "net": "cnt_value_ff[0]",
+   "total": 2,
+   "au_pi_held": 2
+  }
+ ]
+}

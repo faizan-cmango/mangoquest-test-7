@@ -1,0 +1,5 @@
+TOLA-DFT-005 error ports: no test_mode port and the DSR does not say scan_en doubles as test_mode
+TOLA-DFT-010 info dsr.scan.at_speed_validation: not stated
+TOLA-DFT-019 warning dsr.scan.scan_en_fanout: None, the netlist's fan-out is 4
+TOLA-DFT-023 info gatesim_results: skipped: missing_input (gatesim_results)
+TOLA-DFT-030 info atpg_report.atpg.fault_models: LOW block tested with ['stuck_at', 'transition_loc']: the review pass judges the choice
