@@ -1,0 +1,40 @@
+{
+  "kind": "lint",
+  "schema_version": 2,
+  "tool": "style_lint",
+  "block": "counter4d",
+  "inputs": [
+    {
+      "path": "rtl/counter4d.sv",
+      "version": 3,
+      "sha256": "sha256:15c6aa3a5cc68b3251cde7d7b805031381dfdfeb3a59c4cb36dba255e7014b0a"
+    }
+  ],
+  "timed_out": false,
+  "stopped": "",
+  "image": "quest-eda-tools:2026.11.1",
+  "tool_version": "",
+  "top": "",
+  "clean": true,
+  "errors": [],
+  "warnings": [],
+  "error_count": 0,
+  "warning_count": 0,
+  "failure": "",
+  "pack": "kemi-lint@1.2.0",
+  "pack_clean": false,
+  "pack_error_count": 1,
+  "pack_findings": [
+    {
+      "rule": "KEMI-STY-041",
+      "check": "ast:banner_citations",
+      "severity": "error",
+      "file": "rtl/counter4d.sv",
+      "line": 32,
+      "message": "a sub-banner that does not cite its REQ-IDs as the pattern asks",
+      "waived": false
+    }
+  ],
+  "pack_not_evaluated": {},
+  "self_check_clean": false
+}

@@ -1,0 +1,360 @@
+{
+  "kind": "sta",
+  "schema_version": 1,
+  "tool": "sta",
+  "block": "counter4d",
+  "inputs": [
+    {
+      "path": "rtl/counter4d.sv",
+      "version": 1,
+      "sha256": "sha256:2567778adb9afcbb10515e9bc0764ee97246a241ec88b6d11aabbe3941283a49"
+    },
+    {
+      "path": "rtl/counter4d.sdc",
+      "version": 1,
+      "sha256": "sha256:6473595727faa3cf8a743cb5a6d4683d1852d1400575ffccf863124fe1d434e9"
+    }
+  ],
+  "timed_out": false,
+  "stopped": "",
+  "image": "quest-eda-tools:2026.11.1",
+  "tool_version": "",
+  "top": "counter4d",
+  "sdc": "rtl/counter4d.sdc",
+  "held": {},
+  "ok": true,
+  "met": true,
+  "clocks": [
+    {
+      "name": "clk",
+      "period": 10.0
+    }
+  ],
+  "corners": [
+    {
+      "corner": "tt",
+      "liberty": "sky130_fd_sc_hd__tt_025C_1v80",
+      "ran": true,
+      "setup": {
+        "wns": 7.5338,
+        "tns": 0.0,
+        "groups": [
+          {
+            "name": "clk",
+            "wns": 7.5338,
+            "tns": 0.0,
+            "endpoints": 8,
+            "violations": 0,
+            "complete": true,
+            "worst_paths": [
+              {
+                "startpoint": "en",
+                "endpoint": "_22_",
+                "slack": 7.5338,
+                "arrival": 2.3468,
+                "required": 9.8806
+              },
+              {
+                "startpoint": "en",
+                "endpoint": "_21_",
+                "slack": 7.5602,
+                "arrival": 2.324,
+                "required": 9.8842
+              },
+              {
+                "startpoint": "en",
+                "endpoint": "_20_",
+                "slack": 7.6134,
+                "arrival": 2.3069,
+                "required": 9.9202
+              },
+              {
+                "startpoint": "_23_",
+                "endpoint": "count[0]",
+                "slack": 7.671,
+                "arrival": 0.329,
+                "required": 8.0
+              },
+              {
+                "startpoint": "_20_",
+                "endpoint": "count[1]",
+                "slack": 7.6972,
+                "arrival": 0.3028,
+                "required": 8.0
+              }
+            ]
+          }
+        ]
+      },
+      "hold": {
+        "wns": 0.3999,
+        "tns": 0.0,
+        "groups": [
+          {
+            "name": "clk",
+            "wns": 0.3999,
+            "tns": 0.0,
+            "endpoints": 8,
+            "violations": 0,
+            "complete": true,
+            "worst_paths": [
+              {
+                "startpoint": "_22_",
+                "endpoint": "_22_",
+                "slack": 0.3999,
+                "arrival": 0.3438,
+                "required": -0.0561
+              },
+              {
+                "startpoint": "_23_",
+                "endpoint": "_23_",
+                "slack": 0.4478,
+                "arrival": 0.4056,
+                "required": -0.0421
+              },
+              {
+                "startpoint": "_21_",
+                "endpoint": "_21_",
+                "slack": 0.4665,
+                "arrival": 0.4263,
+                "required": -0.0402
+              },
+              {
+                "startpoint": "_20_",
+                "endpoint": "_20_",
+                "slack": 0.4939,
+                "arrival": 0.4367,
+                "required": -0.0572
+              },
+              {
+                "startpoint": "_21_",
+                "endpoint": "count[2]",
+                "slack": 2.2766,
+                "arrival": 0.2766,
+                "required": -2.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "corner": "ss",
+      "liberty": "sky130_fd_sc_hd__ss_100C_1v60",
+      "ran": true,
+      "setup": {
+        "wns": 6.9874,
+        "tns": 0.0,
+        "groups": [
+          {
+            "name": "clk",
+            "wns": 6.9874,
+            "tns": 0.0,
+            "endpoints": 8,
+            "violations": 0,
+            "complete": true,
+            "worst_paths": [
+              {
+                "startpoint": "en",
+                "endpoint": "_22_",
+                "slack": 6.9874,
+                "arrival": 2.7224,
+                "required": 9.7097
+              },
+              {
+                "startpoint": "en",
+                "endpoint": "_21_",
+                "slack": 7.041,
+                "arrival": 2.6761,
+                "required": 9.717
+              },
+              {
+                "startpoint": "en",
+                "endpoint": "_20_",
+                "slack": 7.2256,
+                "arrival": 2.5964,
+                "required": 9.822
+              },
+              {
+                "startpoint": "_23_",
+                "endpoint": "count[0]",
+                "slack": 7.3363,
+                "arrival": 0.6637,
+                "required": 8.0
+              },
+              {
+                "startpoint": "en",
+                "endpoint": "_23_",
+                "slack": 7.3701,
+                "arrival": 2.338,
+                "required": 9.7081
+              }
+            ]
+          }
+        ]
+      },
+      "hold": {
+        "wns": 0.809,
+        "tns": 0.0,
+        "groups": [
+          {
+            "name": "clk",
+            "wns": 0.809,
+            "tns": 0.0,
+            "endpoints": 8,
+            "violations": 0,
+            "complete": true,
+            "worst_paths": [
+              {
+                "startpoint": "_22_",
+                "endpoint": "_22_",
+                "slack": 0.809,
+                "arrival": 0.7165,
+                "required": -0.0925
+              },
+              {
+                "startpoint": "_23_",
+                "endpoint": "_23_",
+                "slack": 0.8635,
+                "arrival": 0.7709,
+                "required": -0.0926
+              },
+              {
+                "startpoint": "_20_",
+                "endpoint": "_20_",
+                "slack": 0.9531,
+                "arrival": 0.8381,
+                "required": -0.115
+              },
+              {
+                "startpoint": "_21_",
+                "endpoint": "_21_",
+                "slack": 0.9597,
+                "arrival": 0.8701,
+                "required": -0.0896
+              },
+              {
+                "startpoint": "_21_",
+                "endpoint": "count[2]",
+                "slack": 2.5443,
+                "arrival": 0.5443,
+                "required": -2.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "corner": "ff",
+      "liberty": "sky130_fd_sc_hd__ff_n40C_1v95",
+      "ran": true,
+      "setup": {
+        "wns": 7.7121,
+        "tns": 0.0,
+        "groups": [
+          {
+            "name": "clk",
+            "wns": 7.7121,
+            "tns": 0.0,
+            "endpoints": 8,
+            "violations": 0,
+            "complete": true,
+            "worst_paths": [
+              {
+                "startpoint": "en",
+                "endpoint": "_22_",
+                "slack": 7.7121,
+                "arrival": 2.217,
+                "required": 9.9292
+              },
+              {
+                "startpoint": "en",
+                "endpoint": "_21_",
+                "slack": 7.7277,
+                "arrival": 2.2021,
+                "required": 9.9298
+              },
+              {
+                "startpoint": "en",
+                "endpoint": "_20_",
+                "slack": 7.7635,
+                "arrival": 2.2014,
+                "required": 9.9649
+              },
+              {
+                "startpoint": "_23_",
+                "endpoint": "count[0]",
+                "slack": 7.7897,
+                "arrival": 0.2103,
+                "required": 8.0
+              },
+              {
+                "startpoint": "_20_",
+                "endpoint": "count[1]",
+                "slack": 7.8093,
+                "arrival": 0.1907,
+                "required": 8.0
+              }
+            ]
+          }
+        ]
+      },
+      "hold": {
+        "wns": 0.2497,
+        "tns": 0.0,
+        "groups": [
+          {
+            "name": "clk",
+            "wns": 0.2497,
+            "tns": 0.0,
+            "endpoints": 8,
+            "violations": 0,
+            "complete": true,
+            "worst_paths": [
+              {
+                "startpoint": "_22_",
+                "endpoint": "_22_",
+                "slack": 0.2497,
+                "arrival": 0.2123,
+                "required": -0.0374
+              },
+              {
+                "startpoint": "_23_",
+                "endpoint": "_23_",
+                "slack": 0.282,
+                "arrival": 0.2446,
+                "required": -0.0374
+              },
+              {
+                "startpoint": "_21_",
+                "endpoint": "_21_",
+                "slack": 0.284,
+                "arrival": 0.2652,
+                "required": -0.0188
+              },
+              {
+                "startpoint": "_20_",
+                "endpoint": "_20_",
+                "slack": 0.2947,
+                "arrival": 0.2553,
+                "required": -0.0394
+              },
+              {
+                "startpoint": "_21_",
+                "endpoint": "count[2]",
+                "slack": 2.1769,
+                "arrival": 0.1769,
+                "required": -2.0
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "cell_count": 14,
+  "area": 136.3808,
+  "errors": [],
+  "warning_count": 0
+}

@@ -1,0 +1,446 @@
+agent: kemi
+block: counter4d
+goal: implement_block
+signoff_level: oss
+self_check:
+- code: KEMI_001
+  check: lint
+  result: pass
+  report:
+    kind: lint
+    tool: verilator_lint
+    block: counter4d
+    path: runs/verilator_lint/counter4d/20261126-144250-ac108c/report.json
+    version: 1
+    file_id: 0805bbd0-d2ea-4ada-adf4-1509dd044bb0
+    stale: false
+  note: verilator_lint is clean
+  step: step1_lint
+- code: KEMI_001
+  check: style_lint
+  result: pass
+  report:
+    kind: lint
+    tool: style_lint
+    block: counter4d
+    path: runs/style_lint/counter4d/20261126-144251-af5e9e/report.json
+    version: 1
+    file_id: b2d92943-26ec-4667-baed-e64075a26f98
+    stale: false
+  note: no kemi-lint@1.2.0 error finding that is not waived; outputs_flopped_pct 100.0%
+    (1 of 1 outputs flopped, 0 unflopped) (KEMI-STY-025 checked against spec/counter4d/idd/counter_io.yaml@1)
+  step: step1_lint
+- code: KEMI_002
+  check: sim
+  result: pass
+  report:
+    kind: sim
+    tool: verilator_sim
+    block: counter4d
+    path: runs/verilator_sim/counter4d/20261126-144312-24c916/report.json
+    version: 1
+    file_id: f8505e73-85d7-445c-ac62-aee4cdfd29f1
+    stale: false
+  note: the unit-level testbench tb_counter4d passed in every run on the RTL as it
+    is
+  step: step2_sim
+- code: KEMI_002
+  check: ult
+  result: pass
+  report:
+    kind: sim
+    tool: verilator_sim
+    block: counter4d
+    path: runs/verilator_sim/counter4d/20261126-144312-24c916/report.json
+    version: 1
+    file_id: f8505e73-85d7-445c-ac62-aee4cdfd29f1
+    stale: false
+  note: the unit-level testbench lists its tests (6 VPS scenarios; reset, X after
+    reset and deadlock cases) and is clean of the pack's testbench rules
+  step: step2_sim
+- code: KEMI_003
+  check: synth
+  result: pass
+  report:
+    kind: synth
+    tool: yosys_synth
+    block: counter4d
+    path: runs/yosys_synth/counter4d/20261126-144251-225198/report.json
+    version: 1
+    file_id: 7c8c4d32-ec3a-4c53-a926-8cd1efc4e175
+    stale: false
+  note: synthesis is clean and latch-free
+  step: step4b_signoff
+- code: KEMI_004
+  check: req_coverage
+  result: pass
+  report:
+    kind: req_coverage
+    tool: req_coverage
+    block: counter4d
+    path: runs/req_coverage/counter4d/20261126-144248-721ef6/report.json
+    version: 1
+    file_id: 0090b5fb-e8fd-48f9-a356-f1e0f47fcc88
+    stale: false
+  note: every requirement of the block is named where it is implemented
+  step: step3_reqcov
+- code: KEMI_006
+  check: cdc
+  result: pass
+  report:
+    kind: cdc
+    tool: cdc_check
+    block: counter4d
+    path: runs/cdc_check/counter4d/20261126-144251-4fd571/report.json
+    version: 1
+    file_id: 85306fb0-475c-4b69-8d2e-0691e4c8e0b2
+    stale: false
+  note: cdc_check is clean (oss-structural)
+  step: step4a_cdc
+- code: KEMI_015
+  check: icarus
+  result: pass
+  report:
+    kind: sim
+    tool: iverilog_sim
+    block: counter4d
+    path: runs/iverilog_sim/counter4d/20261126-144253-ccbc2b/report.json
+    version: 1
+    file_id: c6513f74-8f7b-4241-822f-b68ba2bbff8b
+    stale: false
+  note: the RTL compiles with Icarus -g2012
+  step: step2_sim
+- code: KEMI_011
+  check: timing
+  result: pass
+  report:
+    kind: sta
+    tool: sta
+    block: counter4d
+    path: runs/sta/counter4d/20261126-144258-bb3d5a/report.json
+    version: 1
+    file_id: d55b201e-6a61-4a76-80d6-d75bbfae3992
+    stale: false
+  note: timing is met at every corner
+  step: step4b_signoff
+- code: KEMI_016
+  check: targets
+  result: not_run
+  note: the package sets the block no target
+  step: step4b_signoff
+rtm_delta:
+  agent: kemi
+  block: counter4d
+  entries:
+  - req_id: REQ-3.1.1
+    artefacts:
+    - rtl/counter4d.sv
+    - rtl/counter4d.sdc
+    - tb/tb_counter4d.sv
+    status: implemented
+    rtl_signals:
+    - cnt_value_ff
+    - rst_n
+    rtl_files:
+    - rtl/counter4d.sv
+    test_ids: []
+    properties: []
+  - req_id: REQ-3.1.2
+    artefacts:
+    - rtl/counter4d.sv
+    - tb/tb_counter4d.sv
+    status: implemented
+    rtl_signals:
+    - cnt_value_next
+    - en
+    rtl_files:
+    - rtl/counter4d.sv
+    test_ids: []
+    properties: []
+  - req_id: REQ-3.1.3
+    artefacts:
+    - rtl/counter4d.sv
+    - tb/tb_counter4d.sv
+    status: implemented
+    rtl_signals:
+    - cnt_value_next
+    rtl_files:
+    - rtl/counter4d.sv
+    test_ids: []
+    properties: []
+  - req_id: REQ-3.1.4
+    artefacts:
+    - rtl/counter4d.sv
+    - tb/tb_counter4d.sv
+    status: implemented
+    rtl_signals:
+    - cnt_value_next
+    rtl_files:
+    - rtl/counter4d.sv
+    test_ids: []
+    properties: []
+  - req_id: REQ-3.1.5
+    artefacts:
+    - rtl/counter4d.sv
+    - rtl/counter4d.sdc
+    - tb/tb_counter4d.sv
+    status: implemented
+    rtl_signals:
+    - cnt_value_ff
+    - clk
+    rtl_files:
+    - rtl/counter4d.sv
+    test_ids: []
+    properties: []
+  - req_id: REQ-3.1.6
+    artefacts:
+    - rtl/counter4d.sv
+    - tb/tb_counter4d.sv
+    status: implemented
+    rtl_signals:
+    - count
+    rtl_files:
+    - rtl/counter4d.sv
+    test_ids: []
+    properties: []
+block_spec_sheet:
+  block: counter4d
+  top: counter4d
+  ports:
+  - name: clk
+    dir: in
+    width: 1
+  - name: rst_n
+    dir: in
+    width: 1
+  - name: en
+    dir: in
+    width: 1
+  - name: count
+    dir: out
+    width: 4
+  clocks:
+  - name: clk
+    freq_mhz: 100.0
+  resets:
+  - name: rst_n
+    polarity: active_low
+    style: sync
+  parameters: {}
+  area:
+    cells: 14
+    area_um2: 136.3808
+    liberty: sky130_fd_sc_hd__tt_025C_1v80
+  timing:
+    target_period_ns: 10.0
+    wns_ns: 7.0368
+    tns_ns: 0.0
+    met: true
+    corner: ss
+    top_paths:
+      other:
+      - startpoint: en
+        endpoint: _23_
+        slack_ns: 7.0368
+      - startpoint: en
+        endpoint: _22_
+        slack_ns: 7.0802
+      - startpoint: en
+        endpoint: _21_
+        slack_ns: 7.2649
+      - startpoint: _20_
+        endpoint: count[0]
+        slack_ns: 7.3345
+      - startpoint: en
+        endpoint: _20_
+        slack_ns: 7.3534
+  notes: []
+  purpose: 4-bit wrapping up-counter, enable, synchronous active-low reset.
+  prefixes:
+  - cnt
+  partition: []
+  modules:
+  - name: counter4d
+    registers: 1
+  fsms: []
+  registers_by_prefix:
+    cnt:
+    - counter4d.cnt_value_ff
+  flops: 4
+  debug_notes: probe cnt_value_ff first, then en and rst_n; add wave cnt_*
+  known_gotchas: count is undefined until the first rising edge with rst_n 0 (ADR-03).
+artefacts:
+- path: rtl/counter4d.sv
+  role: rtl
+- path: tb/tb_counter4d.sv
+  role: ult
+- path: rtl/counter4d.sdc
+  role: sdc
+- path: runs/yosys_synth/counter4d/20261126-144251-225198/netlist.v
+  role: netlist
+reports:
+- kind: lint
+  tool: verilator_lint
+  block: counter4d
+  path: runs/verilator_lint/counter4d/20261126-144250-ac108c/report.json
+  version: 1
+  file_id: 0805bbd0-d2ea-4ada-adf4-1509dd044bb0
+  stale: false
+- kind: lint
+  tool: style_lint
+  block: counter4d
+  path: runs/style_lint/counter4d/20261126-144251-af5e9e/report.json
+  version: 1
+  file_id: b2d92943-26ec-4667-baed-e64075a26f98
+  stale: false
+- kind: sim
+  tool: verilator_sim
+  block: counter4d
+  path: runs/verilator_sim/counter4d/20261126-144312-24c916/report.json
+  version: 1
+  file_id: f8505e73-85d7-445c-ac62-aee4cdfd29f1
+  stale: false
+- kind: synth
+  tool: yosys_synth
+  block: counter4d
+  path: runs/yosys_synth/counter4d/20261126-144251-225198/report.json
+  version: 1
+  file_id: 7c8c4d32-ec3a-4c53-a926-8cd1efc4e175
+  stale: false
+- kind: req_coverage
+  tool: req_coverage
+  block: counter4d
+  path: runs/req_coverage/counter4d/20261126-144248-721ef6/report.json
+  version: 1
+  file_id: 0090b5fb-e8fd-48f9-a356-f1e0f47fcc88
+  stale: false
+- kind: cdc
+  tool: cdc_check
+  block: counter4d
+  path: runs/cdc_check/counter4d/20261126-144251-4fd571/report.json
+  version: 1
+  file_id: 85306fb0-475c-4b69-8d2e-0691e4c8e0b2
+  stale: false
+- kind: sim
+  tool: iverilog_sim
+  block: counter4d
+  path: runs/iverilog_sim/counter4d/20261126-144253-ccbc2b/report.json
+  version: 1
+  file_id: c6513f74-8f7b-4241-822f-b68ba2bbff8b
+  stale: false
+- kind: sta
+  tool: sta
+  block: counter4d
+  path: runs/sta/counter4d/20261126-144258-bb3d5a/report.json
+  version: 1
+  file_id: d55b201e-6a61-4a76-80d6-d75bbfae3992
+  stale: false
+rationale:
+  inputs:
+  - path: docs/feasibility/counter4d/counter4d.sv
+    version: 1
+  - path: spec/counter4d/brs.yaml
+    version: 1
+  - path: spec/counter4d/clocks.yaml
+    version: 1
+  - path: spec/counter4d/decisions.yaml
+    version: 2
+  - path: spec/counter4d/errata.yaml
+    version: 1
+  - path: spec/counter4d/idd/counter_io.yaml
+    version: 1
+  - path: spec/counter4d/riskmap.yaml
+    version: 1
+  - path: spec/counter4d/rtm.yaml
+    version: 1
+  - path: spec/counter4d/sad.md
+    version: 2
+  - path: spec/counter4d/sad.yaml
+    version: 2
+  - path: spec/counter4d/vps.yaml
+    version: 2
+  assumptions: []
+  alternatives: []
+  provenance:
+    rule_pack: kemi-lint@1.2.0
+    tools:
+    - cdc_check
+    - iverilog_sim
+    - req_coverage
+    - sta
+    - style_lint
+    - verilator_lint
+    - verilator_sim
+    - yosys_synth
+    signoff_level: oss
+targets_met: true
+challenges_raised: []
+review:
+  file: rtl/review/counter4d.yaml
+  rules:
+  - rule: KEMI-STY-002
+    status: pass
+    finding: header complete
+    location: rtl/counter4d.sv
+  - rule: KEMI-STY-004
+    status: pass
+    finding: none
+    location: rtl/counter4d.sv
+  - rule: KEMI-STY-010
+    status: pass
+    finding: no case needed
+    location: rtl/counter4d.sv
+  - rule: KEMI-STY-012
+    status: pass
+    finding: none
+    location: rtl/counter4d.sv
+  - rule: KEMI-STY-016
+    status: pass
+    finding: one always_ff
+    location: rtl/counter4d.sv
+  - rule: KEMI-STY-019
+    status: pass
+    finding: none
+    location: rtl/counter4d.sv
+  - rule: KEMI-STY-023
+    status: pass
+    finding: single clock
+    location: rtl/counter4d.sv
+  - rule: KEMI-STY-033
+    status: pass
+    finding: none
+    location: rtl/counter4d.sv
+  - rule: KEMI-STY-042
+    status: pass
+    finding: debug notes present
+    location: rtl/counter4d.sv
+  - rule: KEMI-STY-043
+    status: pass
+    finding: none
+    location: rtl/counter4d.sv
+  - rule: KEMI-STY-044
+    status: pass
+    finding: none
+    location: rtl/counter4d.sv
+  - rule: KEMI-STY-050
+    status: pass
+    finding: none
+    location: rtl/counter4d.sv
+  - rule: KEMI-STY-051
+    status: pass
+    finding: none
+    location: rtl/counter4d.sv
+  - rule: KEMI-STY-053
+    status: pass
+    finding: none
+    location: rtl/counter4d.sv
+  - rule: KEMI-STY-054
+    status: pass
+    finding: no FSM or handshake
+    location: rtl/counter4d.sv
+  - rule: KEMI-STY-091
+    status: pass
+    finding: none
+    location: rtl/counter4d.sv
+  findings: 0
+  not_reviewed: []

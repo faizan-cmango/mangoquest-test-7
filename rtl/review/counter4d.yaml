@@ -1,0 +1,18 @@
+block: counter4d
+findings:
+  - {rule: KEMI-STY-002, status: pass, finding: header complete, location: rtl/counter4d.sv}
+  - {rule: KEMI-STY-004, status: pass, finding: none, location: rtl/counter4d.sv}
+  - {rule: KEMI-STY-010, status: pass, finding: no case needed, location: rtl/counter4d.sv}
+  - {rule: KEMI-STY-012, status: pass, finding: none, location: rtl/counter4d.sv}
+  - {rule: KEMI-STY-016, status: pass, finding: one always_ff, one feature, location: rtl/counter4d.sv}
+  - {rule: KEMI-STY-019, status: pass, finding: none, location: rtl/counter4d.sv}
+  - {rule: KEMI-STY-023, status: pass, finding: single clock, no crossing, location: rtl/counter4d.sv}
+  - {rule: KEMI-STY-033, status: pass, finding: none, location: rtl/counter4d.sv}
+  - {rule: KEMI-STY-042, status: pass, finding: debug notes present, location: rtl/counter4d.sv}
+  - {rule: KEMI-STY-043, status: pass, finding: none, location: rtl/counter4d.sv}
+  - {rule: KEMI-STY-044, status: pass, finding: none, location: rtl/counter4d.sv}
+  - {rule: KEMI-STY-050, status: pass, finding: none, location: rtl/counter4d.sv}
+  - {rule: KEMI-STY-051, status: pass, finding: none, location: rtl/counter4d.sv}
+  - {rule: KEMI-STY-053, status: pass, finding: none, location: rtl/counter4d.sv}
+  - {rule: KEMI-STY-054, status: pass, finding: no FSM or handshake, location: rtl/counter4d.sv}
+  - {rule: KEMI-STY-091, status: pass, finding: none, location: rtl/counter4d.sv}
