@@ -1,0 +1,2055 @@
+== liberty (exit 0)
+
+== synth (exit 0)
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2025  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.52 (git sha1 fee39a3284c90249e1d9684cf6944ffbbcbb8f90)
+
+-- Executing script file `.quest/synth.ys' --
+
+1. Executing Verilog-2005 frontend: rtl/counter4d.sv
+Parsing SystemVerilog input from `rtl/counter4d.sv' to AST representation.
+Generating RTLIL representation for module `\counter4d'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \counter4d
+
+2.2. Analyzing design hierarchy..
+Top module:  \counter4d
+Removed 0 unused modules.
+
+3. Executing SYNTH pass.
+
+3.1. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1.1. Analyzing design hierarchy..
+Top module:  \counter4d
+
+3.1.2. Analyzing design hierarchy..
+Top module:  \counter4d
+Removed 0 unused modules.
+
+3.2. Executing PROC pass (convert processes to netlists).
+
+3.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$rtl/counter4d.sv:38$3 in module counter4d.
+Marked 1 switch rules as full_case in process $proc$rtl/counter4d.sv:0$1 in module counter4d.
+Removed a total of 0 dead cases.
+
+3.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 1 assignment to connection.
+
+3.2.4. Executing PROC_INIT pass (extract init attributes).
+
+3.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~2 debug messages>
+
+3.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\counter4d.$proc$rtl/counter4d.sv:38$3'.
+     1/1: $0\cnt_value_ff[3:0]
+Creating decoders for process `\counter4d.$proc$rtl/counter4d.sv:0$1'.
+     1/1: $1\cnt_next_comb[3:0]
+
+3.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\counter4d.\cnt_next_comb' from process `\counter4d.$proc$rtl/counter4d.sv:0$1'.
+
+3.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\counter4d.\cnt_value_ff' using process `\counter4d.$proc$rtl/counter4d.sv:38$3'.
+  created $dff cell `$procdff$11' with positive edge clock.
+
+3.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\counter4d.$proc$rtl/counter4d.sv:38$3'.
+Removing empty process `counter4d.$proc$rtl/counter4d.sv:38$3'.
+Found and cleaned up 1 empty switch in `\counter4d.$proc$rtl/counter4d.sv:0$1'.
+Removing empty process `counter4d.$proc$rtl/counter4d.sv:0$1'.
+Cleaned up 2 empty switches.
+
+3.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4d.
+<suppressed ~1 debug messages>
+
+3.3. Executing FLATTEN pass (flatten design).
+
+3.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4d.
+
+3.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4d..
+Removed 1 unused cells and 7 unused wires.
+<suppressed ~2 debug messages>
+
+3.6. Executing CHECK pass (checking for obvious problems).
+Checking module counter4d...
+Found and reported 0 problems.
+
+3.7. Executing OPT pass (performing simple optimizations).
+
+3.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4d.
+
+3.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter4d'.
+Removed a total of 0 cells.
+
+3.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter4d..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~1 debug messages>
+
+3.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter4d.
+Performed a total of 0 changes.
+
+3.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter4d'.
+Removed a total of 0 cells.
+
+3.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4d..
+
+3.7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4d.
+
+3.7.9. Finished OPT passes. (There is nothing left to do.)
+
+3.8. Executing FSM pass (extract and optimize FSM).
+
+3.8.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+3.8.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+3.8.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+3.8.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4d..
+
+3.8.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+3.8.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+3.8.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+3.8.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+3.9. Executing OPT pass (performing simple optimizations).
+
+3.9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4d.
+
+3.9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter4d'.
+Removed a total of 0 cells.
+
+3.9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter4d..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~1 debug messages>
+
+3.9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter4d.
+Performed a total of 0 changes.
+
+3.9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter4d'.
+Removed a total of 0 cells.
+
+3.9.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$11 ($dff) from module counter4d (D = \cnt_next_comb, Q = \cnt_value_ff, rval = 4'0000).
+Adding EN signal on $auto$ff.cc:266:slice$12 ($sdff) from module counter4d (D = $add$rtl/counter4d.sv:32$2_Y, Q = \cnt_value_ff).
+
+3.9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4d..
+Removed 2 unused cells and 2 unused wires.
+<suppressed ~4 debug messages>
+
+3.9.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4d.
+
+3.9.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.9.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter4d..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+3.9.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter4d.
+Performed a total of 0 changes.
+
+3.9.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter4d'.
+Removed a total of 0 cells.
+
+3.9.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.9.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4d..
+
+3.9.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4d.
+
+3.9.16. Finished OPT passes. (There is nothing left to do.)
+
+3.10. Executing WREDUCE pass (reducing word size of cells).
+Removed top 3 bits (of 4) from port B of cell counter4d.$add$rtl/counter4d.sv:32$2 ($add).
+
+3.11. Executing PEEPOPT pass (run peephole optimizers).
+
+3.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4d..
+
+3.13. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module counter4d:
+  creating $macc model for $add$rtl/counter4d.sv:32$2 ($add).
+  creating $alu model for $macc $add$rtl/counter4d.sv:32$2.
+  creating $alu cell for $add$rtl/counter4d.sv:32$2: $auto$alumacc.cc:495:replace_alu$14
+  created 1 $alu and 0 $macc cells.
+
+3.14. Executing SHARE pass (SAT-based resource sharing).
+
+3.15. Executing OPT pass (performing simple optimizations).
+
+3.15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4d.
+
+3.15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter4d'.
+Removed a total of 0 cells.
+
+3.15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter4d..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+3.15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter4d.
+Performed a total of 0 changes.
+
+3.15.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter4d'.
+Removed a total of 0 cells.
+
+3.15.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4d..
+
+3.15.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4d.
+
+3.15.9. Finished OPT passes. (There is nothing left to do.)
+
+3.16. Executing MEMORY pass.
+
+3.16.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+3.16.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+3.16.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+3.16.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+3.16.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+3.16.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4d..
+
+3.16.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+3.16.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+3.16.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4d..
+
+3.16.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+3.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4d..
+
+3.18. Executing OPT pass (performing simple optimizations).
+
+3.18.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4d.
+
+3.18.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter4d'.
+Removed a total of 0 cells.
+
+3.18.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.18.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4d..
+
+3.18.5. Finished fast OPT passes.
+
+3.19. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+3.20. Executing OPT pass (performing simple optimizations).
+
+3.20.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4d.
+
+3.20.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter4d'.
+Removed a total of 0 cells.
+
+3.20.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter4d..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+3.20.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter4d.
+Performed a total of 0 changes.
+
+3.20.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter4d'.
+Removed a total of 0 cells.
+
+3.20.6. Executing OPT_SHARE pass.
+
+3.20.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.20.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4d..
+
+3.20.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4d.
+
+3.20.10. Finished OPT passes. (There is nothing left to do.)
+
+3.21. Executing TECHMAP pass (map to technology primitives).
+
+3.21.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+3.21.2. Continuing TECHMAP pass.
+Using template $paramod$32a7b7b86c07519b7537abc18e96f0331f97914d\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $sdffe.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $and.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000100 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $or.
+No more expansions possible.
+<suppressed ~224 debug messages>
+
+3.22. Executing OPT pass (performing simple optimizations).
+
+3.22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4d.
+<suppressed ~21 debug messages>
+
+3.22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter4d'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+3.22.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.22.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4d..
+Removed 5 unused cells and 33 unused wires.
+<suppressed ~6 debug messages>
+
+3.22.5. Finished fast OPT passes.
+
+3.23. Executing ABC pass (technology mapping using ABC).
+
+3.23.1. Extracting gate netlist of module `\counter4d' to `<abc-temp-dir>/input.blif'..
+Extracted 6 gates and 10 wires to a netlist network with 4 inputs and 4 outputs.
+
+3.23.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.23.1.2. Re-integrating ABC results.
+ABC RESULTS:            ANDNOT cells:        1
+ABC RESULTS:              NAND cells:        1
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:              XNOR cells:        1
+ABC RESULTS:               XOR cells:        2
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:        4
+ABC RESULTS:          output signals:        4
+Removing temp directory.
+
+3.24. Executing OPT pass (performing simple optimizations).
+
+3.24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter4d.
+
+3.24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter4d'.
+Removed a total of 0 cells.
+
+3.24.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.24.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4d..
+Removed 0 unused cells and 9 unused wires.
+<suppressed ~1 debug messages>
+
+3.24.5. Finished fast OPT passes.
+
+3.25. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `counter4d'. Setting top module to counter4d.
+
+3.25.1. Analyzing design hierarchy..
+Top module:  \counter4d
+
+3.25.2. Analyzing design hierarchy..
+Top module:  \counter4d
+Removed 0 unused modules.
+
+3.26. Printing statistics.
+
+=== counter4d ===
+
+   Number of wires:                  9
+   Number of wire bits:             21
+   Number of public wires:           5
+   Number of public wire bits:      11
+   Number of ports:                  4
+   Number of port bits:              7
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 10
+     $_ANDNOT_                       1
+     $_NAND_                         1
+     $_NOT_                          1
+     $_SDFFE_PN0P_                   4
+     $_XNOR_                         1
+     $_XOR_                          2
+
+3.27. Executing CHECK pass (checking for obvious problems).
+Checking module counter4d...
+Found and reported 0 problems.
+
+4. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_1 (noninv, pins=3, area=20.02) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtn_1 (noninv, pins=4, area=25.02) is a direct match for cell type $_DFF_NN0_.
+  cell sky130_fd_sc_hd__dfrtp_1 (noninv, pins=4, area=25.02) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__edfxtp_1 (noninv, pins=4, area=30.03) is a direct match for cell type $_DFFE_PP_.
+  cell sky130_fd_sc_hd__dfbbn_1 (noninv, pins=6, area=32.53) is a direct match for cell type $_DFFSR_NNN_.
+  cell sky130_fd_sc_hd__dfbbp_1 (noninv, pins=6, area=32.53) is a direct match for cell type $_DFFSR_PNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_1 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    \sky130_fd_sc_hd__dfrtn_1 _DFF_NN0_ (.CLK_N( C), .D( D), .Q( Q), .RESET_B( R));
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_1 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_2 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFE_NN_
+    unmapped dff cell: $_DFFE_NP_
+    unmapped dff cell: $_DFFE_PN_
+    \sky130_fd_sc_hd__edfxtp_1 _DFFE_PP_ (.CLK( C), .D( D), .DE( E), .Q( Q));
+    \sky130_fd_sc_hd__dfbbn_1 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    \sky130_fd_sc_hd__dfbbp_1 _DFFSR_PNN_ (.CLK( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+4.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+<suppressed ~24 debug messages>
+Mapping DFF cells in module `\counter4d':
+  mapped 4 $_DFF_P_ cells to \sky130_fd_sc_hd__dfxtp_1 cells.
+
+5. Executing ABC pass (technology mapping using ABC).
+
+5.1. Extracting gate netlist of module `\counter4d' to `<abc-temp-dir>/input.blif'..
+Extracted 14 gates and 21 wires to a netlist network with 6 inputs and 4 outputs.
+
+5.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /opt/pdk/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.19 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_12" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_3" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_6" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__diode_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__edfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__edfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_0".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_8".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_bleeder_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_12" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_3" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_6" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__lpflow_inputisolatch_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfsbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_4".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/opt/pdk/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib" has 334 cells (94 skipped: 63 seq; 13 tri-state; 18 no func; 0 dont_use).  Time =     0.24 sec
+ABC: Memory =   19.85 MB. Time =     0.24 sec
+ABC: Warning: Detected 9 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf -D 10000 
+ABC: + &put 
+ABC: + buffer -p 
+ABC: + upsize -D 10000 
+ABC: Current delay (383.57 ps) does not exceed the target delay (10000.00 ps). Upsizing is not performed.
+ABC: + dnsize -D 10000 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+5.1.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__a21oi_1 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__and3_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__and4_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nor2_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nor3b_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o21ai_0 cells:        3
+ABC RESULTS:        internal signals:       11
+ABC RESULTS:           input signals:        6
+ABC RESULTS:          output signals:        4
+Removing temp directory.
+
+6. Executing SETUNDEF pass (replace undef values with defined constants).
+
+7. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter4d..
+Removed 0 unused cells and 28 unused wires.
+<suppressed ~5 debug messages>
+
+9. Executing HILOMAP pass (mapping to constant drivers).
+
+10. Executing INSBUF pass (insert buffer cells for connected wires).
+
+11. Printing statistics.
+
+=== counter4d ===
+
+   Number of wires:                 14
+   Number of wire bits:             17
+   Number of public wires:           4
+   Number of public wire bits:       7
+   Number of ports:                  4
+   Number of port bits:              7
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 14
+     sky130_fd_sc_hd__a21oi_1        3
+     sky130_fd_sc_hd__and3_1         1
+     sky130_fd_sc_hd__and4_1         1
+     sky130_fd_sc_hd__dfxtp_1        4
+     sky130_fd_sc_hd__nor2_1         1
+     sky130_fd_sc_hd__nor3b_1        1
+     sky130_fd_sc_hd__o21ai_0        3
+
+   Chip area for module '\counter4d': 136.380800
+     of which used for sequential elements: 80.076800 (58.72%)
+
+12. Executing Verilog backend.
+Dumping module `\counter4d'.
+
+End of script. Logfile hash: 499477869d, CPU: user 0.41s system 0.15s, MEM: 41.34 MB peak
+Yosys 0.52 (git sha1 fee39a3284c90249e1d9684cf6944ffbbcbb8f90)
+Time spent: 49% 2x abc (0 sec), 16% 1x dfflibmap (0 sec), ...
+
+== sta_tt (exit 0)
+QUEST_CLOCK clk 10.000000
+QUEST_CHECK max
+Startpoint: en (input port clocked by clk)
+Endpoint: _22_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   2.0000    2.0000 v input external delay
+   0.0000    2.0000 v en (in)
+   0.1652    2.1652 v _13_/X (sky130_fd_sc_hd__and4_1)
+   0.1345    2.2997 ^ _16_/Y (sky130_fd_sc_hd__o21ai_0)
+   0.0471    2.3468 v _17_/Y (sky130_fd_sc_hd__a21oi_1)
+   0.0000    2.3468 v _22_/D (sky130_fd_sc_hd__dfxtp_1)
+             2.3468   data arrival time
+
+  10.0000   10.0000   clock clk (rise edge)
+   0.0000   10.0000   clock network delay (ideal)
+   0.0000   10.0000   clock reconvergence pessimism
+            10.0000 ^ _22_/CLK (sky130_fd_sc_hd__dfxtp_1)
+  -0.1194    9.8806   library setup time
+             9.8806   data required time
+-------------------------------------------------------------
+             9.8806   data required time
+            -2.3468   data arrival time
+-------------------------------------------------------------
+             7.5338   slack (MET)
+
+
+Startpoint: en (input port clocked by clk)
+Endpoint: _21_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   2.0000    2.0000 v input external delay
+   0.0000    2.0000 v en (in)
+   0.1463    2.1463 v _10_/X (sky130_fd_sc_hd__and3_1)
+   0.1314    2.2777 ^ _14_/Y (sky130_fd_sc_hd__o21ai_0)
+   0.0463    2.3240 v _15_/Y (sky130_fd_sc_hd__nor2_1)
+   0.0000    2.3240 v _21_/D (sky130_fd_sc_hd__dfxtp_1)
+             2.3240   data arrival time
+
+  10.0000   10.0000   clock clk (rise edge)
+   0.0000   10.0000   clock network delay (ideal)
+   0.0000   10.0000   clock reconvergence pessimism
+            10.0000 ^ _21_/CLK (sky130_fd_sc_hd__dfxtp_1)
+  -0.1158    9.8842   library setup time
+             9.8842   data required time
+-------------------------------------------------------------
+             9.8842   data required time
+            -2.3240   data arrival time
+-------------------------------------------------------------
+             7.5602   slack (MET)
+
+
+Startpoint: en (input port clocked by clk)
+Endpoint: _20_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   2.0000    2.0000 v input external delay
+   0.0000    2.0000 v en (in)
+   0.1463    2.1463 v _10_/X (sky130_fd_sc_hd__and3_1)
+   0.1606    2.3069 ^ _12_/Y (sky130_fd_sc_hd__nor3b_1)
+   0.0000    2.3069 ^ _20_/D (sky130_fd_sc_hd__dfxtp_1)
+             2.3069   data arrival time
+
+  10.0000   10.0000   clock clk (rise edge)
+   0.0000   10.0000   clock network delay (ideal)
+   0.0000   10.0000   clock reconvergence pessimism
+            10.0000 ^ _20_/CLK (sky130_fd_sc_hd__dfxtp_1)
+  -0.0798    9.9202   library setup time
+             9.9202   data required time
+-------------------------------------------------------------
+             9.9202   data required time
+            -2.3069   data arrival time
+-------------------------------------------------------------
+             7.6134   slack (MET)
+
+
+Startpoint: _23_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: count[0] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _23_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.3290    0.3290 ^ _23_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0000    0.3290 ^ count[0] (out)
+             0.3290   data arrival time
+
+  10.0000   10.0000   clock clk (rise edge)
+   0.0000   10.0000   clock network delay (ideal)
+   0.0000   10.0000   clock reconvergence pessimism
+  -2.0000    8.0000   output external delay
+             8.0000   data required time
+-------------------------------------------------------------
+             8.0000   data required time
+            -0.3290   data arrival time
+-------------------------------------------------------------
+             7.6710   slack (MET)
+
+
+Startpoint: _20_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: count[1] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _20_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.3028    0.3028 ^ _20_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0000    0.3028 ^ count[1] (out)
+             0.3028   data arrival time
+
+  10.0000   10.0000   clock clk (rise edge)
+   0.0000   10.0000   clock network delay (ideal)
+   0.0000   10.0000   clock reconvergence pessimism
+  -2.0000    8.0000   output external delay
+             8.0000   data required time
+-------------------------------------------------------------
+             8.0000   data required time
+            -0.3028   data arrival time
+-------------------------------------------------------------
+             7.6972   slack (MET)
+
+
+Startpoint: _22_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: count[3] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _22_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.2930    0.2930 ^ _22_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0000    0.2930 ^ count[3] (out)
+             0.2930   data arrival time
+
+  10.0000   10.0000   clock clk (rise edge)
+   0.0000   10.0000   clock network delay (ideal)
+   0.0000   10.0000   clock reconvergence pessimism
+  -2.0000    8.0000   output external delay
+             8.0000   data required time
+-------------------------------------------------------------
+             8.0000   data required time
+            -0.2930   data arrival time
+-------------------------------------------------------------
+             7.7070   slack (MET)
+
+
+Startpoint: _21_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: count[2] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _21_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.2874    0.2874 ^ _21_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0000    0.2874 ^ count[2] (out)
+             0.2874   data arrival time
+
+  10.0000   10.0000   clock clk (rise edge)
+   0.0000   10.0000   clock network delay (ideal)
+   0.0000   10.0000   clock reconvergence pessimism
+  -2.0000    8.0000   output external delay
+             8.0000   data required time
+-------------------------------------------------------------
+             8.0000   data required time
+            -0.2874   data arrival time
+-------------------------------------------------------------
+             7.7126   slack (MET)
+
+
+Startpoint: en (input port clocked by clk)
+Endpoint: _23_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   2.0000    2.0000 v input external delay
+   0.0000    2.0000 v en (in)
+   0.1178    2.1178 ^ _18_/Y (sky130_fd_sc_hd__o21ai_0)
+   0.0471    2.1649 v _19_/Y (sky130_fd_sc_hd__a21oi_1)
+   0.0000    2.1649 v _23_/D (sky130_fd_sc_hd__dfxtp_1)
+             2.1649   data arrival time
+
+  10.0000   10.0000   clock clk (rise edge)
+   0.0000   10.0000   clock network delay (ideal)
+   0.0000   10.0000   clock reconvergence pessimism
+            10.0000 ^ _23_/CLK (sky130_fd_sc_hd__dfxtp_1)
+  -0.1198    9.8802   library setup time
+             9.8802   data required time
+-------------------------------------------------------------
+             9.8802   data required time
+            -2.1649   data arrival time
+-------------------------------------------------------------
+             7.7153   slack (MET)
+
+
+QUEST_CHECK min
+Startpoint: _22_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _22_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _22_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.2930    0.2930 ^ _22_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0507    0.3438 v _17_/Y (sky130_fd_sc_hd__a21oi_1)
+   0.0000    0.3438 v _22_/D (sky130_fd_sc_hd__dfxtp_1)
+             0.3438   data arrival time
+
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000   clock reconvergence pessimism
+             0.0000 ^ _22_/CLK (sky130_fd_sc_hd__dfxtp_1)
+  -0.0561   -0.0561   library hold time
+            -0.0561   data required time
+-------------------------------------------------------------
+            -0.0561   data required time
+            -0.3438   data arrival time
+-------------------------------------------------------------
+             0.3999   slack (MET)
+
+
+Startpoint: _23_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _23_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _23_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.3012    0.3012 v _23_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.1044    0.4056 ^ _19_/Y (sky130_fd_sc_hd__a21oi_1)
+   0.0000    0.4056 ^ _23_/D (sky130_fd_sc_hd__dfxtp_1)
+             0.4056   data arrival time
+
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000   clock reconvergence pessimism
+             0.0000 ^ _23_/CLK (sky130_fd_sc_hd__dfxtp_1)
+  -0.0421   -0.0421   library hold time
+            -0.0421   data required time
+-------------------------------------------------------------
+            -0.0421   data required time
+            -0.4056   data arrival time
+-------------------------------------------------------------
+             0.4478   slack (MET)
+
+
+Startpoint: _21_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _21_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _21_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.2874    0.2874 ^ _21_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0730    0.3604 v _14_/Y (sky130_fd_sc_hd__o21ai_0)
+   0.0659    0.4263 ^ _15_/Y (sky130_fd_sc_hd__nor2_1)
+   0.0000    0.4263 ^ _21_/D (sky130_fd_sc_hd__dfxtp_1)
+             0.4263   data arrival time
+
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000   clock reconvergence pessimism
+             0.0000 ^ _21_/CLK (sky130_fd_sc_hd__dfxtp_1)
+  -0.0402   -0.0402   library hold time
+            -0.0402   data required time
+-------------------------------------------------------------
+            -0.0402   data required time
+            -0.4263   data arrival time
+-------------------------------------------------------------
+             0.4665   slack (MET)
+
+
+Startpoint: _20_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _20_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _20_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.2849    0.2849 v _20_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.1027    0.3876 ^ _11_/Y (sky130_fd_sc_hd__a21oi_1)
+   0.0490    0.4367 v _12_/Y (sky130_fd_sc_hd__nor3b_1)
+   0.0000    0.4367 v _20_/D (sky130_fd_sc_hd__dfxtp_1)
+             0.4367   data arrival time
+
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000   clock reconvergence pessimism
+             0.0000 ^ _20_/CLK (sky130_fd_sc_hd__dfxtp_1)
+  -0.0572   -0.0572   library hold time
+            -0.0572   data required time
+-------------------------------------------------------------
+            -0.0572   data required time
+            -0.4367   data arrival time
+-------------------------------------------------------------
+             0.4939   slack (MET)
+
+
+Startpoint: _21_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: count[2] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _21_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.2766    0.2766 v _21_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0000    0.2766 v count[2] (out)
+             0.2766   data arrival time
+
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000   clock reconvergence pessimism
+  -2.0000   -2.0000   output external delay
+            -2.0000   data required time
+-------------------------------------------------------------
+            -2.0000   data required time
+            -0.2766   data arrival time
+-------------------------------------------------------------
+             2.2766   slack (MET)
+
+
+Startpoint: _22_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: count[3] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _22_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.2800    0.2800 v _22_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0000    0.2800 v count[3] (out)
+             0.2800   data arrival time
+
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000   clock reconvergence pessimism
+  -2.0000   -2.0000   output external delay
+            -2.0000   data required time
+-------------------------------------------------------------
+            -2.0000   data required time
+            -0.2800   data arrival time
+-------------------------------------------------------------
+             2.2800   slack (MET)
+
+
+Startpoint: _20_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: count[1] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _20_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.2849    0.2849 v _20_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0000    0.2849 v count[1] (out)
+             0.2849   data arrival time
+
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000   clock reconvergence pessimism
+  -2.0000   -2.0000   output external delay
+            -2.0000   data required time
+-------------------------------------------------------------
+            -2.0000   data required time
+            -0.2849   data arrival time
+-------------------------------------------------------------
+             2.2849   slack (MET)
+
+
+Startpoint: _23_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: count[0] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _23_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.3012    0.3012 v _23_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0000    0.3012 v count[0] (out)
+             0.3012   data arrival time
+
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000   clock reconvergence pessimism
+  -2.0000   -2.0000   output external delay
+            -2.0000   data required time
+-------------------------------------------------------------
+            -2.0000   data required time
+            -0.3012   data arrival time
+-------------------------------------------------------------
+             2.3012   slack (MET)
+
+
+QUEST_CHECK end
+QUEST_DONE
+
+== sta_ss (exit 0)
+QUEST_CLOCK clk 10.000000
+QUEST_CHECK max
+Startpoint: en (input port clocked by clk)
+Endpoint: _22_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   2.0000    2.0000 v input external delay
+   0.0000    2.0000 v en (in)
+   0.3483    2.3483 v _13_/X (sky130_fd_sc_hd__and4_1)
+   0.2576    2.6059 ^ _16_/Y (sky130_fd_sc_hd__o21ai_0)
+   0.1165    2.7224 v _17_/Y (sky130_fd_sc_hd__a21oi_1)
+   0.0000    2.7224 v _22_/D (sky130_fd_sc_hd__dfxtp_1)
+             2.7224   data arrival time
+
+  10.0000   10.0000   clock clk (rise edge)
+   0.0000   10.0000   clock network delay (ideal)
+   0.0000   10.0000   clock reconvergence pessimism
+            10.0000 ^ _22_/CLK (sky130_fd_sc_hd__dfxtp_1)
+  -0.2903    9.7097   library setup time
+             9.7097   data required time
+-------------------------------------------------------------
+             9.7097   data required time
+            -2.7224   data arrival time
+-------------------------------------------------------------
+             6.9874   slack (MET)
+
+
+Startpoint: en (input port clocked by clk)
+Endpoint: _21_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   2.0000    2.0000 v input external delay
+   0.0000    2.0000 v en (in)
+   0.3094    2.3094 v _10_/X (sky130_fd_sc_hd__and3_1)
+   0.2496    2.5590 ^ _14_/Y (sky130_fd_sc_hd__o21ai_0)
+   0.1171    2.6761 v _15_/Y (sky130_fd_sc_hd__nor2_1)
+   0.0000    2.6761 v _21_/D (sky130_fd_sc_hd__dfxtp_1)
+             2.6761   data arrival time
+
+  10.0000   10.0000   clock clk (rise edge)
+   0.0000   10.0000   clock network delay (ideal)
+   0.0000   10.0000   clock reconvergence pessimism
+            10.0000 ^ _21_/CLK (sky130_fd_sc_hd__dfxtp_1)
+  -0.2830    9.7170   library setup time
+             9.7170   data required time
+-------------------------------------------------------------
+             9.7170   data required time
+            -2.6761   data arrival time
+-------------------------------------------------------------
+             7.0410   slack (MET)
+
+
+Startpoint: en (input port clocked by clk)
+Endpoint: _20_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   2.0000    2.0000 v input external delay
+   0.0000    2.0000 v en (in)
+   0.3094    2.3094 v _10_/X (sky130_fd_sc_hd__and3_1)
+   0.2870    2.5964 ^ _12_/Y (sky130_fd_sc_hd__nor3b_1)
+   0.0000    2.5964 ^ _20_/D (sky130_fd_sc_hd__dfxtp_1)
+             2.5964   data arrival time
+
+  10.0000   10.0000   clock clk (rise edge)
+   0.0000   10.0000   clock network delay (ideal)
+   0.0000   10.0000   clock reconvergence pessimism
+            10.0000 ^ _20_/CLK (sky130_fd_sc_hd__dfxtp_1)
+  -0.1780    9.8220   library setup time
+             9.8220   data required time
+-------------------------------------------------------------
+             9.8220   data required time
+            -2.5964   data arrival time
+-------------------------------------------------------------
+             7.2256   slack (MET)
+
+
+Startpoint: _23_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: count[0] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _23_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.6637    0.6637 ^ _23_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0000    0.6637 ^ count[0] (out)
+             0.6637   data arrival time
+
+  10.0000   10.0000   clock clk (rise edge)
+   0.0000   10.0000   clock network delay (ideal)
+   0.0000   10.0000   clock reconvergence pessimism
+  -2.0000    8.0000   output external delay
+             8.0000   data required time
+-------------------------------------------------------------
+             8.0000   data required time
+            -0.6637   data arrival time
+-------------------------------------------------------------
+             7.3363   slack (MET)
+
+
+Startpoint: en (input port clocked by clk)
+Endpoint: _23_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   2.0000    2.0000 v input external delay
+   0.0000    2.0000 v en (in)
+   0.2214    2.2214 ^ _18_/Y (sky130_fd_sc_hd__o21ai_0)
+   0.1165    2.3380 v _19_/Y (sky130_fd_sc_hd__a21oi_1)
+   0.0000    2.3380 v _23_/D (sky130_fd_sc_hd__dfxtp_1)
+             2.3380   data arrival time
+
+  10.0000   10.0000   clock clk (rise edge)
+   0.0000   10.0000   clock network delay (ideal)
+   0.0000   10.0000   clock reconvergence pessimism
+            10.0000 ^ _23_/CLK (sky130_fd_sc_hd__dfxtp_1)
+  -0.2919    9.7081   library setup time
+             9.7081   data required time
+-------------------------------------------------------------
+             9.7081   data required time
+            -2.3380   data arrival time
+-------------------------------------------------------------
+             7.3701   slack (MET)
+
+
+Startpoint: _20_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: count[1] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _20_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.6218    0.6218 ^ _20_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0000    0.6218 ^ count[1] (out)
+             0.6218   data arrival time
+
+  10.0000   10.0000   clock clk (rise edge)
+   0.0000   10.0000   clock network delay (ideal)
+   0.0000   10.0000   clock reconvergence pessimism
+  -2.0000    8.0000   output external delay
+             8.0000   data required time
+-------------------------------------------------------------
+             8.0000   data required time
+            -0.6218   data arrival time
+-------------------------------------------------------------
+             7.3782   slack (MET)
+
+
+Startpoint: _22_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: count[3] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _22_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.6073    0.6073 ^ _22_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0000    0.6073 ^ count[3] (out)
+             0.6073   data arrival time
+
+  10.0000   10.0000   clock clk (rise edge)
+   0.0000   10.0000   clock network delay (ideal)
+   0.0000   10.0000   clock reconvergence pessimism
+  -2.0000    8.0000   output external delay
+             8.0000   data required time
+-------------------------------------------------------------
+             8.0000   data required time
+            -0.6073   data arrival time
+-------------------------------------------------------------
+             7.3927   slack (MET)
+
+
+Startpoint: _21_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: count[2] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _21_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.5964    0.5964 ^ _21_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0000    0.5964 ^ count[2] (out)
+             0.5964   data arrival time
+
+  10.0000   10.0000   clock clk (rise edge)
+   0.0000   10.0000   clock network delay (ideal)
+   0.0000   10.0000   clock reconvergence pessimism
+  -2.0000    8.0000   output external delay
+             8.0000   data required time
+-------------------------------------------------------------
+             8.0000   data required time
+            -0.5964   data arrival time
+-------------------------------------------------------------
+             7.4036   slack (MET)
+
+
+QUEST_CHECK min
+Startpoint: _22_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _22_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _22_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.5517    0.5517 v _22_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.1648    0.7165 ^ _17_/Y (sky130_fd_sc_hd__a21oi_1)
+   0.0000    0.7165 ^ _22_/D (sky130_fd_sc_hd__dfxtp_1)
+             0.7165   data arrival time
+
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000   clock reconvergence pessimism
+             0.0000 ^ _22_/CLK (sky130_fd_sc_hd__dfxtp_1)
+  -0.0925   -0.0925   library hold time
+            -0.0925   data required time
+-------------------------------------------------------------
+            -0.0925   data required time
+            -0.7165   data arrival time
+-------------------------------------------------------------
+             0.8090   slack (MET)
+
+
+Startpoint: _23_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _23_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _23_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.5885    0.5885 v _23_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.1824    0.7709 ^ _19_/Y (sky130_fd_sc_hd__a21oi_1)
+   0.0000    0.7709 ^ _23_/D (sky130_fd_sc_hd__dfxtp_1)
+             0.7709   data arrival time
+
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000   clock reconvergence pessimism
+             0.0000 ^ _23_/CLK (sky130_fd_sc_hd__dfxtp_1)
+  -0.0926   -0.0926   library hold time
+            -0.0926   data required time
+-------------------------------------------------------------
+            -0.0926   data required time
+            -0.7709   data arrival time
+-------------------------------------------------------------
+             0.8635   slack (MET)
+
+
+Startpoint: _20_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _20_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _20_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.5605    0.5605 v _20_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.1756    0.7362 ^ _11_/Y (sky130_fd_sc_hd__a21oi_1)
+   0.1019    0.8381 v _12_/Y (sky130_fd_sc_hd__nor3b_1)
+   0.0000    0.8381 v _20_/D (sky130_fd_sc_hd__dfxtp_1)
+             0.8381   data arrival time
+
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000   clock reconvergence pessimism
+             0.0000 ^ _20_/CLK (sky130_fd_sc_hd__dfxtp_1)
+  -0.1150   -0.1150   library hold time
+            -0.1150   data required time
+-------------------------------------------------------------
+            -0.1150   data required time
+            -0.8381   data arrival time
+-------------------------------------------------------------
+             0.9531   slack (MET)
+
+
+Startpoint: _21_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _21_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _21_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.5964    0.5964 ^ _21_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.1537    0.7501 v _14_/Y (sky130_fd_sc_hd__o21ai_0)
+   0.1200    0.8701 ^ _15_/Y (sky130_fd_sc_hd__nor2_1)
+   0.0000    0.8701 ^ _21_/D (sky130_fd_sc_hd__dfxtp_1)
+             0.8701   data arrival time
+
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000   clock reconvergence pessimism
+             0.0000 ^ _21_/CLK (sky130_fd_sc_hd__dfxtp_1)
+  -0.0896   -0.0896   library hold time
+            -0.0896   data required time
+-------------------------------------------------------------
+            -0.0896   data required time
+            -0.8701   data arrival time
+-------------------------------------------------------------
+             0.9597   slack (MET)
+
+
+Startpoint: _21_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: count[2] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _21_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.5443    0.5443 v _21_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0000    0.5443 v count[2] (out)
+             0.5443   data arrival time
+
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000   clock reconvergence pessimism
+  -2.0000   -2.0000   output external delay
+            -2.0000   data required time
+-------------------------------------------------------------
+            -2.0000   data required time
+            -0.5443   data arrival time
+-------------------------------------------------------------
+             2.5443   slack (MET)
+
+
+Startpoint: _22_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: count[3] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _22_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.5517    0.5517 v _22_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0000    0.5517 v count[3] (out)
+             0.5517   data arrival time
+
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000   clock reconvergence pessimism
+  -2.0000   -2.0000   output external delay
+            -2.0000   data required time
+-------------------------------------------------------------
+            -2.0000   data required time
+            -0.5517   data arrival time
+-------------------------------------------------------------
+             2.5517   slack (MET)
+
+
+Startpoint: _20_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: count[1] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _20_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.5605    0.5605 v _20_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0000    0.5605 v count[1] (out)
+             0.5605   data arrival time
+
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000   clock reconvergence pessimism
+  -2.0000   -2.0000   output external delay
+            -2.0000   data required time
+-------------------------------------------------------------
+            -2.0000   data required time
+            -0.5605   data arrival time
+-------------------------------------------------------------
+             2.5605   slack (MET)
+
+
+Startpoint: _23_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: count[0] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _23_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.5885    0.5885 v _23_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0000    0.5885 v count[0] (out)
+             0.5885   data arrival time
+
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000   clock reconvergence pessimism
+  -2.0000   -2.0000   output external delay
+            -2.0000   data required time
+-------------------------------------------------------------
+            -2.0000   data required time
+            -0.5885   data arrival time
+-------------------------------------------------------------
+             2.5885   slack (MET)
+
+
+QUEST_CHECK end
+QUEST_DONE
+
+== sta_ff (exit 0)
+QUEST_CLOCK clk 10.000000
+QUEST_CHECK max
+Startpoint: en (input port clocked by clk)
+Endpoint: _22_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   2.0000    2.0000 v input external delay
+   0.0000    2.0000 v en (in)
+   0.1063    2.1063 v _13_/X (sky130_fd_sc_hd__and4_1)
+   0.0901    2.1964 ^ _16_/Y (sky130_fd_sc_hd__o21ai_0)
+   0.0206    2.2170 v _17_/Y (sky130_fd_sc_hd__a21oi_1)
+   0.0000    2.2170 v _22_/D (sky130_fd_sc_hd__dfxtp_1)
+             2.2170   data arrival time
+
+  10.0000   10.0000   clock clk (rise edge)
+   0.0000   10.0000   clock network delay (ideal)
+   0.0000   10.0000   clock reconvergence pessimism
+            10.0000 ^ _22_/CLK (sky130_fd_sc_hd__dfxtp_1)
+  -0.0708    9.9292   library setup time
+             9.9292   data required time
+-------------------------------------------------------------
+             9.9292   data required time
+            -2.2170   data arrival time
+-------------------------------------------------------------
+             7.7121   slack (MET)
+
+
+Startpoint: en (input port clocked by clk)
+Endpoint: _21_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   2.0000    2.0000 v input external delay
+   0.0000    2.0000 v en (in)
+   0.0940    2.0940 v _10_/X (sky130_fd_sc_hd__and3_1)
+   0.0876    2.1817 ^ _14_/Y (sky130_fd_sc_hd__o21ai_0)
+   0.0205    2.2021 v _15_/Y (sky130_fd_sc_hd__nor2_1)
+   0.0000    2.2021 v _21_/D (sky130_fd_sc_hd__dfxtp_1)
+             2.2021   data arrival time
+
+  10.0000   10.0000   clock clk (rise edge)
+   0.0000   10.0000   clock network delay (ideal)
+   0.0000   10.0000   clock reconvergence pessimism
+            10.0000 ^ _21_/CLK (sky130_fd_sc_hd__dfxtp_1)
+  -0.0702    9.9298   library setup time
+             9.9298   data required time
+-------------------------------------------------------------
+             9.9298   data required time
+            -2.2021   data arrival time
+-------------------------------------------------------------
+             7.7277   slack (MET)
+
+
+Startpoint: en (input port clocked by clk)
+Endpoint: _20_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   2.0000    2.0000 v input external delay
+   0.0000    2.0000 v en (in)
+   0.0940    2.0940 v _10_/X (sky130_fd_sc_hd__and3_1)
+   0.1073    2.2014 ^ _12_/Y (sky130_fd_sc_hd__nor3b_1)
+   0.0000    2.2014 ^ _20_/D (sky130_fd_sc_hd__dfxtp_1)
+             2.2014   data arrival time
+
+  10.0000   10.0000   clock clk (rise edge)
+   0.0000   10.0000   clock network delay (ideal)
+   0.0000   10.0000   clock reconvergence pessimism
+            10.0000 ^ _20_/CLK (sky130_fd_sc_hd__dfxtp_1)
+  -0.0351    9.9649   library setup time
+             9.9649   data required time
+-------------------------------------------------------------
+             9.9649   data required time
+            -2.2014   data arrival time
+-------------------------------------------------------------
+             7.7635   slack (MET)
+
+
+Startpoint: _23_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: count[0] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _23_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.2103    0.2103 ^ _23_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0000    0.2103 ^ count[0] (out)
+             0.2103   data arrival time
+
+  10.0000   10.0000   clock clk (rise edge)
+   0.0000   10.0000   clock network delay (ideal)
+   0.0000   10.0000   clock reconvergence pessimism
+  -2.0000    8.0000   output external delay
+             8.0000   data required time
+-------------------------------------------------------------
+             8.0000   data required time
+            -0.2103   data arrival time
+-------------------------------------------------------------
+             7.7897   slack (MET)
+
+
+Startpoint: _20_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: count[1] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _20_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.1907    0.1907 ^ _20_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0000    0.1907 ^ count[1] (out)
+             0.1907   data arrival time
+
+  10.0000   10.0000   clock clk (rise edge)
+   0.0000   10.0000   clock network delay (ideal)
+   0.0000   10.0000   clock reconvergence pessimism
+  -2.0000    8.0000   output external delay
+             8.0000   data required time
+-------------------------------------------------------------
+             8.0000   data required time
+            -0.1907   data arrival time
+-------------------------------------------------------------
+             7.8093   slack (MET)
+
+
+Startpoint: _22_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: count[3] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _22_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.1828    0.1828 ^ _22_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0000    0.1828 ^ count[3] (out)
+             0.1828   data arrival time
+
+  10.0000   10.0000   clock clk (rise edge)
+   0.0000   10.0000   clock network delay (ideal)
+   0.0000   10.0000   clock reconvergence pessimism
+  -2.0000    8.0000   output external delay
+             8.0000   data required time
+-------------------------------------------------------------
+             8.0000   data required time
+            -0.1828   data arrival time
+-------------------------------------------------------------
+             7.8172   slack (MET)
+
+
+Startpoint: _21_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: count[2] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _21_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.1789    0.1789 ^ _21_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0000    0.1789 ^ count[2] (out)
+             0.1789   data arrival time
+
+  10.0000   10.0000   clock clk (rise edge)
+   0.0000   10.0000   clock network delay (ideal)
+   0.0000   10.0000   clock reconvergence pessimism
+  -2.0000    8.0000   output external delay
+             8.0000   data required time
+-------------------------------------------------------------
+             8.0000   data required time
+            -0.1789   data arrival time
+-------------------------------------------------------------
+             7.8211   slack (MET)
+
+
+Startpoint: en (input port clocked by clk)
+Endpoint: _23_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   2.0000    2.0000 v input external delay
+   0.0000    2.0000 v en (in)
+   0.0785    2.0785 ^ _18_/Y (sky130_fd_sc_hd__o21ai_0)
+   0.0206    2.0992 v _19_/Y (sky130_fd_sc_hd__a21oi_1)
+   0.0000    2.0992 v _23_/D (sky130_fd_sc_hd__dfxtp_1)
+             2.0992   data arrival time
+
+  10.0000   10.0000   clock clk (rise edge)
+   0.0000   10.0000   clock network delay (ideal)
+   0.0000   10.0000   clock reconvergence pessimism
+            10.0000 ^ _23_/CLK (sky130_fd_sc_hd__dfxtp_1)
+  -0.0725    9.9275   library setup time
+             9.9275   data required time
+-------------------------------------------------------------
+             9.9275   data required time
+            -2.0992   data arrival time
+-------------------------------------------------------------
+             7.8283   slack (MET)
+
+
+QUEST_CHECK min
+Startpoint: _22_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _22_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _22_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.1828    0.1828 ^ _22_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0295    0.2123 v _17_/Y (sky130_fd_sc_hd__a21oi_1)
+   0.0000    0.2123 v _22_/D (sky130_fd_sc_hd__dfxtp_1)
+             0.2123   data arrival time
+
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000   clock reconvergence pessimism
+             0.0000 ^ _22_/CLK (sky130_fd_sc_hd__dfxtp_1)
+  -0.0374   -0.0374   library hold time
+            -0.0374   data required time
+-------------------------------------------------------------
+            -0.0374   data required time
+            -0.2123   data arrival time
+-------------------------------------------------------------
+             0.2497   slack (MET)
+
+
+Startpoint: _23_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _23_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _23_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.2103    0.2103 ^ _23_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0343    0.2446 v _19_/Y (sky130_fd_sc_hd__a21oi_1)
+   0.0000    0.2446 v _23_/D (sky130_fd_sc_hd__dfxtp_1)
+             0.2446   data arrival time
+
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000   clock reconvergence pessimism
+             0.0000 ^ _23_/CLK (sky130_fd_sc_hd__dfxtp_1)
+  -0.0374   -0.0374   library hold time
+            -0.0374   data required time
+-------------------------------------------------------------
+            -0.0374   data required time
+            -0.2446   data arrival time
+-------------------------------------------------------------
+             0.2820   slack (MET)
+
+
+Startpoint: _21_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _21_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _21_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.1789    0.1789 ^ _21_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0446    0.2235 v _14_/Y (sky130_fd_sc_hd__o21ai_0)
+   0.0417    0.2652 ^ _15_/Y (sky130_fd_sc_hd__nor2_1)
+   0.0000    0.2652 ^ _21_/D (sky130_fd_sc_hd__dfxtp_1)
+             0.2652   data arrival time
+
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000   clock reconvergence pessimism
+             0.0000 ^ _21_/CLK (sky130_fd_sc_hd__dfxtp_1)
+  -0.0188   -0.0188   library hold time
+            -0.0188   data required time
+-------------------------------------------------------------
+            -0.0188   data required time
+            -0.2652   data arrival time
+-------------------------------------------------------------
+             0.2840   slack (MET)
+
+
+Startpoint: _20_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _20_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _20_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.1832    0.1832 v _20_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0460    0.2292 ^ _11_/Y (sky130_fd_sc_hd__a21oi_1)
+   0.0260    0.2553 v _12_/Y (sky130_fd_sc_hd__nor3b_1)
+   0.0000    0.2553 v _20_/D (sky130_fd_sc_hd__dfxtp_1)
+             0.2553   data arrival time
+
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000   clock reconvergence pessimism
+             0.0000 ^ _20_/CLK (sky130_fd_sc_hd__dfxtp_1)
+  -0.0394   -0.0394   library hold time
+            -0.0394   data required time
+-------------------------------------------------------------
+            -0.0394   data required time
+            -0.2553   data arrival time
+-------------------------------------------------------------
+             0.2947   slack (MET)
+
+
+Startpoint: _21_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: count[2] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _21_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.1769    0.1769 v _21_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0000    0.1769 v count[2] (out)
+             0.1769   data arrival time
+
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000   clock reconvergence pessimism
+  -2.0000   -2.0000   output external delay
+            -2.0000   data required time
+-------------------------------------------------------------
+            -2.0000   data required time
+            -0.1769   data arrival time
+-------------------------------------------------------------
+             2.1769   slack (MET)
+
+
+Startpoint: _22_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: count[3] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _22_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.1793    0.1793 v _22_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0000    0.1793 v count[3] (out)
+             0.1793   data arrival time
+
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000   clock reconvergence pessimism
+  -2.0000   -2.0000   output external delay
+            -2.0000   data required time
+-------------------------------------------------------------
+            -2.0000   data required time
+            -0.1793   data arrival time
+-------------------------------------------------------------
+             2.1793   slack (MET)
+
+
+Startpoint: _20_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: count[1] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _20_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.1832    0.1832 v _20_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0000    0.1832 v count[1] (out)
+             0.1832   data arrival time
+
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000   clock reconvergence pessimism
+  -2.0000   -2.0000   output external delay
+            -2.0000   data required time
+-------------------------------------------------------------
+            -2.0000   data required time
+            -0.1832   data arrival time
+-------------------------------------------------------------
+             2.1832   slack (MET)
+
+
+Startpoint: _23_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: count[0] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ _23_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.1945    0.1945 v _23_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.0000    0.1945 v count[0] (out)
+             0.1945   data arrival time
+
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000   clock reconvergence pessimism
+  -2.0000   -2.0000   output external delay
+            -2.0000   data required time
+-------------------------------------------------------------
+            -2.0000   data required time
+            -0.1945   data arrival time
+-------------------------------------------------------------
+             2.1945   slack (MET)
+
+
+QUEST_CHECK end
+QUEST_DONE

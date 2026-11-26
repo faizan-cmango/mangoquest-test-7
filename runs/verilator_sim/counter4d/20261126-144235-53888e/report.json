@@ -1,0 +1,71 @@
+{
+  "kind": "sim",
+  "schema_version": 2,
+  "tool": "verilator_sim",
+  "block": "counter4d",
+  "inputs": [
+    {
+      "path": "rtl/counter4d.sv",
+      "version": 3,
+      "sha256": "sha256:15c6aa3a5cc68b3251cde7d7b805031381dfdfeb3a59c4cb36dba255e7014b0a"
+    },
+    {
+      "path": "tb/tb_counter4d.sv",
+      "version": 1,
+      "sha256": "sha256:cb8217bb4d67f6b1ab3910dcbc692caa3b3da3c40f99476172771f5ef3e16b0f"
+    }
+  ],
+  "timed_out": false,
+  "stopped": "",
+  "image": "quest-eda-tools:2026.11.1",
+  "tool_version": "",
+  "simulator": "verilator",
+  "testbench": "tb_counter4d",
+  "compiled": true,
+  "compile_errors": [],
+  "compile_warning_count": 0,
+  "compile_failure": "",
+  "finished": true,
+  "end_time": "1us",
+  "passed": true,
+  "first_failure": null,
+  "mismatches": 0,
+  "assertion_errors": 0,
+  "errors": [],
+  "assertion_failures": 0,
+  "coverage": {
+    "line": {
+      "hit": 1,
+      "total": 1,
+      "percent": 100.0
+    },
+    "branch": {
+      "hit": 2,
+      "total": 2,
+      "percent": 100.0
+    },
+    "toggle": {
+      "hit": 15,
+      "total": 15,
+      "percent": 100.0
+    },
+    "user": null,
+    "functional": null,
+    "fsm": null,
+    "other": {},
+    "uncovered": [],
+    "uncovered_count": 0
+  },
+  "seed": 484134241,
+  "framework": "sv",
+  "test_module": "",
+  "toplevel": "",
+  "seeds": [],
+  "functional_groups": [],
+  "fsms": [],
+  "fsm_source": "",
+  "fsm_note": "",
+  "simulator_version": "",
+  "reproduction": false,
+  "closure": null
+}

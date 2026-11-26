@@ -1,0 +1,8 @@
+== compile (exit 0)
+.quest/quest_dump.v:1: warning: timescale for quest_dump inherited from another file.
+tb/tb_counter4d.sv:11: ...: The inherited timescale is here.
+
+== simulate (exit 0)
+VCD info: dumpfile wave.vcd opened for output.
+PASS
+tb/tb_counter4d.sv:82: $finish called at 1046000 (1ps)

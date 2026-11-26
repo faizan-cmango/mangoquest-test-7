@@ -1,0 +1,30 @@
+{
+  "kind": "lint",
+  "schema_version": 2,
+  "tool": "verilator_lint",
+  "block": "counter4d",
+  "inputs": [
+    {
+      "path": "rtl/counter4d.sv",
+      "version": 4,
+      "sha256": "sha256:2465adb6f64fb52bce9659b3ae11bd9233d1636ce47e61d028a72ae9655d3ffe"
+    }
+  ],
+  "timed_out": false,
+  "stopped": "",
+  "image": "quest-eda-tools:2026.11.1",
+  "tool_version": "",
+  "top": "counter4d",
+  "clean": true,
+  "errors": [],
+  "warnings": [],
+  "error_count": 0,
+  "warning_count": 0,
+  "failure": "",
+  "pack": "",
+  "pack_clean": null,
+  "pack_error_count": 0,
+  "pack_findings": [],
+  "pack_not_evaluated": {},
+  "self_check_clean": null
+}

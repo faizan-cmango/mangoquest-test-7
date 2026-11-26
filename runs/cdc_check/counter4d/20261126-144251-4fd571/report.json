@@ -1,0 +1,43 @@
+{
+  "kind": "cdc",
+  "schema_version": 1,
+  "tool": "cdc_check",
+  "block": "counter4d",
+  "inputs": [
+    {
+      "path": "rtl/counter4d.sv",
+      "version": 4,
+      "sha256": "sha256:2465adb6f64fb52bce9659b3ae11bd9233d1636ce47e61d028a72ae9655d3ffe"
+    },
+    {
+      "path": "spec/counter4d/clocks.yaml",
+      "version": 1,
+      "sha256": "sha256:96b369f8ba03e688bae402f8c82ff1f47d8ea68d94bc0e4ea90bd6dbc412315a"
+    }
+  ],
+  "timed_out": false,
+  "stopped": "",
+  "image": "quest-eda-tools:2026.11.1",
+  "tool_version": "",
+  "signoff_level": "oss-structural",
+  "top": "counter4d",
+  "clocks_file": "spec/counter4d/clocks.yaml",
+  "ok": true,
+  "clean": true,
+  "domains": [
+    {
+      "name": "core",
+      "clocks": [
+        "clk"
+      ],
+      "declared": true,
+      "flops": 4
+    }
+  ],
+  "crossings": [],
+  "crossing_count": 0,
+  "findings": [],
+  "error_count": 0,
+  "warning_count": 0,
+  "errors": []
+}

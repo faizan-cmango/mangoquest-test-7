@@ -1,0 +1,36 @@
+{
+  "kind": "synth",
+  "schema_version": 1,
+  "tool": "yosys_synth",
+  "block": "counter4d",
+  "inputs": [
+    {
+      "path": "rtl/counter4d.sv",
+      "version": 2,
+      "sha256": "sha256:8e6d5418964a13e4687cba9b9f78e996938024fd62272853ff19c3193544a11f"
+    }
+  ],
+  "timed_out": false,
+  "stopped": "",
+  "image": "quest-eda-tools:2026.11.1",
+  "tool_version": "",
+  "top": "counter4d",
+  "ok": true,
+  "errors": [],
+  "error_count": 0,
+  "warning_count": 0,
+  "cell_count": 10,
+  "cells_by_type": {
+    "$_ANDNOT_": 1,
+    "$_NAND_": 1,
+    "$_NOT_": 1,
+    "$_SDFFE_PN0P_": 4,
+    "$_XNOR_": 1,
+    "$_XOR_": 2
+  },
+  "latches": [],
+  "latch_cells": 0,
+  "area": null,
+  "timing": null,
+  "liberty": null
+}

@@ -1,0 +1,94 @@
+{
+  "kind": "lint",
+  "schema_version": 2,
+  "tool": "style_lint",
+  "block": "counter4d",
+  "inputs": [
+    {
+      "path": "rtl/counter4d.sv",
+      "version": 1,
+      "sha256": "sha256:2567778adb9afcbb10515e9bc0764ee97246a241ec88b6d11aabbe3941283a49"
+    }
+  ],
+  "timed_out": false,
+  "stopped": "",
+  "image": "quest-eda-tools:2026.11.1",
+  "tool_version": "",
+  "top": "",
+  "clean": true,
+  "errors": [],
+  "warnings": [],
+  "error_count": 0,
+  "warning_count": 0,
+  "failure": "",
+  "pack": "kemi-lint@1.2.0",
+  "pack_clean": false,
+  "pack_error_count": 3,
+  "pack_findings": [
+    {
+      "rule": "KEMI-STY-006",
+      "check": "ast:port_kinds",
+      "severity": "error",
+      "file": "rtl/counter4d.sv",
+      "line": 15,
+      "message": "the input clk is not declared input wire logic",
+      "waived": false
+    },
+    {
+      "rule": "KEMI-STY-006",
+      "check": "ast:port_kinds",
+      "severity": "error",
+      "file": "rtl/counter4d.sv",
+      "line": 16,
+      "message": "the input rst_n is not declared input wire logic",
+      "waived": false
+    },
+    {
+      "rule": "KEMI-STY-006",
+      "check": "ast:port_kinds",
+      "severity": "error",
+      "file": "rtl/counter4d.sv",
+      "line": 17,
+      "message": "the input en is not declared input wire logic",
+      "waived": false
+    },
+    {
+      "rule": "KEMI-STY-022",
+      "check": "ast:role_suffix",
+      "severity": "warning",
+      "file": "rtl/counter4d.sv",
+      "line": 23,
+      "message": "cnt_next_comb ends in no role (_next, _en, _sel, _dec, _hit, _match, _cnt, _err, _async, _sync)",
+      "waived": false
+    },
+    {
+      "rule": "KEMI-STY-010",
+      "check": "ast:always_comb_needs_case",
+      "severity": "warning",
+      "file": "rtl/counter4d.sv",
+      "line": 29,
+      "message": "an always_comb with no case: write it as an assign",
+      "waived": false
+    },
+    {
+      "rule": "KEMI-STY-016",
+      "check": "ast:one_feature_prefix_per_always_ff",
+      "severity": "warning",
+      "file": "rtl/counter4d.sv",
+      "line": 38,
+      "message": "an always_ff with no sub-banner of its own",
+      "waived": false
+    },
+    {
+      "rule": "KEMI-STY-014",
+      "check": "ast:reset_literal_unsized",
+      "severity": "warning",
+      "file": "rtl/counter4d.sv",
+      "line": 40,
+      "message": "cnt_value_ff is reset to a sized literal",
+      "waived": false
+    }
+  ],
+  "pack_not_evaluated": {},
+  "self_check_clean": false
+}
