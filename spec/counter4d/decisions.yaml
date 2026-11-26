@@ -1,0 +1,46 @@
+decisions:
+  - id: ADR-01
+    date: 2026-11-26
+    status: proposed
+    title: "Single IDD of class level for the counter's pins"
+    req_ids: [REQ-3.1.1, REQ-3.1.2, REQ-3.1.5, REQ-3.1.6]
+    context: "The block has no bus; the package needs an IDD to hold its ports."
+    alternatives: ["IDD of class level (chosen, simplest)", "no IDD"]
+    decision: "One IDD, idd/counter_io.yaml, class level, holds clk, rst_n, en, count. Scan ports are not part of it."
+    decided_by: {actor_ref: faizan@chipmango.com, role: adr}
+  - id: ADR-02
+    date: 2026-11-26
+    status: proposed
+    title: "No area budget; DFT, power, regmap, debug, security not_applicable"
+    req_ids: [REQ-3.1.6]
+    context: "The brief gives no area number and puts power, registers and security out of scope; scan is inserted later by the DFT flow."
+    alternatives: ["invent an area budget", "not_applicable with reasons (chosen)"]
+    decision: "area_budget is not_applicable; dft is not_applicable in this package (scan inserted later, full scan, one chain, mux-D, stuck-at and transition, platform default coverage)."
+    decided_by: {actor_ref: faizan@chipmango.com, role: adr}
+  - id: ADR-03
+    date: 2026-11-26
+    status: proposed
+    title: "Power-up value of count is not specified"
+    req_ids: [REQ-3.1.1]
+    context: "The brief defines count only after reset."
+    alternatives: ["define a power-up value", "leave undefined until the first rst_n 0 edge (chosen)"]
+    decision: "count is defined from the first rising edge with rst_n 0; harnesses must reset first. Reset value of the output is 0."
+    decided_by: {actor_ref: faizan@chipmango.com, role: adr}
+  - id: ADR-04
+    date: 2026-11-26
+    status: proposed
+    title: "Board currents and the 1.8 V regulator gap"
+    req_ids: [REQ-3.1.1]
+    context: "The board standard has only a 3.3 V LDO; the brief fixes 1.8 V. The brief gives no currents."
+    alternatives: ["use 3.3 V rail (breaks brief)", "keep 1.8 V and name the part as a gap (chosen)"]
+    decision: "VDD_1V8 stays 1.8 V; BRS-4 states the 1.8 V LDO is not in the standard and its Device Model is supplied by a person. Rail currents are estimates: VDD_1V8 10 mA, +5V, VBUS_F and VBUS 20 mA."
+    decided_by: {actor_ref: faizan@chipmango.com, role: adr}
+  - id: ADR-05
+    date: 2026-11-26
+    status: proposed
+    title: "Harness timing for RTL and gate-level reuse"
+    req_ids: [REQ-3.1.5]
+    context: "The same harness runs unchanged on the gate-level netlist."
+    alternatives: ["inputs at rising edge with delay", "inputs at falling edges only (chosen)"]
+    decision: "Clock starts low; inputs are driven only at falling edges; recorded as IDD rule R1. A failing regression is reproduced with a single-seed run and fixed before the full batch is rerun."
+    decided_by: {actor_ref: faizan@chipmango.com, role: adr}

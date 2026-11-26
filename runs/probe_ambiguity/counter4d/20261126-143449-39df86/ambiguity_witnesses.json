@@ -1,0 +1,57 @@
+{
+  "tool": "chidi-probe 1.0.0",
+  "method": "static: a variant is distinguished when a scenario's check constrains the clause it changes (no variant RTL is simulated in v1.0)",
+  "package": "spec/counter4d",
+  "vps": "spec/counter4d/vps.yaml",
+  "variant_library": {
+    "version": "MQ variants 1.0",
+    "variants": 34
+  },
+  "check_set": {
+    "hash": "sha256:ad8c8118e06b7646",
+    "checks": 7
+  },
+  "counts": {
+    "probed": 2,
+    "distinguished": 2,
+    "witnesses": 0,
+    "witnesses_with_proposal": 0,
+    "closure": 1.0
+  },
+  "variants": [
+    {
+      "variant": "IDD-COUNTER_IO/reset",
+      "source": "library",
+      "interface": "IDD-COUNTER_IO",
+      "interface_class": "level",
+      "risk": "LOW",
+      "requirement": "",
+      "clause_class": "a rule about the outputs while reset",
+      "witness": false,
+      "distinguished_by": [
+        "VPS-01",
+        "VPS-05",
+        "VPS-06"
+      ]
+    },
+    {
+      "variant": "IDD-COUNTER_IO/lv-follow",
+      "source": "library",
+      "interface": "IDD-COUNTER_IO",
+      "interface_class": "level",
+      "risk": "LOW",
+      "requirement": "",
+      "clause_class": "a rule about how soon an output follows its input",
+      "witness": false,
+      "distinguished_by": [
+        "VPS-02",
+        "VPS-03",
+        "VPS-04"
+      ]
+    }
+  ],
+  "ambiguities": [],
+  "notes": [
+    "static: a variant is distinguished when a scenario's check constrains the clause it changes (no variant RTL is simulated in v1.0)"
+  ]
+}

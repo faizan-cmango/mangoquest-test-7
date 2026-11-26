@@ -1,0 +1,50 @@
+project: counter4d
+sad_version: "0.1"
+scope: full
+blocks:
+  - id: counter4d
+    owner: kemi
+    sad_sections: ["3.1"]
+    interfaces: [IDD-COUNTER_IO]
+    idd_files: [idd/counter_io.yaml]
+    scan_notes: "No clock gating, no asynchronous reset, no memories; every flop is scannable (full scan, one chain, mux-D) by later insertion."
+peer_blocks: []
+sections:
+  - {id: "1", title: Scope and context, status: complete, req_range: []}
+  - {id: "2", title: Block decomposition, status: complete, req_range: []}
+  - {id: "3.1", title: Counter behaviour, status: complete, req_range: [REQ-3.1.1, REQ-3.1.2, REQ-3.1.3, REQ-3.1.4, REQ-3.1.5, REQ-3.1.6]}
+  - {id: "7", title: Risk register, status: complete, req_range: []}
+  - {id: "8", title: Open items, status: complete, req_range: []}
+documents:
+  idd:       {files: [idd/counter_io.yaml], authority: "interface behaviour, names, widths, reset values, timing"}
+  vps:       {file: vps.yaml,       authority: "what must be proven (scenarios)"}
+  rtm:       {file: rtm.yaml,       authority: "requirement text, owner, verification method"}
+  riskmap:   {file: riskmap.yaml,   authority: "risk class per block and the targets it implies"}
+  clocks:    {file: clocks.yaml,    authority: "clocks, resets, CDC pairs"}
+  errata:    {file: errata.yaml,    authority: "amendments after release"}
+  decisions: {file: decisions.yaml, authority: "architecture decision records"}
+optional_documents:
+  regmap:   {not_applicable: "No registers or bus interface (out of scope in the brief)."}
+  power:    {not_applicable: "Power management is out of scope in the brief."}
+  debug:    {not_applicable: "No debug features asked."}
+  security: {not_applicable: "No security requirement."}
+  dft:      {not_applicable: "Scan is added later by DFT insertion and is not part of this interface; see ADR-02."}
+  brs:      {file: brs.yaml}
+precedence: [errata, idd, clocks, riskmap, rtm, vps, sad_yaml, sad_md]
+waivers: []
+area_budget: {not_applicable: "The brief gives no area target; see ADR-02."}
+pin_intent:
+  pins:
+    - {port: clk, side: west, order: 1, group: control}
+    - {port: rst_n, side: west, order: 2, group: control}
+    - {port: en, side: west, order: 3, group: control}
+    - {port: scan_in, side: west, order: 4, group: scan}
+    - {port: scan_en, side: west, order: 5, group: scan}
+    - {port: "count[0]", side: east, order: 1, group: count}
+    - {port: "count[1]", side: east, order: 2, group: count}
+    - {port: "count[2]", side: east, order: 3, group: count}
+    - {port: "count[3]", side: east, order: 4, group: count}
+    - {port: scan_out, side: east, order: 5, group: scan}
+feasibility:
+  blocks:
+    - {block: counter4d, clock: clk, target_mhz: 100, fmax_mhz: 1257.9, headroom_pct: 1157.9, area_um2: 140.1344, method: opensta_liberty, confidence: 0.5, meets_target: true, report: runs/feasibility/counter4d/20261126-143443-83df7f/report.json}

@@ -1,0 +1,104 @@
+{
+  "kind": "probe",
+  "schema_version": 1,
+  "tool": "probe_ambiguity",
+  "block": "counter4d",
+  "inputs": [
+    {
+      "path": "spec/counter4d/rtm.yaml",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "spec/counter4d/idd/counter_io.yaml",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "spec/counter4d/clocks.yaml",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "spec/counter4d/riskmap.yaml",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "spec/counter4d/errata.yaml",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "spec/counter4d/brs.yaml",
+      "version": 1,
+      "sha256": ""
+    },
+    {
+      "path": "spec/counter4d/vps.yaml",
+      "version": 2,
+      "sha256": ""
+    },
+    {
+      "path": "spec/counter4d/decisions.yaml",
+      "version": 2,
+      "sha256": ""
+    },
+    {
+      "path": "spec/counter4d/sad.yaml",
+      "version": 2,
+      "sha256": ""
+    },
+    {
+      "path": "spec/counter4d/sad.md",
+      "version": 2,
+      "sha256": ""
+    }
+  ],
+  "package": "spec/counter4d",
+  "method": "static: a variant is distinguished when a scenario's check constrains the clause it changes (no variant RTL is simulated in v1.0)",
+  "variant_library": "MQ variants 1.0",
+  "check_set": "sha256:ad8c8118e06b7646",
+  "checks": 7,
+  "probed": 2,
+  "distinguished": 2,
+  "witnesses": 0,
+  "witnesses_with_proposal": 0,
+  "variants": [
+    {
+      "variant": "IDD-COUNTER_IO/reset",
+      "source": "library",
+      "clause_class": "a rule about the outputs while reset",
+      "witness": false,
+      "distinguished_by": [
+        "VPS-01",
+        "VPS-05",
+        "VPS-06"
+      ],
+      "proposal": "",
+      "interface": "IDD-COUNTER_IO",
+      "interface_class": "level",
+      "block": "counter4d",
+      "risk": "LOW",
+      "requirement": ""
+    },
+    {
+      "variant": "IDD-COUNTER_IO/lv-follow",
+      "source": "library",
+      "clause_class": "a rule about how soon an output follows its input",
+      "witness": false,
+      "distinguished_by": [
+        "VPS-02",
+        "VPS-03",
+        "VPS-04"
+      ],
+      "proposal": "",
+      "interface": "IDD-COUNTER_IO",
+      "interface_class": "level",
+      "block": "counter4d",
+      "risk": "LOW",
+      "requirement": ""
+    }
+  ],
+  "ambiguities": []
+}

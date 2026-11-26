@@ -1,0 +1,11 @@
+riskmap: spec/counter4d/riskmap.yaml@v0.1
+blocks:
+  - id: counter4d
+    risk: LOW
+    rationale: "One 4-bit wrapping counter, one clock, no crossings, no protocol; risk class given LOW by the brief."
+    factors: {interfaces: 1, cdc_crossings: 0, fsm_states: 0, protocol_complexity: low, novelty: low}
+    targets: {coverage: {line: 100, branch: 100, toggle: 100, fsm: 100, functional: 100}}
+    formal_properties_required: []
+    register_entries: [R-01]
+register:
+  - {id: R-01, block: counter4d, severity: LOW, status: open, text: "Input changing at a rising clk edge would make the gate-level run race.", mitigation: "Harness drives inputs only at falling edges (IDD rule R1)."}

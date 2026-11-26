@@ -1,0 +1,42 @@
+brs: spec/counter4d/brs.yaml@v0.1
+project: counter4d
+sad_version: "0.1"
+board: counter4d_eval
+requirements:
+  - id: BRS-1
+    text: "The board shall bring 5 V in on a header (VBUS) through a fuse (VBUS_F) and a reverse-protection diode (+5V)."
+    category: power
+    req_ids: [REQ-3.1.6]
+    verif_method: inspection
+  - id: BRS-2
+    text: "The board shall supply the chip core and pins at 1.8 V on rail VDD_1V8 from +5V through an LDO, with decoupling."
+    category: power
+    req_ids: [REQ-3.1.6]
+    verif_method: inspection
+  - id: BRS-3
+    text: "The board shall bring out clk, rst_n, en, count[3:0] and the scan pins on headers at 1.8 V logic, with test points on clk and count[3:0]."
+    category: interface
+    req_ids: [REQ-3.1.1, REQ-3.1.2, REQ-3.1.5, REQ-3.1.6]
+    verif_method: inspection
+  - id: BRS-4
+    text: "The 1.8 V LDO and the chip are not in the board standard; their Device Models and the parts snapshot are supplied by a person at board/counter4d_eval/."
+    category: other
+    req_ids: [REQ-3.1.6]
+    verif_method: review
+  - id: BRS-5
+    text: "The board shall be a 2-layer board of fabrication class jlc-2l-standard, with no firmware consumer."
+    category: mechanical
+    req_ids: [REQ-3.1.6]
+    verif_method: inspection
+interfaces:
+  - {name: counter_hdr, kind: header, connector: "1.8 V logic header", signals: [clk, rst_n, en, count, scan_in, scan_en, scan_out], idd: IDD-COUNTER_IO}
+power_rails:
+  - {name: VBUS, voltage_v: 5.0, current_ma: 20, tolerance_pct: 5}
+  - {name: VBUS_F, voltage_v: 5.0, current_ma: 20, tolerance_pct: 5}
+  - {name: "+5V", voltage_v: 4.7, current_ma: 20, tolerance_pct: 7}
+  - {name: VDD_1V8, voltage_v: 1.8, current_ma: 10, tolerance_pct: 5}
+environment: {ambient_min_c: 0, ambient_max_c: 70, bus_voltage_min_v: 4.75, bus_voltage_max_v: 5.25}
+constraints: {header_spacing_mm: 2.54, assembly: "hand or JLC standard assembly"}
+firmware_consumer: none
+mechanical: {layers: 2}
+fab_class: jlc-2l-standard

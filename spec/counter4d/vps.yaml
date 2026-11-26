@@ -1,0 +1,63 @@
+vps: spec/counter4d/vps.yaml@v0.1
+block: counter4d
+scenarios:
+  - id: VPS-01
+    slug: reset
+    req_ids: [REQ-3.1.1]
+    observe: [IDD-COUNTER_IO.count]
+    intent: "Count to a non-zero value with en 1, then drive rst_n to 0 at a falling edge and hold en 0, then release."
+    expected: "count is 0 after the first rising edge with rst_n 0 and stays 0 while rst_n is 0."
+    checks: ["count == 0 within 1 cycles after reset_release", "count == 0 while reset"]
+    distinguishes: {count_at: [mid, max]}
+    formal: false
+  - id: VPS-02
+    slug: increment
+    req_ids: [REQ-3.1.2]
+    observe: [IDD-COUNTER_IO.count]
+    intent: "After reset, drive en 1 for several edges."
+    expected: "count increases by 1 at every rising edge."
+    checks: ["count == 1 within 1 cycles after rise(en)"]
+    distinguishes: {count_at: [zero, mid]}
+    formal: false
+  - id: VPS-03
+    slug: hold
+    req_ids: [REQ-3.1.4, REQ-3.1.5]
+    observe: [IDD-COUNTER_IO.count]
+    intent: "At several count values drive en 0 for many edges, and toggle en between edges."
+    expected: "count keeps its value while en is 0 and changes only at rising edges."
+    checks: ["count == 0 while low(en)"]
+    distinguishes: {count_at: [zero, mid, max]}
+    formal: false
+  - id: VPS-04
+    slug: wrap
+    req_ids: [REQ-3.1.3]
+    observe: [IDD-COUNTER_IO.count]
+    intent: "Count up to 15 and give one more enabled edge."
+    expected: "count goes from 15 to 0."
+    checks: ["count == 0 within 1 cycles after rise(en)"]
+    distinguishes: {count_at: [max]}
+    formal: false
+  - id: VPS-05
+    slug: reset_priority
+    req_ids: [REQ-3.1.1]
+    observe: [IDD-COUNTER_IO.count]
+    intent: "Drive rst_n 0 and en 1 together at a falling edge, at a non-zero count."
+    expected: "count becomes 0 and stays 0 while rst_n is 0 despite en 1."
+    checks: ["count == 0 while reset"]
+    distinguishes: {count_at: [mid]}
+    formal: false
+  - id: VPS-06
+    slug: port_list
+    req_ids: [REQ-3.1.6]
+    observe: [IDD-COUNTER_IO.count]
+    intent: "Inspect the port list of the top module, and run any scenario to see count is 4 bits wide."
+    expected: "Ports are exactly clk, rst_n, en, count[3:0]."
+    checks: ["count != 15 while reset"]
+    distinguishes: {count_at: [zero]}
+    formal: false
+environment:
+  clk: "100 MHz, starts low, 50% duty"
+  en: "any value, changes only at falling edges of clk"
+  rst_n: "any value, changes only at falling edges of clk"
+  illegal_inputs: ["en or rst_n changing in the same timestep as a rising edge of clk"]
+retired: {}
